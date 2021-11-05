@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */; };
+		823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */; };
+		823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
 		82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDB2730C4BD00719A51 /* SceneDelegate.swift */; };
 		82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDD2730C4BD00719A51 /* ViewController.swift */; };
@@ -14,9 +17,13 @@
 		82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82628EE22730C4BD00719A51 /* pandapp.xcdatamodeld */; };
 		82628EE62730C4BF00719A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE52730C4BF00719A51 /* Assets.xcassets */; };
 		82628EE92730C4BF00719A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */; };
+		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
+		823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunctionsViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82628ED92730C4BD00719A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82628EDB2730C4BD00719A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		82628EE52730C4BF00719A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82628EE82730C4BF00719A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82628EEA2730C4BF00719A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,10 @@
 				82628ED92730C4BD00719A51 /* AppDelegate.swift */,
 				82628EDB2730C4BD00719A51 /* SceneDelegate.swift */,
 				82628EDD2730C4BD00719A51 /* ViewController.swift */,
+				823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */,
+				823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */,
+				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
+				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
 				82628EDF2730C4BD00719A51 /* Main.storyboard */,
 				82628EE52730C4BF00719A51 /* Assets.xcassets */,
 				82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */,
@@ -141,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
+				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
+				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
+				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
 			);
