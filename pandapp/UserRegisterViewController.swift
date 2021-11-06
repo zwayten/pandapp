@@ -25,16 +25,30 @@ class UserRegisterViewController: UIViewController {
         ReusableFunctionsViewController.customTextField(textfield: identifierUserRegister)
         
         
-        // Do any additional setup after loading the view.
+       
     }
+    
+    // Toggle view/hide password field
     @IBAction func passwordShowHideUserRegister(_ sender: Any) {
         passwordUserRegister.isSecureTextEntry.toggle()
     }
+    // Toggle view/hide ConfirmPassword field
     @IBAction func passwordConfirmShowHideUserRegister(_ sender: Any) {
         passwordConfirmUserregister.isSecureTextEntry.toggle()
     }
     
 
+    @IBAction func userConfirmPasswordListener(_ sender: Any) {
+        if ReusableFunctionsViewController.validatePassword(textfield: passwordUserRegister, textfieldConfirm: passwordConfirmUserregister) {
+            ReusableFunctionsViewController.customTextFieldGreen(textfield: passwordConfirmUserregister)
+            ReusableFunctionsViewController.customTextFieldGreen(textfield: passwordUserRegister)
+        }
+        else {
+            ReusableFunctionsViewController.customTextField(textfield: passwordConfirmUserregister)
+            ReusableFunctionsViewController.customTextField(textfield: passwordUserRegister)
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
