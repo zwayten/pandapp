@@ -13,6 +13,9 @@
 		823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */; };
 		823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAC27362B60003F3FA4 /* ClubViewController.swift */; };
 		823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */; };
+		823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */; };
+		823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB327389842003F3FA4 /* HomeViewController.swift */; };
+		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
 		82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDB2730C4BD00719A51 /* SceneDelegate.swift */; };
 		82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDD2730C4BD00719A51 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		823E5FAC27362B60003F3FA4 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRegisterViewController.swift; sourceTree = "<group>"; };
+		823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELearningViewController.swift; sourceTree = "<group>"; };
+		823E5FB327389842003F3FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82628ED92730C4BD00719A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82628EDB2730C4BD00719A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */,
 				82628EEA2730C4BF00719A51 /* Info.plist */,
 				82628EE22730C4BD00719A51 /* pandapp.xcdatamodeld */,
+				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
+				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
+				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
 			);
 			path = pandapp;
 			sourceTree = "<group>";
@@ -166,13 +175,16 @@
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
+				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
 				823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */,
 				823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */,
+				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
+				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
