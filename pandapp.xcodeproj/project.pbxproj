@@ -16,6 +16,7 @@
 		823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */; };
 		823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB327389842003F3FA4 /* HomeViewController.swift */; };
 		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
+		823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
 		82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDB2730C4BD00719A51 /* SceneDelegate.swift */; };
 		82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDD2730C4BD00719A51 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELearningViewController.swift; sourceTree = "<group>"; };
 		823E5FB327389842003F3FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82628ED92730C4BD00719A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82628EDB2730C4BD00719A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
 				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
+				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
 			);
 			path = pandapp;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
+				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,

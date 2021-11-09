@@ -22,9 +22,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet var claasTwoPicker: UIPickerView!
     @IBOutlet var claasThreePicker: UIPickerView!
     
+    @IBOutlet var tooltipCardView: UIView!
+    
     let pickerOneData = ["1", "2", "3", "4", "5"]
     let pickerTwoData = ["aaa", "C-Programming", "Electronics", "French", "English", "Algorithm", "Arduino"]
     let pickerThreeData = ["1", "2", "3", "4", "5","6","7","8","9","10"]
+    
+    var toggleCardTooltip = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +57,23 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         classFieldOne.inputView = claasOnePicker
         classFieldTwo.inputView = claasTwoPicker
         classFieldThree.inputView = claasThreePicker
+        
+        tooltipCardView.frame = CGRect(x: 175, y: 470, width: self.view.bounds.width * 0.5, height: self.view.bounds.height * 0.13)
 
     }
+    
+    @IBAction func displayCardTooltip(_ sender: Any) {
+        if toggleCardTooltip == false {
+            toggleCardTooltip = true
+            self.view.addSubview(tooltipCardView)
+        }
+        else {
+            toggleCardTooltip = false
+            tooltipCardView.removeFromSuperview()
+        }
+    }
+    
+    
     
     // Toggle view/hide password field
     @IBAction func passwordShowHideUserRegister(_ sender: Any) {
