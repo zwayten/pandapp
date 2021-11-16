@@ -25,6 +25,22 @@
 		82628EE62730C4BF00719A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE52730C4BF00719A51 /* Assets.xcassets */; };
 		82628EE92730C4BF00719A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */; };
 		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
+		82A9226027432ED5008D3A8C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9225F27432ED5008D3A8C /* Clubs.swift */; };
+		82A922622743306D008D3A8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922612743306D008D3A8C /* User.swift */; };
+		82A9226427433140008D3A8C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226327433140008D3A8C /* Document.swift */; };
+		82A92266274331CA008D3A8C /* EventPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92265274331CA008D3A8C /* EventPost.swift */; };
+		82A92268274332A3008D3A8C /* LostPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92267274332A3008D3A8C /* LostPost.swift */; };
+		82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922692743334A008D3A8C /* OtherPost.swift */; };
+		82A9226C2743340E008D3A8C /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226B2743340E008D3A8C /* Parking.swift */; };
+		82A9226E27433489008D3A8C /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226D27433489008D3A8C /* Surveys.swift */; };
+		82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226F274337F9008D3A8C /* ClubsViewModel.swift */; };
+		82A9227227433825008D3A8C /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227127433825008D3A8C /* userViewModel.swift */; };
+		82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922732743384A008D3A8C /* DocumentViewModel.swift */; };
+		82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227527433862008D3A8C /* EventPostViewModel.swift */; };
+		82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922772743388A008D3A8C /* LostPostViewModel.swift */; };
+		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
+		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
+		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +64,22 @@
 		82628EE82730C4BF00719A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82628EEA2730C4BF00719A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
+		82A9225F27432ED5008D3A8C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
+		82A922612743306D008D3A8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		82A9226327433140008D3A8C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		82A92265274331CA008D3A8C /* EventPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPost.swift; sourceTree = "<group>"; };
+		82A92267274332A3008D3A8C /* LostPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPost.swift; sourceTree = "<group>"; };
+		82A922692743334A008D3A8C /* OtherPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPost.swift; sourceTree = "<group>"; };
+		82A9226B2743340E008D3A8C /* Parking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
+		82A9226D27433489008D3A8C /* Surveys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surveys.swift; sourceTree = "<group>"; };
+		82A9226F274337F9008D3A8C /* ClubsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewModel.swift; sourceTree = "<group>"; };
+		82A9227127433825008D3A8C /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
+		82A922732743384A008D3A8C /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
+		82A9227527433862008D3A8C /* EventPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPostViewModel.swift; sourceTree = "<group>"; };
+		82A922772743388A008D3A8C /* LostPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPostViewModel.swift; sourceTree = "<group>"; };
+		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
+		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
+		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +112,54 @@
 		82628ED82730C4BD00719A51 /* pandapp */ = {
 			isa = PBXGroup;
 			children = (
+				82A9225E27432E5F008D3A8C /* View */,
+				82A9225D27432E52008D3A8C /* ViewModel */,
+				82A9225C27432E3E008D3A8C /* Model */,
 				82628ED92730C4BD00719A51 /* AppDelegate.swift */,
 				82628EDB2730C4BD00719A51 /* SceneDelegate.swift */,
-				82628EDD2730C4BD00719A51 /* ViewController.swift */,
 				823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */,
+				82628EE52730C4BF00719A51 /* Assets.xcassets */,
+				82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */,
+				82628EEA2730C4BF00719A51 /* Info.plist */,
+				82628EE22730C4BD00719A51 /* pandapp.xcdatamodeld */,
+			);
+			path = pandapp;
+			sourceTree = "<group>";
+		};
+		82A9225C27432E3E008D3A8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82A9225F27432ED5008D3A8C /* Clubs.swift */,
+				82A922612743306D008D3A8C /* User.swift */,
+				82A9226327433140008D3A8C /* Document.swift */,
+				82A92265274331CA008D3A8C /* EventPost.swift */,
+				82A92267274332A3008D3A8C /* LostPost.swift */,
+				82A922692743334A008D3A8C /* OtherPost.swift */,
+				82A9226B2743340E008D3A8C /* Parking.swift */,
+				82A9226D27433489008D3A8C /* Surveys.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82A9225D27432E52008D3A8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82A9226F274337F9008D3A8C /* ClubsViewModel.swift */,
+				82A9227127433825008D3A8C /* userViewModel.swift */,
+				82A922732743384A008D3A8C /* DocumentViewModel.swift */,
+				82A9227527433862008D3A8C /* EventPostViewModel.swift */,
+				82A922772743388A008D3A8C /* LostPostViewModel.swift */,
+				82A92279274338B9008D3A8C /* OtherPostViewModel.swift */,
+				82A9227B274338E5008D3A8C /* ParkingViewModel.swift */,
+				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		82A9225E27432E5F008D3A8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82628EDD2730C4BD00719A51 /* ViewController.swift */,
 				823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */,
 				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
@@ -91,16 +167,12 @@
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
 				823E5FAC27362B60003F3FA4 /* ClubViewController.swift */,
 				82628EDF2730C4BD00719A51 /* Main.storyboard */,
-				82628EE52730C4BF00719A51 /* Assets.xcassets */,
-				82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */,
-				82628EEA2730C4BF00719A51 /* Info.plist */,
-				82628EE22730C4BD00719A51 /* pandapp.xcdatamodeld */,
 				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
 				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
 				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
 			);
-			path = pandapp;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,18 +248,34 @@
 			files = (
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
+				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
+				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
+				82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */,
+				82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */,
+				82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
+				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
+				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
+				82A922622743306D008D3A8C /* User.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
+				82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
+				82A9227227433825008D3A8C /* userViewModel.swift in Sources */,
 				823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */,
 				823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */,
+				82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */,
+				82A9226427433140008D3A8C /* Document.swift in Sources */,
 				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
+				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
+				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
+				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
+				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
 				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
