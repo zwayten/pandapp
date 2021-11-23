@@ -73,7 +73,41 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     }
     
+    func getData() -> User {
+        let mail = userEmailRegister.text!
+        let password = passwordUserRegister.text!
+        
+        //passwordConfirmUserregister
+        let lastName = lastNameUserRegister.text!
+        let firstName = FirstNameUserRegister.text!
+        let identifiant = identifierUserRegister.text!
+        let class1 = classFieldOne.text!
+        let class2 = classFieldTwo.text!
+        let class3 = classFieldThree.text!
+        let className = "\(class1)\(class2)\(class3)"
+        let user = User(email: mail, password: password, phoneNumber: 9999999, profilePicture: "534343543.png", FirstName: firstName, LastName: lastName, verified: false, identifant: identifiant, className: className, parkId: 4, role: "user", social: false)
+        
+        return user
+       
+    }
     
+    @IBAction func btnregister(_ sender: Any) {
+        print("hello1")
+        let user = getData()
+        performSegue(withIdentifier: "toRegister2", sender: user)
+       
+        print("hello2")
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRegister2" {
+                    let user = sender as! User
+                    let destination = segue.destination as! Register2ViewController
+                    destination.segueClass = user
+                    destination.clubCheck = false
+                    destination.userCheck = true
+                    
+                }
+    }
     
     // Toggle view/hide password field
     @IBAction func passwordShowHideUserRegister(_ sender: Any) {

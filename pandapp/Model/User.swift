@@ -16,12 +16,17 @@ class User {
     var FirstName: String
     var LastName: String
     var verified: Bool
+    var social: Bool
     var identifant :String
+    var role :String
     var className: String
     var parkId: Int
+     
+    func setPhoneNumber(phoneNumber: Int){
+        self.phoneNumber = phoneNumber
+    }
     
-    
-    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, parkId: Int) {
+    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, parkId: Int, role: String, social: Bool) {
         self.email = email
         self.password = password
         self.phoneNumber = phoneNumber
@@ -32,5 +37,7 @@ class User {
         self.identifant = identifant
         self.className = className
         self.parkId = parkId
+        self.role = role
+        self.social = social
     }
 }

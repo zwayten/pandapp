@@ -16,6 +16,8 @@ class AddEventViewController: UIViewController {
     @IBOutlet var eventTimeInput: UITextField!
     @IBOutlet var eventDatePicker: UIDatePicker!
     @IBOutlet var eventTimePicker: UIDatePicker!
+    @IBOutlet var eventDescriptionInput: UITextView!
+    @IBOutlet var eventPlaceInput: UITextField!
     
     override func viewDidLoad() {
         ReusableFunctionsViewController.customTextField(textfield: eventNameInput)
@@ -31,6 +33,25 @@ class AddEventViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func getData() -> EventPost {
+        let eventname = eventNameInput.text!
+        let price = eventPriceInput.text!
+        let date = eventDateInput.text!
+        let time =  eventTimeInput.text!
+        let description =  eventDescriptionInput.text!
+        let place = eventPlaceInput.text!
+        let event = EventPost(publisheId: 23, state: true, type: "Event", place: place, banner: "123.png", Time: time, price: Double(price)!, rate: 0, title: eventname, description: description)
+        return event
+    }
+    
+    
+    @IBAction func btnsaveEvent(_ sender: UIButton) {
+        let eventPostModel = EventPostViewModel()
+        let event = getData()
+        eventPostModel.addEventPost(eventPost: event)
     }
     
    

@@ -12,16 +12,16 @@ class Clubs {
     var clubName: String
     var clubOwner: Int
     var clubLogo: String
-    var verifed: Bool
-    var passward: String
+    var verified: Bool
+    var password: String
     var login: String
     
-    init(clubName: String, clubOwner: Int, clubLogo: String, verifed: Bool, passward: String, login: String) {
+    init(clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String) {
         self.clubName = clubName
         self.clubOwner = clubOwner
         self.clubLogo = clubLogo
-        self.verifed = verifed
-        self.passward = passward
+        self.verified = verified
+        self.password = password
         self.login = login
     }
     

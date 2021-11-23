@@ -13,16 +13,17 @@ class ClubRegisterViewController: UIViewController {
     @IBOutlet var clubRegisterPassword: UITextField!
     @IBOutlet var clubRegisterConfirmPassword: UITextField!
     @IBOutlet var clubRegisterClubName: UITextField!
-    @IBOutlet var clubRegisterDescription: UITextField!
-    @IBOutlet var clubRegisterIdentifier: UITextField!
+    @IBOutlet var clubRegisterOwner: UITextField!
+    
+
     
     func initClubRegister(){
         ReusableFunctionsViewController.customTextField(textfield: clubRegisteremail)
         ReusableFunctionsViewController.customTextField(textfield: clubRegisterPassword)
         ReusableFunctionsViewController.customTextField(textfield: clubRegisterConfirmPassword)
         ReusableFunctionsViewController.customTextField(textfield: clubRegisterClubName)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterDescription)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterIdentifier)
+        ReusableFunctionsViewController.customTextField(textfield: clubRegisterOwner)
+
         
     }
     override func viewDidLoad() {
@@ -31,6 +32,30 @@ class ClubRegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func registerBtn(_ sender: UIButton) {
+       let club = getData()
+        performSegue(withIdentifier: "toRegisterclub", sender: club)
+    }
+    func getData() -> Clubs {
+        let clubname = clubRegisteremail.text!
+        let password  = clubRegisterPassword.text!
+        let login = clubRegisteremail.text!
+        let owner = Int(clubRegisterOwner.text!)
+        
+        let club = Clubs(clubName: clubname, clubOwner: owner!, clubLogo: "logo.png", verified: false, password: password, login: login)
+        return club
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRegisterclub" {
+                    let club = sender as! Clubs
+                    let destination = segue.destination as! Register2ViewController
+                    destination.segueClassClub = club
+                    destination.clubCheck = true
+                    destination.userCheck = false
+                    
+                }
     }
     
     @IBAction func ShowPassword(_ sender: Any) {

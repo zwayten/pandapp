@@ -25,6 +25,8 @@
 		82628EE62730C4BF00719A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE52730C4BF00719A51 /* Assets.xcassets */; };
 		82628EE92730C4BF00719A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */; };
 		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
+		8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82762819274C7ED50068B01D /* ConnectionDb.swift */; };
+		82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A47D6F274C907C002B6F64 /* Register2ViewController.swift */; };
 		82A9226027432ED5008D3A8C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9225F27432ED5008D3A8C /* Clubs.swift */; };
 		82A922622743306D008D3A8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922612743306D008D3A8C /* User.swift */; };
 		82A9226427433140008D3A8C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226327433140008D3A8C /* Document.swift */; };
@@ -64,6 +66,8 @@
 		82628EE82730C4BF00719A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82628EEA2730C4BF00719A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
+		82762819274C7ED50068B01D /* ConnectionDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDb.swift; sourceTree = "<group>"; };
+		82A47D6F274C907C002B6F64 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		82A9225F27432ED5008D3A8C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
 		82A922612743306D008D3A8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		82A9226327433140008D3A8C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				82A92279274338B9008D3A8C /* OtherPostViewModel.swift */,
 				82A9227B274338E5008D3A8C /* ParkingViewModel.swift */,
 				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
+				82762819274C7ED50068B01D /* ConnectionDb.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +167,8 @@
 				82628EDD2730C4BD00719A51 /* ViewController.swift */,
 				823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */,
 				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
+				82A47D6F274C907C002B6F64 /* Register2ViewController.swift */,
+				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
 				823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */,
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
@@ -170,7 +177,6 @@
 				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
 				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
-				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
+				8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */,
 				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
 				82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */,
@@ -276,6 +283,7 @@
 				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
 				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
+				82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */,
 				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
