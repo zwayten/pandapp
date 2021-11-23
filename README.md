@@ -1,11 +1,11 @@
 
 ![command-line-pic](https://github.com/KlaiGhassen/IosBack/blob/main/final_panda_ios.png)
 
-# README-IosBack
+# README-Swift
 
 ---
 
-<a href="https://img.shields.io/badge/Swift5-100%25-yellow"><img alt="Swift use" src="https://img.shields.io/badge/JavaScipt-100%25-yellow"></a> <a href="https://img.shields.io/badge/StoryBoard.js-red"><img alt="StoryBoard use" src="https://img.shields.io/badge/Used-Node.js-red"></a> 
+<a href="https://img.shields.io/badge/Swift5-100%25-yellow"><img alt="Swift use" src="https://img.shields.io/badge/Swift-100%25-yellow"></a> <a href="https://img.shields.io/badge/StoryBoard.js-red"><img alt="StoryBoard use" src="https://img.shields.io/badge/Used-StoryBoard-red"></a> 
 ## Table of Contents
 
 - [Description](#description)
