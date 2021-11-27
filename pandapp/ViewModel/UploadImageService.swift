@@ -39,4 +39,31 @@ class UploadImageService{
         return imageJsonReturnAf
         
     }
+    
+    public func uploadImageToServer(imageOrVideo : UIImage?, eventPost: EventPost) ->String {
+
+        let headers: HTTPHeaders = [
+            /* "Authorization": "your_access_token",  in case you need authorization header */
+            "Content-type": "multipart/form-data"
+        ]
+        
+        let postmodel = EventPostViewModel()
+            AF.upload(
+                multipartFormData: { multipartFormData in
+                    multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
+            },
+                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+            .responseJSON {  response in
+                let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
+                //print(imm.img)
+                self.imageJsonReturnAf = imm.img
+                eventPost.set(banner: imm.img)
+                print(imm.img)
+                postmodel.addEventPost(eventPost: eventPost)
+                
+            }
+        print(imageJsonReturnAf)
+        return imageJsonReturnAf
+        
+    }
 }

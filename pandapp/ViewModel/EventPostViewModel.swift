@@ -6,9 +6,17 @@
 //
 
 import Foundation
+import Alamofire
+import UIKit
 
 
 class EventPostViewModel {
+    
+    
+    //var tableView: UITableView?
+    
+    
+    
     
     public func fetchEventPost() {
         

@@ -18,6 +18,10 @@ class AddEventViewController: UIViewController {
     @IBOutlet var eventTimePicker: UIDatePicker!
     @IBOutlet var eventDescriptionInput: UITextView!
     @IBOutlet var eventPlaceInput: UITextField!
+    @IBOutlet var imageView: UIImageView!
+    
+    var selectedImages : UIImage?
+    var imageJsonReturnAf  = ""
     
     override func viewDidLoad() {
         ReusableFunctionsViewController.customTextField(textfield: eventNameInput)
@@ -34,6 +38,14 @@ class AddEventViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func uploadImage(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+        
+    }
     
     
     func getData() -> EventPost {
@@ -43,15 +55,17 @@ class AddEventViewController: UIViewController {
         let time =  eventTimeInput.text!
         let description =  eventDescriptionInput.text!
         let place = eventPlaceInput.text!
-        let event = EventPost(publisheId: 23, state: true, type: "Event", place: place, banner: "123.png", Time: time, price: Double(price)!, rate: 0, title: eventname, description: description)
+        let event = EventPost(publisheId: "23", state: true, type: "Event", place: place, banner: "default.png", Time: time, price: Double(price) ?? 14.4, rate: 0, title: eventname, description: description)
         return event
     }
     
     
     @IBAction func btnsaveEvent(_ sender: UIButton) {
         let eventPostModel = EventPostViewModel()
+        let uploadService = UploadImageService()
         let event = getData()
-        eventPostModel.addEventPost(eventPost: event)
+        uploadService.uploadImageToServer(imageOrVideo: selectedImages, eventPost: getData())
+        //eventPostModel.addEventPost(eventPost: event)
     }
     
    
@@ -74,14 +88,25 @@ class AddEventViewController: UIViewController {
         formater.dateFormat = "hh-MM-A"
         eventTimeInput.text = formater.string(from:eventTimePicker.date)
     }
-    /*
-    // MARK: - Navigation
+   
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+extension AddEventViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView.image = image
+            selectedImages = image
+            
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class EventPost {
+class EventPost: Codable{
     
-var publisheId: Int
+var publisheId: String
 var state: Bool
 var type: String
 var place: String
@@ -21,7 +21,7 @@ var title: String
 var description: String
     
 
-    init(publisheId: Int, state: Bool, type: String, place: String, banner: String, Time: String, price: Double, rate: Int, title: String, description: String) {
+    init(publisheId: String, state: Bool, type: String, place: String, banner: String, Time: String, price: Double, rate: Int, title: String, description: String) {
         self.publisheId = publisheId
         self.state = state
         self.type = type
@@ -34,7 +34,7 @@ var description: String
         self.description = description
     }
     
-    func set(publisheId:Int){
+    func set(publisheId: String){
         self.publisheId = publisheId
     }
     func set(state: Bool){
