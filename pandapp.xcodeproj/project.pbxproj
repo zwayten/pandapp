@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D7735212D28ABCDA8D986F /* Pods_pandapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE227153A47BBA1857149A68 /* Pods_pandapp.framework */; };
 		823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */; };
 		823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */; };
 		823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */; };
@@ -26,6 +27,8 @@
 		82628EE92730C4BF00719A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82628EE72730C4BF00719A51 /* LaunchScreen.storyboard */; };
 		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
 		8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82762819274C7ED50068B01D /* ConnectionDb.swift */; };
+		82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F4802751800C0009F372 /* UploadImageStruct.swift */; };
+		82A0F483275180500009F372 /* UploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F482275180500009F372 /* UploadImageService.swift */; };
 		82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A47D6F274C907C002B6F64 /* Register2ViewController.swift */; };
 		82A9226027432ED5008D3A8C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9225F27432ED5008D3A8C /* Clubs.swift */; };
 		82A922622743306D008D3A8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922612743306D008D3A8C /* User.swift */; };
@@ -46,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35E377F7BA1D40B843BECFC3 /* Pods-pandapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.debug.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.debug.xcconfig"; sourceTree = "<group>"; };
 		823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunctionsViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		82628EEA2730C4BF00719A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
 		82762819274C7ED50068B01D /* ConnectionDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDb.swift; sourceTree = "<group>"; };
+		82A0F4802751800C0009F372 /* UploadImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageStruct.swift; sourceTree = "<group>"; };
+		82A0F482275180500009F372 /* UploadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageService.swift; sourceTree = "<group>"; };
 		82A47D6F274C907C002B6F64 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		82A9225F27432ED5008D3A8C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
 		82A922612743306D008D3A8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
+		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,17 +99,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D7735212D28ABCDA8D986F /* Pods_pandapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30A3EBF7E5FA6C6F422EABB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35E377F7BA1D40B843BECFC3 /* Pods-pandapp.debug.xcconfig */,
+				B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		82628ECD2730C4BD00719A51 = {
 			isa = PBXGroup;
 			children = (
 				82628ED82730C4BD00719A51 /* pandapp */,
 				82628ED72730C4BD00719A51 /* Products */,
+				30A3EBF7E5FA6C6F422EABB0 /* Pods */,
+				C8F7B8F55A5F0F83B48F1E90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +161,7 @@
 				82A922692743334A008D3A8C /* OtherPost.swift */,
 				82A9226B2743340E008D3A8C /* Parking.swift */,
 				82A9226D27433489008D3A8C /* Surveys.swift */,
+				82A0F4802751800C0009F372 /* UploadImageStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +178,7 @@
 				82A9227B274338E5008D3A8C /* ParkingViewModel.swift */,
 				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
 				82762819274C7ED50068B01D /* ConnectionDb.swift */,
+				82A0F482275180500009F372 /* UploadImageService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,6 +203,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C8F7B8F55A5F0F83B48F1E90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE227153A47BBA1857149A68 /* Pods_pandapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82628EED2730C4BF00719A51 /* Build configuration list for PBXNativeTarget "pandapp" */;
 			buildPhases = (
+				A423A0057A5BDE296CC5E8CE /* [CP] Check Pods Manifest.lock */,
 				82628ED22730C4BD00719A51 /* Sources */,
 				82628ED32730C4BD00719A51 /* Frameworks */,
 				82628ED42730C4BD00719A51 /* Resources */,
+				B2A13F4E8042659D9E32B180 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +279,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A423A0057A5BDE296CC5E8CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pandapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2A13F4E8042659D9E32B180 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pandapp/Pods-pandapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pandapp/Pods-pandapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pandapp/Pods-pandapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82628ED22730C4BD00719A51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,7 +353,9 @@
 				82A9226427433140008D3A8C /* Document.swift in Sources */,
 				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
+				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
 				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
+				82A0F483275180500009F372 /* UploadImageService.swift in Sources */,
 				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
 				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
@@ -428,6 +504,7 @@
 		};
 		82628EEE2730C4BF00719A51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35E377F7BA1D40B843BECFC3 /* Pods-pandapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +532,7 @@
 		};
 		82628EEF2730C4BF00719A51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

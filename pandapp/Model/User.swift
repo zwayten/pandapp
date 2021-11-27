@@ -20,13 +20,10 @@ class User {
     var identifant :String
     var role :String
     var className: String
-    var parkId: Int
-     
-    func setPhoneNumber(phoneNumber: Int){
-        self.phoneNumber = phoneNumber
-    }
     
-    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, parkId: Int, role: String, social: Bool) {
+    
+    //constructor
+    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, role: String, social: Bool) {
         self.email = email
         self.password = password
         self.phoneNumber = phoneNumber
@@ -36,8 +33,74 @@ class User {
         self.verified = verified
         self.identifant = identifant
         self.className = className
-        self.parkId = parkId
         self.role = role
         self.social = social
+    }
+    
+    //setters
+    func setEmail(email: String){
+        self.email = email
+    }
+    func setPassword(password: String){
+        self.password = password
+    }
+    func setProfilepicture(profilePicture: String){
+        self.profilePicture = profilePicture
+    }
+    func setPhoneNumber(phoneNumber: Int){
+        self.phoneNumber = phoneNumber
+    }
+    func setFirstName(FirstName: String){
+        self.FirstName = FirstName
+    }
+    func setLastName(LastName: String){
+        self.LastName = LastName
+    }
+    func setVerified(verified: Bool){
+        self.verified = verified
+    }
+    func setSocial(social: Bool){
+        self.social = social
+    }
+    func setIdentifant(identifant: String){
+        self.identifant = identifant
+    }
+    func setRole(role: String){
+        self.role = role
+    }
+    func setClassName(className: String){
+        self.className = className
+    }
+    
+    // getters
+    func getEmail() -> String{
+        return self.email
+    }
+    func getPassword() -> String{
+        return self.password
+    }
+    func getPhoneNumber() -> Int{
+        return self.phoneNumber
+    }
+    func getFirstName() -> String{
+        return self.FirstName
+    }
+    func getLastName() -> String{
+        return self.LastName
+    }
+    func getVerified() -> Bool{
+        return self.verified
+    }
+    func getSocial() -> Bool{
+        return self.social
+    }
+    func getIdentifant() -> String{
+        return self.identifant
+    }
+    func getRole() -> String{
+        return self.role
+    }
+    func getClassName() -> String{
+        return self.className
     }
 }

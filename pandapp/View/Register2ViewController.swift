@@ -9,11 +9,16 @@ import UIKit
 
 class Register2ViewController: UIViewController {
 
-    
-    var segueClass: User?
-    var segueClassClub: Clubs?
-    var clubCheck: Bool?
-    var userCheck: Bool?
+    //var from Register 1 interface
+        // classes user and clubs instantiated in "UserRegisterViewController"
+        var segueClass: User?
+        var segueClassClub: Clubs?
+        // Bool vars to check if its user or club to register
+        var clubCheck: Bool?
+        var userCheck: Bool?
+    // upload image vars
+    var selectedImages : UIImage?
+    var imageJsonReturnAf  = ""
     
     
     @IBOutlet var imageView: UIImageView!
@@ -52,18 +57,25 @@ class Register2ViewController: UIViewController {
     @IBAction func btnregister2(_ sender: Any) {
         let umodel = UserViewModel()
         let cmodel = ClubsViewModel()
+        let uploadService = UploadImageService()
         
         if clubCheck! == false && userCheck! == true {
             if let numtext = PhoneNumber.text {
                 if let numInt = Int(numtext) {
                     segueClass!.setPhoneNumber(phoneNumber: numInt)
                 }
-                else { segueClass!.phoneNumber = 999 }
+                else { segueClass!.phoneNumber = 123 }
             }
             else { print("empty field") }
+             uploadService.uploadImageToServer(imageOrVideo: selectedImages, user: segueClass!)
+            print("debuggggggg")
+            print(segueClass!.profilePicture)
+            print("debuggggggg")
+              //  segueClass!.setProfilepicture(profilePicture: imageJsonReturnAf)
             
             
-             umodel.registerUser(user: segueClass!)
+            
+             //umodel.registerUser(user: segueClass!)
         }
         if clubCheck! == true && userCheck! == false {
             
@@ -81,6 +93,8 @@ extension Register2ViewController: UIImagePickerControllerDelegate, UINavigation
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             imageView.image = image
+            selectedImages = image
+            
         }
         picker.dismiss(animated: true, completion: nil)
     }

@@ -1,0 +1,6 @@
+framework module Pods_pandapp {
+  umbrella header "Pods-pandapp-umbrella.h"
+
+  export *
+  module * { export * }
+}
