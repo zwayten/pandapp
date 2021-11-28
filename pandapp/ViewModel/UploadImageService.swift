@@ -67,6 +67,33 @@ class UploadImageService{
         
     }
     
+    public func uploadImageToServerLostPost(imageOrVideo : UIImage?, lostPost: LostPost) ->String {
+
+        let headers: HTTPHeaders = [
+            /* "Authorization": "your_access_token",  in case you need authorization header */
+            "Content-type": "multipart/form-data"
+        ]
+        
+        let lostPostmodel = LostPostViewModel()
+            AF.upload(
+                multipartFormData: { multipartFormData in
+                    multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
+            },
+                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+            .responseJSON {  response in
+                let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
+                //print(imm.img)
+                self.imageJsonReturnAf = imm.img
+                lostPost.set(image: imm.img)
+                print(imm.img)
+                lostPostmodel.addLostPost(lostPost: lostPost)
+                
+            }
+        print(imageJsonReturnAf)
+        return imageJsonReturnAf
+        
+    }
+    
     public func uploadFileToServer(pdf : Data?, elearning: Elearning) ->String {
 
         let headers: HTTPHeaders = [
