@@ -46,6 +46,11 @@
 		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
 		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
 		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
+		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
+		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
+		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
+		82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */; };
+		82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC1B27530B4100D2894F /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,11 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
+		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
+		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
+		82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
+		82ECAC1B27530B4100D2894F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
 		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +172,7 @@
 				82A9226B2743340E008D3A8C /* Parking.swift */,
 				82A9226D27433489008D3A8C /* Surveys.swift */,
 				82A0F4802751800C0009F372 /* UploadImageStruct.swift */,
+				82ECAC0B275263A000D2894F /* Elearning.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
 				82762819274C7ED50068B01D /* ConnectionDb.swift */,
 				82A0F482275180500009F372 /* UploadImageService.swift */,
+				82ECAC0F275276E300D2894F /* ElearningViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +211,9 @@
 				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
 				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
+				82ECAC0D275276C900D2894F /* AddElearningViewController.swift */,
+				82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */,
+				82ECAC1B27530B4100D2894F /* TabBarVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +344,7 @@
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
+				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
 				8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */,
 				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
@@ -340,10 +356,14 @@
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
 				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
+				82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */,
 				82A922622743306D008D3A8C /* User.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
+				82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */,
+				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
 				82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */,
+				82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
 				82A9227227433825008D3A8C /* userViewModel.swift in Sources */,

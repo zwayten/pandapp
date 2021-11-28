@@ -66,4 +66,31 @@ class UploadImageService{
         return imageJsonReturnAf
         
     }
+    
+    public func uploadFileToServer(pdf : Data?, elearning: Elearning) ->String {
+
+        let headers: HTTPHeaders = [
+            /* "Authorization": "your_access_token",  in case you need authorization header */
+            "Content-type": "multipart/form-data"
+        ]
+        
+        let postmodel = ElearningViewModel()
+            AF.upload(
+                multipartFormData: { multipartFormData in
+                    multipartFormData.append(pdf!, withName: "file" , fileName: "file.pdf", mimeType: "application/pdf")
+            },
+                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+            .responseJSON {  response in
+                let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
+                //print(imm.img)
+                self.imageJsonReturnAf = imm.img
+                elearning.set(courseFile: imm.img)
+                print(imm.img)
+                postmodel.addCoursePost(eLearning: elearning)
+                
+            }
+        print(imageJsonReturnAf)
+        return imageJsonReturnAf
+        
+    }
 }
