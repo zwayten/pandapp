@@ -29,29 +29,26 @@ class UserLoginViewController: UIViewController {
         let parameters = ["email": email,
                           "password": password] as [String : Any]
         AF.request("http://192.168.109.1:3000/auth", method: .post, parameters: parameters).responseJSON {  response in
-            
+            let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
+            self.token = login.token
+            print(login.token)
+            /*
             if let data = response.data  {
                             
                 let json = String(data: data, encoding: .utf8)
                 print(json)
                 
                         }
-            
+            */
 
             
             
-           // let tt: String = try! JSONDecoder().decode(String.self, from: response.data!)
-            //print(tt)
-            //self.token = imm.img
-            //if let headers = response.response?.allHeaderFields as? [String: String]{
-                  //let header = headers["token"]
-            //print(headers)
-           // print(imm.img)
            
-            //print(tokenn)
             
             
         }
+        print("test:###############")
+        print(token)
     //print(token)
     // return token
     
