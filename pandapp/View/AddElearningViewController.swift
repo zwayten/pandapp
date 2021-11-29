@@ -8,17 +8,44 @@
 import UIKit
 import MobileCoreServices
 
-class AddElearningViewController: UIViewController {
+class AddElearningViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
 
+    let modulesFirstYearInfo  = ["Mathematics", "French", "English", "C-Programing", "Electronics", "Multimedia", "System & Network"]
+    let modulesSecondYearInfo  = ["Mathematics", "French", "English", "C++-Programing","Web-Developpement" ,"Communication-Network", "Database", "Microncontroller-Architecture"]
+    let modulesThirdYearInfo  = ["Mathematics", "French", "English", "Java-Programing","Web-Developpement 2.0" ,"Network", "Database", "Finance","Mobile-Programming"]
+    
+    let pickerData = ["Mathematics", "French", "English", "C-Programing", "Electronics", "Multimedia", "System & Network"]
+    
     var dataPdf: Data?
     
     @IBOutlet var courseNameInput: UITextField!
     @IBOutlet var moduleInput: UITextField!
     @IBOutlet var classNameInput: UITextField!
+
+    @IBOutlet var pickerModule: UIPickerView!
+    
+    
+        
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        //pickerData = modulesFirstYearInfo
+        pickerModule.delegate = self
+        pickerModule.dataSource = self
+        pickerModule.isHidden = true
+        
+        moduleInput.inputView = pickerModule
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+
+    @IBAction func modulechangeValuelistener(_ sender: UITextField) {
+        pickerModule.isHidden = false
     }
     
     func getdata() -> Elearning {
@@ -42,6 +69,43 @@ class AddElearningViewController: UIViewController {
        
     }
     
+    override func didReceiveMemoryWarning() {
+        print("ooooooooooooooooooooooooooo")
+           super.didReceiveMemoryWarning()
+           // Dispose of any resources that can be recreated.
+       }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+            return pickerData.count
+        
+    }
+    
+    // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+       
+            print("mochkla ########################")
+            return pickerData[row]
+        
+        
+       
+    }
+ 
+ func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+     
+         moduleInput.text = pickerData[row]
+         moduleInput.resignFirstResponder()
+     
+   
+     
+     
+ }
     
 
 }

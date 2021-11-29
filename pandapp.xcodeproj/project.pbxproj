@@ -18,6 +18,7 @@
 		823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB327389842003F3FA4 /* HomeViewController.swift */; };
 		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
 		823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */; };
+		82594ADC2754227D0062575F /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82594ADB2754227D0062575F /* PdfViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
 		82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDB2730C4BD00719A51 /* SceneDelegate.swift */; };
 		82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDD2730C4BD00719A51 /* ViewController.swift */; };
@@ -28,6 +29,8 @@
 		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
 		8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82762819274C7ED50068B01D /* ConnectionDb.swift */; };
 		8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D496275397F70088CAA9 /* AddLostPostViewController.swift */; };
+		8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */; };
+		8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D49A275408760088CAA9 /* DetailModuleViewController.swift */; };
 		82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F4802751800C0009F372 /* UploadImageStruct.swift */; };
 		82A0F483275180500009F372 /* UploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F482275180500009F372 /* UploadImageService.swift */; };
 		82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A47D6F274C907C002B6F64 /* Register2ViewController.swift */; };
@@ -66,6 +69,7 @@
 		823E5FB327389842003F3FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		82594ADB2754227D0062575F /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82628ED92730C4BD00719A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82628EDB2730C4BD00719A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
 		82762819274C7ED50068B01D /* ConnectionDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDb.swift; sourceTree = "<group>"; };
 		8288D496275397F70088CAA9 /* AddLostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLostPostViewController.swift; sourceTree = "<group>"; };
+		8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleElearningViewController.swift; sourceTree = "<group>"; };
+		8288D49A275408760088CAA9 /* DetailModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleViewController.swift; sourceTree = "<group>"; };
 		82A0F4802751800C0009F372 /* UploadImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageStruct.swift; sourceTree = "<group>"; };
 		82A0F482275180500009F372 /* UploadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageService.swift; sourceTree = "<group>"; };
 		82A47D6F274C907C002B6F64 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +223,9 @@
 				82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */,
 				82ECAC1B27530B4100D2894F /* TabBarVC.swift */,
 				8288D496275397F70088CAA9 /* AddLostPostViewController.swift */,
+				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
+				8288D49A275408760088CAA9 /* DetailModuleViewController.swift */,
+				82594ADB2754227D0062575F /* PdfViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
 				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
+				8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */,
 				8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */,
 				8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */,
 				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
@@ -380,11 +390,13 @@
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
 				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
 				82A0F483275180500009F372 /* UploadImageService.swift in Sources */,
+				8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */,
 				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
 				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
 				82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */,
 				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
+				82594ADC2754227D0062575F /* PdfViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

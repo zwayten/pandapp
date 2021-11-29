@@ -17,7 +17,6 @@ class ClubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUsersAf()
-        
         tableView.reloadData()
         
 
@@ -29,8 +28,6 @@ class ClubViewController: UIViewController {
             self?.events = response.value ?? []
             print(response)
             print(response.value)
-            
-           // print(self!.events.count)
             self?.tableView.reloadData()
         }
     }
