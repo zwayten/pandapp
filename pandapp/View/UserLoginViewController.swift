@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class UserLoginViewController: UIViewController {
-
+    var token = ""
+    
     @IBOutlet var userEmail: UITextField!
     @IBOutlet var userPassword: UITextField!
     
@@ -21,6 +23,42 @@ class UserLoginViewController: UIViewController {
     
     @IBAction func passwordShowHideUserLogin(_ sender: Any) {
         userPassword.isSecureTextEntry.toggle()
+    }
+    
+    func loginUser(email: String, password: String) {
+        let parameters = ["email": email,
+                          "password": password] as [String : Any]
+        AF.request("http://192.168.109.1:3000/auth", method: .post, parameters: parameters).responseJSON {  response in
+            
+            if let data = response.data  {
+                            
+                let json = String(data: data, encoding: .utf8)
+                print(json)
+                
+                        }
+            
+
+            
+            
+           // let tt: String = try! JSONDecoder().decode(String.self, from: response.data!)
+            //print(tt)
+            //self.token = imm.img
+            //if let headers = response.response?.allHeaderFields as? [String: String]{
+                  //let header = headers["token"]
+            //print(headers)
+           // print(imm.img)
+           
+            //print(tokenn)
+            
+            
+        }
+    //print(token)
+    // return token
+    
+}
+    
+    @IBAction func loginClicked(_ sender: UIButton) {
+        loginUser(email: userEmail.text ?? "123", password: userPassword.text ?? "777")
     }
     
     /*
