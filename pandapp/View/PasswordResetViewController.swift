@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PasswordResetViewController: UIViewController {
 
@@ -14,7 +15,10 @@ class PasswordResetViewController: UIViewController {
     @IBOutlet var emailRecovery: UITextField!
     @IBOutlet var mailRadio: UIButton!
     
+    
     @IBOutlet var smsRadion: UIButton!
+    
+    
     
     func initRadioButtons(){
         ReusableFunctionsViewController.radioButtonToggleOn(radionButton: mailRadio, radioText: sendMailLabel)
@@ -29,6 +33,38 @@ class PasswordResetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func sendResetCode(loginemail: String){
+        //var logg: LoginUser
+        let parameters = ["email": loginemail] as [String : Any]
+        AF.request("http://192.168.109.1:3000/auth/reset", method: .post, parameters: parameters).responseJSON {  response in
+            
+            
+                let login: String = try! JSONDecoder().decode(String.self, from: response.data!)
+                
+            
+        }
+}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCode" {
+                    let mail = sender as! String
+                    let destination = segue.destination as! ResetTwoViewController
+                    destination.seguemail = mail
+                    
+                    
+                }
+    }
+    
+    
+    
+    @IBAction func submit(_ sender: Any) {
+        let email = emailRecovery.text
+        sendResetCode(loginemail: email!)
+        
+        
+        performSegue(withIdentifier: "toCode", sender: emailRecovery.text)
+        
+    }
     @IBAction func toggleOnMail(_ sender: Any) {
         ReusableFunctionsViewController.radioButtonToggleOn(radionButton: mailRadio, radioText: sendMailLabel)
         ReusableFunctionsViewController.radioButtonToggleOff(radionButton: smsRadion, radioText: sendSmsLabel)
@@ -39,14 +75,6 @@ class PasswordResetViewController: UIViewController {
         ReusableFunctionsViewController.radioButtonToggleOff(radionButton: mailRadio, radioText: sendMailLabel)
     
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

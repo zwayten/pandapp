@@ -51,6 +51,7 @@
 		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
 		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
 		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
+		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
 		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
 		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
@@ -106,6 +107,7 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
 		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
 		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
 				823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */,
+				82BA60A4275644B400037525 /* ResetTwoViewController.swift */,
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
 				823E5FAC27362B60003F3FA4 /* ClubViewController.swift */,
 				82628EDF2730C4BD00719A51 /* Main.storyboard */,
@@ -381,6 +384,7 @@
 				82A922622743306D008D3A8C /* User.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
 				82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */,
+				82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */,
 				8252B155275487E700AF300A /* LoginUser.swift in Sources */,
 				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,

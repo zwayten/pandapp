@@ -49,7 +49,7 @@ extension DetailModuleViewController: UITableViewDataSource, UITableViewDelegate
         
                 
         //image.image = UIImage(named: users[indexPath.row].profilePicture)
-            module.text = elearningTab[indexPath.row].module
+            module.text = elearningTab[indexPath.row].courseName
         
         
         //coursename.text = elearningTab[indexPath.row].courseName
