@@ -43,11 +43,12 @@ class ElearningViewModel {
                           "module":     eLearning.module,
                           "courseName": eLearning.courseName,
                           "courseFile": eLearning.courseFile] as [String : Any]
-        
+        let token = UserDefaults.standard.string(forKey: "tokenClub")
         let  url = ConnectionDb.createConnection(urlStringModule: "elearning")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue( "Bearer \(token!)", forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
         request.httpBody = httpBody
         

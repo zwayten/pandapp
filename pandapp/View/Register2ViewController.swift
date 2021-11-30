@@ -55,8 +55,8 @@ class Register2ViewController: UIViewController {
     }
     
     @IBAction func btnregister2(_ sender: Any) {
-        let umodel = UserViewModel()
-        let cmodel = ClubsViewModel()
+        //let umodel = UserViewModel()
+        //let cmodel = ClubsViewModel()
         let uploadService = UploadImageService()
         
         if clubCheck! == false && userCheck! == true {
@@ -79,7 +79,7 @@ class Register2ViewController: UIViewController {
         }
         if clubCheck! == true && userCheck! == false {
             
-            cmodel.registerClub(club: segueClassClub!)
+            uploadService.uploadImageToServerClub(imageOrVideo: selectedImages, club: segueClassClub!)
         }
         
         

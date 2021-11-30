@@ -47,11 +47,12 @@ class EventPostViewModel {
     
     public func addEventPost(eventPost: EventPost) {
         let parameters = ["publisheId": eventPost.publisheId, "state": eventPost.state, "type": eventPost.type, "place": eventPost.place, "banner": eventPost.banner, "Time": eventPost.Time, "price": eventPost.price, "rate": eventPost.rate, "title": eventPost.title, "description": eventPost.description] as [String : Any]
-        
+        let token = UserDefaults.standard.string(forKey: "tokenClub")
         let  url = ConnectionDb.createConnection(urlStringModule: "event")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue( "Bearer \(token!)", forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
         request.httpBody = httpBody
         

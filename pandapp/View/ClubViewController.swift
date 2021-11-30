@@ -12,19 +12,31 @@ import Alamofire
 class ClubViewController: UIViewController {
     
     var events = [EventPost]()
+    var clubs = [Clubs]()
 
+    @IBOutlet var clubDesc: UITextView!
+    @IBOutlet var imageview: UIImageView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var clubNamelbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUsersAf()
         tableView.reloadData()
+        fetchClubProfile()
+        //setProfileInfos()
         
 
         // Do any additional setup after loading the view.
     }
     
     func fetchUsersAf() {
-        AF.request("http://192.168.109.1:3000/event", method: .get).responseDecodable(of: [EventPost].self) { [weak self] response in
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+        AF.request("http://192.168.109.1:3000/event", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
             print(response)
             print(response.value)
@@ -32,7 +44,35 @@ class ClubViewController: UIViewController {
         }
     }
 
-
+    func fetchClubProfile() {
+        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        let clubName = UserDefaults.standard.string(forKey: "clubName")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "clubName": "\(clubName!)",
+            "Accept": "application/json"
+        ]
+        AF.request("http://192.168.109.1:3000/club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
+            self?.clubs = response.value ?? []
+            self?.clubNamelbl.text = self?.clubs[0].clubName
+            let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
+            let urlImage = URL(string: strImageUrl)
+            let imageData = try? Data(contentsOf: urlImage!)
+            self?.imageview.image = UIImage(data: imageData!)
+            print(response)
+            print(response.value)
+            
+        }
+    }
+    
+    func setProfileInfos() {
+        //clubDesc.text = clubs[0]
+        clubNamelbl.text = clubs[0].clubName
+        let strImageUrl = "http://192.168.109.1:3000/upload/download/" + clubs[0].clubLogo
+        let urlImage = URL(string: strImageUrl)
+        let imageData = try? Data(contentsOf: urlImage!)
+        imageview.image = UIImage(data: imageData!)
+    }
 
 }
 extension ClubViewController: UITableViewDataSource {

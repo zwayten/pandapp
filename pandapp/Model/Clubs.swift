@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Clubs {
+class Clubs: Codable{
     
     var clubName: String
     var clubOwner: Int
@@ -25,4 +25,7 @@ class Clubs {
         self.login = login
     }
     
+    func set(clubLogo: String) {
+        self.clubLogo = clubLogo
+    }
 }

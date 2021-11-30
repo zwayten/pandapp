@@ -51,6 +51,7 @@
 		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
 		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
 		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
+		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
 		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
 		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
 		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
@@ -105,6 +106,7 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
 		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
 		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
 		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				82A0F4802751800C0009F372 /* UploadImageStruct.swift */,
 				82ECAC0B275263A000D2894F /* Elearning.swift */,
 				8252B154275487E700AF300A /* LoginUser.swift */,
+				82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,15 +196,15 @@
 			children = (
 				82A9226F274337F9008D3A8C /* ClubsViewModel.swift */,
 				82A9227127433825008D3A8C /* userViewModel.swift */,
-				82A922732743384A008D3A8C /* DocumentViewModel.swift */,
+				82ECAC0F275276E300D2894F /* ElearningViewModel.swift */,
 				82A9227527433862008D3A8C /* EventPostViewModel.swift */,
 				82A922772743388A008D3A8C /* LostPostViewModel.swift */,
+				82A922732743384A008D3A8C /* DocumentViewModel.swift */,
 				82A92279274338B9008D3A8C /* OtherPostViewModel.swift */,
 				82A9227B274338E5008D3A8C /* ParkingViewModel.swift */,
 				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
 				82762819274C7ED50068B01D /* ConnectionDb.swift */,
 				82A0F482275180500009F372 /* UploadImageService.swift */,
-				82ECAC0F275276E300D2894F /* ElearningViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */,
 				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
 				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
+				82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */,
 				82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */,
 				82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */,
 				82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */,
