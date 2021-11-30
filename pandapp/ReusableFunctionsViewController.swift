@@ -75,7 +75,7 @@ class ReusableFunctionsViewController: UIViewController {
     
     static func displayAlert(title: String, subTitle: String) {
         let color2 = UIColor(red: 103/255, green: 24/255, blue: 24/255, alpha: 1)
-        guard let pandaLogo = UIImage(named: "smallPanda") else { return  }
+        guard let pandaLogo = UIImage(named: "alertPanda") else { return  }
         SCLAlertView().showCustom(title, subTitle: subTitle, color: color2, icon: pandaLogo)
     }
 }

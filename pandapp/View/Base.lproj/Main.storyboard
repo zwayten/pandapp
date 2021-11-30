@@ -2169,6 +2169,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Resend"/>
+                                <connections>
+                                    <action selector="Resend:" destination="Tgw-Ub-ZAD" eventType="touchUpInside" id="BTt-dq-xZg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert 4 digits send :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHU-6v-iIO">
                                 <rect key="frame" x="38" y="168" width="200" height="31"/>
