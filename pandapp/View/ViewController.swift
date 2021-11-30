@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         //var logg: LoginUser
         let parameters = ["email": email,
                           "password": password] as [String : Any]
-        AF.request("http://192.168.109.1:3000/auth", method: .post, parameters: parameters).responseJSON {  response in
+        AF.request("\(ConnectionDb.baserequest())auth", method: .post, parameters: parameters).responseJSON {  response in
             let statusCode = response.response?.statusCode
             if statusCode == 200 {
                 let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
                 self.present(vc, animated: true)
             } else {
-                self.popAlert(a: "Invalid Credentials", b: "Your credentials are invalid")
+                ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
             }
         }
         
@@ -50,10 +50,5 @@ class ViewController: UIViewController {
 */
    
 
-    func popAlert(a: String, b: String) {
-            let alert = UIAlertController(title: a, message: b, preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true)
-        }
+
         }

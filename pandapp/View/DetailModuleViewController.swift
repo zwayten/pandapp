@@ -24,7 +24,7 @@ class DetailModuleViewController: UIViewController {
     }
     
     func fetchModules() {
-        AF.request("http://192.168.109.1:3000/elearning/byModule/\(moduleSegue!)", method: .get).responseDecodable(of: [Elearning].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())elearning/byModule/\(moduleSegue!)", method: .get).responseDecodable(of: [Elearning].self) { [weak self] response in
             self?.elearningTab = response.value ?? []
             print(response)
             print(response.value)

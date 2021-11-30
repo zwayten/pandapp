@@ -36,7 +36,7 @@ class PasswordResetViewController: UIViewController {
     func sendResetCode(loginemail: String){
         //var logg: LoginUser
         let parameters = ["email": loginemail] as [String : Any]
-        AF.request("http://192.168.109.1:3000/auth/reset", method: .post, parameters: parameters).responseJSON {  response in
+        AF.request("\(ConnectionDb.baserequest())reset", method: .post, parameters: parameters).responseJSON {  response in
             
             
                 let login: String = try! JSONDecoder().decode(String.self, from: response.data!)

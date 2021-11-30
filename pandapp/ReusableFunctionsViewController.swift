@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class ReusableFunctionsViewController: UIViewController {
 
@@ -70,5 +71,11 @@ class ReusableFunctionsViewController: UIViewController {
         radionButton.setImage(unchecked, for: .normal)
         radioText.textColor = UIColor(red: 42/255, green: 47/255, blue: 52/255, alpha: 1)
         
+    }
+    
+    static func displayAlert(title: String, subTitle: String) {
+        let color2 = UIColor(red: 103/255, green: 24/255, blue: 24/255, alpha: 1)
+        guard let pandaLogo = UIImage(named: "smallPanda") else { return  }
+        SCLAlertView().showCustom(title, subTitle: subTitle, color: color2, icon: pandaLogo)
     }
 }

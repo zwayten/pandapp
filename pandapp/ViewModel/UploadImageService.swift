@@ -25,7 +25,7 @@ class UploadImageService{
                 multipartFormData: { multipartFormData in
                     multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
             },
-                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
             .responseJSON {  response in
                 let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
                 //print(imm.img)
@@ -53,7 +53,7 @@ class UploadImageService{
                 multipartFormData: { multipartFormData in
                     multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
             },
-                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
             .responseJSON {  response in
                 let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
                 //print(imm.img)
@@ -80,7 +80,7 @@ class UploadImageService{
                 multipartFormData: { multipartFormData in
                     multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
             },
-                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
             .responseJSON {  response in
                 let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
                 //print(imm.img)
@@ -107,7 +107,7 @@ class UploadImageService{
                 multipartFormData: { multipartFormData in
                     multipartFormData.append(imageOrVideo!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
             },
-                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
             .responseJSON {  response in
                 let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
                 //print(imm.img)
@@ -133,7 +133,7 @@ class UploadImageService{
                 multipartFormData: { multipartFormData in
                     multipartFormData.append(pdf!, withName: "file" , fileName: "file.pdf", mimeType: "application/pdf")
             },
-                to: "http://192.168.109.1:3000/upload/file", method: .post , headers: headers)
+                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
             .responseJSON {  response in
                 let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
                 //print(imm.img)

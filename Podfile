@@ -7,5 +7,6 @@ target 'pandapp' do
 
   # Pods for pandapp
 pod 'Alamofire', '~> 5.4'
+pod 'SCLAlertView'
 
 end

@@ -18,7 +18,7 @@ class ModuleElearningViewController: UIViewController {
         tableView.reloadData()
     }
     func fetchModules() {
-        AF.request("http://192.168.109.1:3000/elearning", method: .get).responseDecodable(of: [Elearning].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())elearning", method: .get).responseDecodable(of: [Elearning].self) { [weak self] response in
             self?.elearningTab = response.value ?? []
             print(response)
             print(response.value)

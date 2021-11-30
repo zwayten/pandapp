@@ -19,9 +19,12 @@ class AddLostPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ReusableFunctionsViewController.customTextField(textfield: typelbl)
+        ReusableFunctionsViewController.customTextField(textfield: placelbl)
+        ReusableFunctionsViewController.customTextField(textfield: objectlbl)
     }
+    
+    
     
     func getdata() -> LostPost {
         let typelost = typelbl.text!
@@ -41,10 +44,16 @@ class AddLostPostViewController: UIViewController {
     }
     
     @IBAction func savelostPost(_ sender: Any) {
-        let lostPostModel = LostPostViewModel()
-        let uploadService = UploadImageService()
+        if typelbl.text == "" || placelbl.text == "" || objectlbl.text == "" {
+            let lostPostModel = LostPostViewModel()
+            let uploadService = UploadImageService()
+            uploadService.uploadImageToServerLostPost(imageOrVideo: selectedImages, lostPost: getdata())
+        }
+        else {
+            ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+        }
         
-        uploadService.uploadImageToServerLostPost(imageOrVideo: selectedImages, lostPost: getdata())
+       
     }
 }
 extension AddLostPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

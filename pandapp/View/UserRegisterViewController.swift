@@ -92,11 +92,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func btnregister(_ sender: Any) {
-        print("hello1")
+        if passwordUserRegister.text == passwordConfirmUserregister.text {
         let user = getData()
         performSegue(withIdentifier: "toRegister2", sender: user)
-       
-        print("hello2")
+        }
+        else {
+            ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRegister2" {
@@ -196,14 +198,6 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         claasThreePicker.isHidden = false
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

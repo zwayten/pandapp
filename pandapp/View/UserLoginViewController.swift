@@ -48,7 +48,7 @@ class UserLoginViewController: UIViewController {
         
         let parameters = ["email": email,
                           "password": password] as [String : Any]
-        AF.request("http://192.168.109.1:3000/auth", method: .post, parameters: parameters).responseJSON {  response in
+        AF.request("\(ConnectionDb.baserequest())auth", method: .post, parameters: parameters).responseJSON {  response in
             let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
             //self.loginUserr! = login
             self.token = login.token
@@ -82,13 +82,13 @@ class UserLoginViewController: UIViewController {
         //var logg: LoginUser
         let parameters = ["email": email,
                           "password": password] as [String : Any]
-        AF.request("http://192.168.109.1:3000/auth", method: .post, parameters: parameters).responseJSON {  response in
+        AF.request("\(ConnectionDb.baserequest())auth", method: .post, parameters: parameters).responseJSON {  response in
             let statusCode = response.response?.statusCode
             if statusCode == 200 {
                 let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
                 completionHandler(login,statusCode )
             } else {
-                self.popAlert(a: "Invalid Credentials", b: "Verify the email and password")
+                ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
             }
         }
 }
@@ -96,7 +96,7 @@ class UserLoginViewController: UIViewController {
         //var logg: LoginUser
         let parameters = ["login": loginemail,
                           "password": password] as [String : Any]
-        AF.request("http://192.168.109.1:3000/authClub", method: .post, parameters: parameters).responseJSON {  response in
+        AF.request("\(ConnectionDb.baserequest())authClub", method: .post, parameters: parameters).responseJSON {  response in
             let statusCode = response.response?.statusCode
             if statusCode == 200 {
                 let login: LoginClub = try! JSONDecoder().decode(LoginClub.self, from: response.data!)
@@ -150,10 +150,5 @@ class UserLoginViewController: UIViewController {
         
     }
     
-    func popAlert(a: String, b: String) {
-            let alert = UIAlertController(title: a, message: b, preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true)
-        }
+   
 }

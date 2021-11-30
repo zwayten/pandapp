@@ -31,6 +31,9 @@ class AddElearningViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        ReusableFunctionsViewController.customTextField(textfield: courseNameInput)
+        ReusableFunctionsViewController.customTextField(textfield: moduleInput)
+        ReusableFunctionsViewController.customTextField(textfield: classNameInput)
         //pickerData = modulesFirstYearInfo
         pickerModule.delegate = self
         pickerModule.dataSource = self

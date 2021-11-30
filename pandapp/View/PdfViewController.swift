@@ -23,7 +23,7 @@ class PdfViewController: UIViewController {
 
                 // Load Sample.pdf file.
                 //let fileURL = Bundle.main.url(forResource: "Sample", withExtension: "pdf")
-        let stringUrl = "http://192.168.109.1:3000/upload/download/\(fileSegue!)"
+        let stringUrl = "\(ConnectionDb.baserequest())upload/download/\(fileSegue!)"
         let fileURL = URL(string: stringUrl)
                 pdfView.document = PDFDocument(url: fileURL!)
             }

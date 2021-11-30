@@ -36,7 +36,7 @@ class ClubViewController: UIViewController {
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
-        AF.request("http://192.168.109.1:3000/event", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())event", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
             print(response)
             print(response.value)
@@ -52,7 +52,7 @@ class ClubViewController: UIViewController {
             "clubName": "\(clubName!)",
             "Accept": "application/json"
         ]
-        AF.request("http://192.168.109.1:3000/club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
@@ -68,7 +68,7 @@ class ClubViewController: UIViewController {
     func setProfileInfos() {
         //clubDesc.text = clubs[0]
         clubNamelbl.text = clubs[0].clubName
-        let strImageUrl = "http://192.168.109.1:3000/upload/download/" + clubs[0].clubLogo
+        let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + clubs[0].clubLogo
         let urlImage = URL(string: strImageUrl)
         let imageData = try? Data(contentsOf: urlImage!)
         imageview.image = UIImage(data: imageData!)
@@ -98,7 +98,7 @@ extension ClubViewController: UITableViewDataSource {
         description.text = events[indexPath.row].description
         //price.text = String(events[indexPath.row].price)
         
-        let strImageUrl = "http://192.168.109.1:3000/upload/download/" + events[indexPath.row].banner
+        let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + events[indexPath.row].banner
         let urlImage = URL(string: strImageUrl)
         let imageData = try? Data(contentsOf: urlImage!)
         image.image = UIImage(data: imageData!)

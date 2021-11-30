@@ -16,4 +16,7 @@ class ConnectionDb {
         var urlc = URL(string: urlTempString)
         return urlc!
     }
+    public static func baserequest() ->String {
+        return "http://192.168.109.1:3000/"
+    }
 }
