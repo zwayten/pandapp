@@ -2311,7 +2311,7 @@
         <!--Navigation Controller-->
         <scene sceneID="pJi-kL-SVF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="32c-9K-PzZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="initialNavigation" automaticallyAdjustsScrollViewInsets="NO" id="32c-9K-PzZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jc7-d6-NdQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -2842,7 +2842,7 @@
         <!--Custom Tab Barvc-->
         <scene sceneID="uyM-F6-oWy">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Kkd-zW-QjF" customClass="CustomTabBarvc" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="customTabBarId" automaticallyAdjustsScrollViewInsets="NO" id="Kkd-zW-QjF" customClass="CustomTabBarvc" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3M3-BH-srk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Szl-22-uko">

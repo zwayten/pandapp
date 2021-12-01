@@ -15,14 +15,14 @@ class ViewController: UIViewController {
         
         
         
-        let email = UserDefaults.standard.string(forKey: "email")
-        let password = UserDefaults.standard.string(forKey: "password")
-        let token = UserDefaults.standard.string(forKey: "token")
-        loginUser1(email: email!, password: password!)
+       // let email = UserDefaults.standard.string(forKey: "email")
+       // let password = UserDefaults.standard.string(forKey: "password")
+       // let token = UserDefaults.standard.string(forKey: "token")
+       // loginUser1(email: email!, password: password!)
 
-        print("email :   ",email)
+            // print("email :   ",email)
        // print("password :   ",password)
-        print("token :   ",token)
+            // print("token :   ",token)
         
     }
     
@@ -35,7 +35,8 @@ class ViewController: UIViewController {
             if statusCode == 200 {
                 let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+                let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
             } else {
                 ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")

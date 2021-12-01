@@ -6,17 +6,104 @@
 //
 
 import UIKit
+import Alamofire
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    
+    
+    func loginUser1(email: String, password: String, completionHandler: @escaping (Bool) -> ()){
+        //var logg: LoginUser
+        let parameters = ["email": email,
+                          "password": password] as [String : Any]
+        AF.request("\(ConnectionDb.baserequest())auth", method: .post, parameters: parameters).responseJSON {  response in
+            let statusCode = response.response?.statusCode
+            var test = false
+            if statusCode == 200 {
+                test = true
+                completionHandler(test)
+                
+            } else {
+                //ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+                test = false
+                completionHandler(test)
+            }
+        }
+    }
+    
+    func loginClub(email: String, password: String, completionHandler: @escaping (Bool) -> ()){
+        //var logg: LoginUser
+        let parameters = ["login": email,
+                          "password": password] as [String : Any]
+        AF.request("\(ConnectionDb.baserequest())authClub", method: .post, parameters: parameters).responseJSON {  response in
+            let statusCode = response.response?.statusCode
+            var test = false
+            if statusCode == 200 {
+                test = true
+                completionHandler(test)
+                
+            } else {
+                //ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+                test = false
+                completionHandler(test)
+            }
+        }
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        print("el init", lastLogged)
+        if lastLogged == "user" {
+            let email = UserDefaults.standard.string(forKey: "email")
+            let password = UserDefaults.standard.string(forKey: "password")
+            //let token = UserDefaults.standard.string(forKey: "token")
+            loginUser1(email: email!, password: password!, completionHandler: { (test) in
+                if test == true {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                    self.window?.rootViewController = vc
+                } else {
+                    ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+                }
+                
+            })
+        } else if lastLogged == "club" {
+            let email = UserDefaults.standard.string(forKey: "login")
+            let password = UserDefaults.standard.string(forKey: "passwordClub")
+            //let token = UserDefaults.standard.string(forKey: "token")
+            loginClub(email: email!, password: password!, completionHandler: { (test) in
+                if test == true {
+                    let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                    self.window?.rootViewController = vc
+                } else {
+                    ReusableFunctionsViewController.displayAlert(title: "Invalid club Credentials", subTitle: "Your club credentials are invalid")
+                }
+                
+            })
+            
+           
+            
+        }  else if lastLogged == nil {
+            let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
+            window?.rootViewController = vc
+        }
+        
+        /*
+         UserDefaults.standard.set(login.login, forKey: "login")
+         UserDefaults.standard.set(login.password, forKey: "passwordClub")
+         UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
+         UserDefaults.standard.set(login.clubName, forKey: "clubName")
+         UserDefaults.standard.set("club", forKey: "lastLoggedIn")
+         */
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -37,7 +37,10 @@ class UserLoginViewController: UIViewController {
     
     @IBAction func toggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 { loginas = "user"
-        } else { loginas = "club" }
+            print("user")
+        } else { loginas = "club"
+            print("clubbbbb")
+        }
     }
     
     @IBAction func passwordShowHideUserLogin(_ sender: Any) {
@@ -127,11 +130,13 @@ class UserLoginViewController: UIViewController {
             UserDefaults.standard.set(login.identifant, forKey: "identifant")
             UserDefaults.standard.set(login.password, forKey: "password")
             UserDefaults.standard.set(login.token, forKey: "token")
+            UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
+            
             //self.performSegue(withIdentifier: "afterLogin", sender: login)
             
         })
         }
-        else {
+        else if loginas == "club" {
             loginClub(loginemail: userEmail.text ?? "123", password: userPassword.text ?? "777", completionHandler: { (login,statusCode) in
                 //let loginn = self.setUserLoginInstance(user: login)
                 //print("test : ", loginn.email)
@@ -143,6 +148,7 @@ class UserLoginViewController: UIViewController {
                 UserDefaults.standard.set(login.password, forKey: "passwordClub")
                 UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
                 UserDefaults.standard.set(login.clubName, forKey: "clubName")
+                UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
                 //self.performSegue(withIdentifier: "afterLogin", sender: login)
                 
             })
