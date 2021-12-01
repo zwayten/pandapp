@@ -7,20 +7,22 @@
 
 import Foundation
 
-class Document {
+class Document: Codable {
 
     var documentType: String
     var claimedId: String
-    var createdAT: Date
+    var createdAT: String
     var numcopies: Int
     var docLanguage: String
+    var _id: String
     
-    init(documentType: String, claimedId: String, createdAT: Date, numcopies: Int, docLanguage: String) {
+    init(documentType: String, claimedId: String, createdAT: String, numcopies: Int, docLanguage: String, _id: String) {
         self.documentType = documentType
         self.claimedId = claimedId
         self.createdAT = createdAT
         self.numcopies = numcopies
         self.docLanguage = docLanguage
+        self._id = _id
     }
     
 }

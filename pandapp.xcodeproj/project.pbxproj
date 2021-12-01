@@ -51,6 +51,8 @@
 		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
 		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
 		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
+		82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36D2756E0400017503E /* AddDocumentViewController.swift */; };
+		82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36F2756F3E90017503E /* DocumentViewController.swift */; };
 		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
 		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
@@ -107,6 +109,8 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		82B7B36D2756E0400017503E /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
+		82B7B36F2756F3E90017503E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
 		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
@@ -224,7 +228,6 @@
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
 				823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */,
 				82BA60A4275644B400037525 /* ResetTwoViewController.swift */,
-				82628EDF2730C4BD00719A51 /* Main.storyboard */,
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
 				823E5FAC27362B60003F3FA4 /* ClubViewController.swift */,
 				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
@@ -235,6 +238,9 @@
 				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
 				8288D49A275408760088CAA9 /* DetailModuleViewController.swift */,
 				82594ADB2754227D0062575F /* PdfViewController.swift */,
+				82628EDF2730C4BD00719A51 /* Main.storyboard */,
+				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
+				82B7B36F2756F3E90017503E /* DocumentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
+				82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */,
 				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
 				82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */,
 				82A922622743306D008D3A8C /* User.swift in Sources */,
@@ -400,6 +407,7 @@
 				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
+				82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */,
 				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
 				82A0F483275180500009F372 /* UploadImageService.swift in Sources */,
 				8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */,

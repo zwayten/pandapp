@@ -124,6 +124,7 @@ class UserLoginViewController: UIViewController {
             
                 
             UserDefaults.standard.set(login.email, forKey: "email")
+            UserDefaults.standard.set(login.identifant, forKey: "identifant")
             UserDefaults.standard.set(login.password, forKey: "password")
             UserDefaults.standard.set(login.token, forKey: "token")
             //self.performSegue(withIdentifier: "afterLogin", sender: login)
@@ -146,9 +147,6 @@ class UserLoginViewController: UIViewController {
                 
             })
         }
-       
-        
     }
-    
-   
+
 }
