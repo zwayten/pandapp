@@ -105,7 +105,7 @@ class UserLoginViewController: UIViewController {
                 let login: LoginClub = try! JSONDecoder().decode(LoginClub.self, from: response.data!)
                 completionHandler(login,statusCode )
             } else {
-                print("ollllllllllllaaaaaaaaaaaa")
+                ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
             }
         }
 }
@@ -128,6 +128,11 @@ class UserLoginViewController: UIViewController {
             UserDefaults.standard.set(login.password, forKey: "password")
             UserDefaults.standard.set(login.token, forKey: "token")
             UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
 
             
         })
@@ -141,6 +146,10 @@ class UserLoginViewController: UIViewController {
                 UserDefaults.standard.set(login.clubName, forKey: "clubName")
                 UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
                 
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
             })
         }
     }

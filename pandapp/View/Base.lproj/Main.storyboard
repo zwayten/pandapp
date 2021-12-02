@@ -58,84 +58,6 @@
                                 <color key="textColor" red="0.50344729420000001" green="0.1374645531" blue="0.1156672165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.50344729420000001" green="0.1374645531" blue="0.1156672165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAx-G8-lMr">
-                                <rect key="frame" x="111" y="762" width="61" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="home"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-e4-TIt">
-                                <rect key="frame" x="115" y="790" width="52" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="map"/>
-                                <connections>
-                                    <segue destination="xq8-LK-LVG" kind="show" id="JYh-hj-ecJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00b-Yi-FZP">
-                                <rect key="frame" x="21" y="790" width="81" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="add post"/>
-                                <connections>
-                                    <segue destination="gGK-8s-oCY" kind="show" id="j5l-Qm-JkO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLR-E2-9JQ">
-                                <rect key="frame" x="16" y="763" width="93" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="clubProfile"/>
-                                <connections>
-                                    <segue destination="Kkd-zW-QjF" kind="show" id="FmT-Sh-oCY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-MH-k1c">
-                                <rect key="frame" x="175" y="789" width="131" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="add dOCUMENT"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-F6-ooV">
-                                <rect key="frame" x="176" y="762" width="123" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="VIEWdocument"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCw-Ad-tG8">
-                                <rect key="frame" x="301" y="788" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="userProfile"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pb-iv-y4l">
-                                <rect key="frame" x="312" y="749" width="73" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="lostadd"/>
-                                <connections>
-                                    <segue destination="6oI-2d-Sh0" kind="show" id="Hut-uo-na3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-CU-KfL">
-                                <rect key="frame" x="12" y="599" width="114" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="viewElearning"/>
-                                <connections>
-                                    <segue destination="DrV-8I-WsL" kind="show" id="SNY-li-teL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv4-F6-UXv">
-                                <rect key="frame" x="167" y="599" width="165" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="UserProgile"/>
-                                <connections>
-                                    <segue destination="1mt-fm-ccW" kind="show" id="GyV-ag-tIR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,7 +71,7 @@
         <!--Userprofile View Controller-->
         <scene sceneID="fcn-c8-oYt">
             <objects>
-                <viewController id="1mt-fm-ccW" customClass="UserprofileViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="userProfileId" id="1mt-fm-ccW" customClass="UserprofileViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHL-U7-mQe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -354,6 +276,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                     <color key="baseForegroundColor" red="0.1647058824" green="0.18464022869999999" blue="0.20398190620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutUser:" destination="1mt-fm-ccW" eventType="touchUpInside" id="YAD-1G-w9n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1si-Yn-mdz"/>
@@ -390,7 +315,7 @@
         <!--Club View Controller-->
         <scene sceneID="BIY-bw-JI2">
             <objects>
-                <viewController id="szi-L6-4yf" customClass="ClubViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="clubProfileId" id="szi-L6-4yf" customClass="ClubViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HlC-a0-VZm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -547,7 +472,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" red="0.1647058824" green="0.18464022869999999" blue="0.20398190620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="zQb-aU-XSo"/>
+                    <tabBarItem key="tabBarItem" title="" id="zQb-aU-XSo"/>
                     <navigationItem key="navigationItem" id="6kL-zj-DQF"/>
                     <connections>
                         <outlet property="clubDesc" destination="gW7-W5-mJT" id="pBm-q3-xob"/>
@@ -563,7 +488,7 @@
         <!--Learning View Controller-->
         <scene sceneID="GB5-VD-X2E">
             <objects>
-                <viewController id="sdt-Ss-tqs" customClass="ELearningViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="elearningId" id="sdt-Ss-tqs" customClass="ELearningViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGQ-fb-5Ti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -861,14 +786,14 @@
                         <viewLayoutGuide key="safeArea" id="ff9-7m-bhJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="1Xf-tV-6uf"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="books.vertical" catalog="system" id="1Xf-tV-6uf"/>
                     <connections>
                         <outlet property="modulePicker" destination="VUh-Sv-IvW" id="I2k-MS-rxs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fID-9D-qAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257.9710144927537" y="1466.5178571428571"/>
+            <point key="canvasLocation" x="1210" y="1428"/>
         </scene>
         <!--Module Elearning View Controller-->
         <scene sceneID="Y12-b6-nbP">
@@ -939,7 +864,7 @@
             <objects>
                 <viewController id="flU-k0-xWO" customClass="DetailModuleViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ny2-Nv-exL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Module" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4j-Gz-Rfd">
@@ -1003,7 +928,7 @@
             <objects>
                 <viewController id="G72-NA-IuO" customClass="PdfViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1Q-EZ-REw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DKv-6U-3f3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1613,7 +1538,7 @@
             <objects>
                 <viewController id="q5j-cV-l8j" customClass="AddElearningViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drz-ef-Kf7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload course" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-fz-82V">
@@ -2488,7 +2413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2K-1Y-Q5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="515.94202898550725" y="1466.5178571428571"/>
+            <point key="canvasLocation" x="528" y="1409"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wFe-Mt-w5b">
@@ -2524,7 +2449,7 @@
             <objects>
                 <viewController id="aGC-F5-bSh" customClass="AddDocumentViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqa-Eu-bXT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vox-Xg-eev">
@@ -2678,10 +2603,10 @@
             </objects>
             <point key="canvasLocation" x="-1810.144927536232" y="1466.5178571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="9mK-fr-EPG">
             <objects>
-                <viewController id="WEw-ih-87Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatId" id="WEw-ih-87Q" customClass="ChatViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bet-r1-XQc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2725,10 +2650,11 @@
                         <viewLayoutGuide key="safeArea" id="oTq-qH-crf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3Hb-ua-PmK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCz-5X-MBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1049.2753623188407" y="2148.8839285714284"/>
+            <point key="canvasLocation" x="1333" y="2133"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y8z-QL-FMN">
@@ -2858,11 +2784,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.97639578579999997" green="0.97651261089999997" blue="0.97635620830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="T16-QU-xYG" kind="relationship" relationship="viewControllers" id="RPL-zm-Wc0"/>
-                        <segue destination="sdt-Ss-tqs" kind="relationship" relationship="viewControllers" id="m9K-IJ-qi4"/>
-                        <segue destination="szi-L6-4yf" kind="relationship" relationship="viewControllers" id="mpL-iI-Aht"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40c-cp-D9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2879,6 +2800,7 @@
         <image name="3l429i" width="500" height="543"/>
         <image name="G-Logomini" width="23" height="23"/>
         <image name="Wallpaper" width="3840" height="2160"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="business" width="1600" height="1067"/>
         <image name="calendar.badge.clock.rtl" catalog="system" width="128" height="108"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>

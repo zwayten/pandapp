@@ -55,6 +55,7 @@
 		82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36F2756F3E90017503E /* DocumentViewController.swift */; };
 		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
+		82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0EC23275878D900B58DE0 /* ChatViewController.swift */; };
 		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
 		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
 		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
@@ -113,6 +114,7 @@
 		82B7B36F2756F3E90017503E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
+		82E0EC23275878D900B58DE0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
 		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
 		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
@@ -219,28 +221,29 @@
 			isa = PBXGroup;
 			children = (
 				82628EDF2730C4BD00719A51 /* Main.storyboard */,
+				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
+				82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */,
+				82ECAC1B27530B4100D2894F /* TabBarVC.swift */,
 				82628EDD2730C4BD00719A51 /* ViewController.swift */,
 				823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */,
 				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
 				82A47D6F274C907C002B6F64 /* Register2ViewController.swift */,
-				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
-				82ECAC0D275276C900D2894F /* AddElearningViewController.swift */,
-				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
 				823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */,
 				82BA60A4275644B400037525 /* ResetTwoViewController.swift */,
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
 				823E5FAC27362B60003F3FA4 /* ClubViewController.swift */,
-				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
-				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
-				82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */,
-				82ECAC1B27530B4100D2894F /* TabBarVC.swift */,
-				8288D496275397F70088CAA9 /* AddLostPostViewController.swift */,
-				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
+				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
+				82ECAC0D275276C900D2894F /* AddElearningViewController.swift */,
 				8288D49A275408760088CAA9 /* DetailModuleViewController.swift */,
+				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
+				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
 				82594ADB2754227D0062575F /* PdfViewController.swift */,
-				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
 				82B7B36F2756F3E90017503E /* DocumentViewController.swift */,
+				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
+				8288D496275397F70088CAA9 /* AddLostPostViewController.swift */,
+				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
+				82E0EC23275878D900B58DE0 /* ChatViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
 				82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */,
+				82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */,
 				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
 				82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */,
 				82A922622743306D008D3A8C /* User.swift in Sources */,

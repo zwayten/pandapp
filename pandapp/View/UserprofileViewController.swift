@@ -39,7 +39,7 @@ class UserprofileViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())user", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
             self?.users = response.value ?? []
-            self?.userName.text = "\(self?.users[0].LastName) \(self?.users[0].FirstName)"
+            self?.userName.text = "\((self?.users[0].LastName)!) \((self?.users[0].FirstName)!)"
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.users[0].profilePicture)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
@@ -48,6 +48,27 @@ class UserprofileViewController: UIViewController {
             print(response.value)
             
         }
+    }
+    @IBAction func logoutUser(_ sender: UIButton) {
+        let menu = UIMenu(title: "", children: [
+            UIAction(title: "Edit your profile", image: UIImage(systemName: "pencil.and.ellipsis.rectangle"), handler: { (_) in
+
+            }),
+            UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), handler: { (_) in
+                UserDefaults.standard.set("", forKey: "userName")
+                UserDefaults.standard.set("", forKey: "email")
+                UserDefaults.standard.set("", forKey: "identifant")
+                UserDefaults.standard.set("", forKey: "password")
+                UserDefaults.standard.set("", forKey: "token")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+            })
+        ])
+
+        sender.menu = menu
+        sender.showsMenuAsPrimaryAction = true
     }
     
     override func viewDidLoad() {
