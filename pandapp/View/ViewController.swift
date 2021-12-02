@@ -12,9 +12,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
        // let email = UserDefaults.standard.string(forKey: "email")
        // let password = UserDefaults.standard.string(forKey: "password")
        // let token = UserDefaults.standard.string(forKey: "token")

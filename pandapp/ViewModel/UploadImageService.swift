@@ -13,7 +13,7 @@ class UploadImageService{
     
     var imageJsonReturnAf = ""
     
-    public func uploadImageToServer(imageOrVideo : UIImage?, user: User) ->String {
+    public func uploadImageToServer(imageOrVideo : UIImage?, user: User, bio: UITextView?){
         //let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
             //"Authorisation": "bearer \(token!)",
@@ -32,15 +32,14 @@ class UploadImageService{
                 self.imageJsonReturnAf = imm.img
                 user.setProfilepicture(profilePicture: imm.img)
                 print(imm.img)
+                user.setDescription(description: bio!.text)
                 umodel.registerUser(user: user)
                 
             }
-        print(imageJsonReturnAf)
-        return imageJsonReturnAf
         
     }
     
-    public func uploadImageToServerClub(imageOrVideo : UIImage?, club: Clubs) ->String {
+    public func uploadImageToServerClub(imageOrVideo : UIImage?, club: Clubs, bio: UITextView?){
         //let token = UserDefaults.standard.string(forKey: "token")
         let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
@@ -59,16 +58,16 @@ class UploadImageService{
                 //print(imm.img)
                 self.imageJsonReturnAf = imm.img
                 club.set(clubLogo: imm.img)
+                club.set(description: bio!.text)
                 print(imm.img)
                 cmodel.registerClub(club: club)
                 
             }
-        print(imageJsonReturnAf)
-        return imageJsonReturnAf
+
         
     }
     
-    public func uploadImageToServer(imageOrVideo : UIImage?, eventPost: EventPost) ->String {
+    public func uploadImageToServer(imageOrVideo : UIImage?, eventPost: EventPost) {
         let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
             "Authorisation": "bearer \(token!)",
@@ -90,12 +89,10 @@ class UploadImageService{
                 postmodel.addEventPost(eventPost: eventPost)
                 
             }
-        print(imageJsonReturnAf)
-        return imageJsonReturnAf
         
     }
     
-    public func uploadImageToServerLostPost(imageOrVideo : UIImage?, lostPost: LostPost) ->String {
+    public func uploadImageToServerLostPost(imageOrVideo : UIImage?, lostPost: LostPost){
         let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
             "Authorisation": "bearer \(token!)",
@@ -117,12 +114,10 @@ class UploadImageService{
                 lostPostmodel.addLostPost(lostPost: lostPost)
                 
             }
-        print(imageJsonReturnAf)
-        return imageJsonReturnAf
         
     }
     
-    public func uploadFileToServer(pdf : Data?, elearning: Elearning) ->String {
+    public func uploadFileToServer(pdf : Data?, elearning: Elearning) {
         let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
             "Authorisation": "bearer \(token!)",
@@ -143,8 +138,6 @@ class UploadImageService{
                 postmodel.addCoursePost(eLearning: elearning)
                 
             }
-        print(imageJsonReturnAf)
-        return imageJsonReturnAf
         
     }
 }

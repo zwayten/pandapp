@@ -36,7 +36,7 @@ class ClubsViewModel {
     }
     
     public func registerClub(club: Clubs) {
-        let parameters = ["clubName": club.clubName, "clubOwner": club.clubOwner, "password": club.password, "login": club.login, "verified": club.verified, "clubLogo": club.clubLogo] as [String : Any]
+        let parameters = ["clubName": club.clubName, "clubOwner": club.clubOwner, "password": club.password, "login": club.login, "verified": club.verified, "clubLogo": club.clubLogo, "description": club.description] as [String : Any]
         
         let  url = ConnectionDb.createConnection(urlStringModule: "club")
         var request = URLRequest(url: url)

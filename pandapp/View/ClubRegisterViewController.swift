@@ -43,7 +43,7 @@ class ClubRegisterViewController: UIViewController {
         let login = clubRegisteremail.text!
         let owner = Int(clubRegisterOwner.text!)
         
-        let club = Clubs(clubName: clubname, clubOwner: owner!, clubLogo: "logo.png", verified: false, password: password, login: login)
+        let club = Clubs(clubName: clubname, clubOwner: owner!, clubLogo: "logo.png", verified: false, password: password, login: login, description: "")
         return club
     }
     

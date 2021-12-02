@@ -7,7 +7,9 @@
 
 import Foundation
 
-class User {
+class User: Codable{
+    
+    
 
     var email: String
     var password: String
@@ -20,10 +22,11 @@ class User {
     var identifant :String
     var role :String
     var className: String
+    var description: String
     
     
     //constructor
-    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, role: String, social: Bool) {
+    init(email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, role: String, social: Bool, description: String) {
         self.email = email
         self.password = password
         self.phoneNumber = phoneNumber
@@ -35,6 +38,8 @@ class User {
         self.className = className
         self.role = role
         self.social = social
+        self.description = description
+
     }
     
     //setters
@@ -70,6 +75,9 @@ class User {
     }
     func setClassName(className: String){
         self.className = className
+    }
+    func setDescription(description: String){
+        self.description = description
     }
     
     // getters

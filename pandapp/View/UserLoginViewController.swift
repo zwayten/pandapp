@@ -113,43 +113,33 @@ class UserLoginViewController: UIViewController {
     
     
     func setUserLoginInstance(user : LoginUser) -> LoginUser {
-        let log = LoginUser(token: user.token, email: user.email, password: user.password, phoneNumber: user.phoneNumber, profilePicture: user.profilePicture, FirstName: user.FirstName, LastName: user.LastName, verified: user.verified, identifant: user.identifant, className: user.className, role: user.role, social: user.social)
+        let log = LoginUser(token: user.token, email: user.email, password: user.password, phoneNumber: user.phoneNumber, profilePicture: user.profilePicture, FirstName: user.FirstName, LastName: user.LastName, verified: user.verified, identifant: user.identifant, className: user.className, role: user.role, social: user.social, description: user.description)
         return log
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
         if loginas == "user" {
         loginUser1(email: userEmail.text ?? "123", password: userPassword.text ?? "777", completionHandler: { (login,statusCode) in
-            //let loginn = self.setUserLoginInstance(user: login)
-            //print("test : ", loginn.email)
-            print("mel handler ya jon",login.token)
-            print("################")
-            
-                
+
+            let completeName = "\(login.FirstName) \(login.LastName)"
+            UserDefaults.standard.set(completeName, forKey: "userName")
             UserDefaults.standard.set(login.email, forKey: "email")
             UserDefaults.standard.set(login.identifant, forKey: "identifant")
             UserDefaults.standard.set(login.password, forKey: "password")
             UserDefaults.standard.set(login.token, forKey: "token")
             UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
-            
-            //self.performSegue(withIdentifier: "afterLogin", sender: login)
+
             
         })
         }
         else if loginas == "club" {
             loginClub(loginemail: userEmail.text ?? "123", password: userPassword.text ?? "777", completionHandler: { (login,statusCode) in
-                //let loginn = self.setUserLoginInstance(user: login)
-                //print("test : ", loginn.email)
-                print("mel handler ya jon",login.tokenClub)
-                print("################")
                 
-                    
                 UserDefaults.standard.set(login.login, forKey: "login")
                 UserDefaults.standard.set(login.password, forKey: "passwordClub")
                 UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
                 UserDefaults.standard.set(login.clubName, forKey: "clubName")
                 UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
-                //self.performSegue(withIdentifier: "afterLogin", sender: login)
                 
             })
         }

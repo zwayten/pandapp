@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="582.60869565217399" y="-160.04464285714286"/>
         </scene>
-        <!--User Profile View Controller-->
+        <!--Userprofile View Controller-->
         <scene sceneID="fcn-c8-oYt">
             <objects>
-                <viewController id="1mt-fm-ccW" customClass="UserProfileViewController" sceneMemberID="viewController">
+                <viewController id="1mt-fm-ccW" customClass="UserprofileViewController" customModule="pandapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHL-U7-mQe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +223,7 @@
                                 <rect key="frame" x="214" y="708" width="172" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Complaint">
+                                <buttonConfiguration key="configuration" style="plain" title="Courses Uploaded">
                                     <backgroundConfiguration key="background" cornerRadius="18">
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </backgroundConfiguration>
@@ -360,6 +360,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="9OA-zf-Qsd"/>
+                    <connections>
+                        <outlet property="userBio" destination="r3E-wf-Bzx" id="YBh-Gv-pjf"/>
+                        <outlet property="userImage" destination="G7H-kP-Nh6" id="r7v-6Y-NaC"/>
+                        <outlet property="userName" destination="Zm5-68-T2p" id="Thw-7g-pkm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfV-U4-zE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -533,6 +538,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutClub:" destination="szi-L6-4yf" eventType="touchUpInside" id="AjM-8n-py3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7bI-di-FzG"/>
@@ -1004,7 +1012,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMQ-Fj-an5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3842" y="1409"/>
+            <point key="canvasLocation" x="3800" y="1467"/>
         </scene>
         <!--Add Lost Post View Controller-->
         <scene sceneID="JpI-wA-pj0">
@@ -1947,8 +1955,8 @@
                                 <color key="textColor" red="0.1720349491" green="0.19248178599999999" blue="0.2118244171" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@esprit.tn" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-Uo-maP">
-                                <rect key="frame" x="39" y="246" width="338" height="37.333333333333336"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yassine.zitoun@esprit.tn" borderStyle="roundedRect" placeholder="example@esprit.tn" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-Uo-maP">
+                                <rect key="frame" x="39" y="246" width="338" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>

@@ -20,15 +20,17 @@ class ClubViewController: UIViewController {
     @IBOutlet var clubNamelbl: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         fetchUsersAf()
         tableView.reloadData()
         fetchClubProfile()
         //setProfileInfos()
         
-
+        ReusableFunctionsViewController.roundPicture(image: imageview)
         // Do any additional setup after loading the view.
     }
+    
     
     func fetchUsersAf() {
         let token = UserDefaults.standard.string(forKey: "token")
@@ -55,6 +57,7 @@ class ClubViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
+            self?.clubDesc.text = self?.clubs[0].description
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
@@ -73,6 +76,36 @@ class ClubViewController: UIViewController {
         let imageData = try? Data(contentsOf: urlImage!)
         imageview.image = UIImage(data: imageData!)
     }
+    
+    //logout
+    @IBAction func logoutClub(_ sender: UIButton) {
+        //let destructiveAction =  UIAction(title: "desss", attributes: .destructive) { (_) in print("eeeeee destructive")}
+        
+       
+        // pencil.and.ellipsis.rectangle
+        //rectangle.portrait.and.arrow.right
+        //popup menu
+        let menu = UIMenu(title: "", children: [
+            UIAction(title: "Edit club Profile", image: UIImage(systemName: "pencil.and.ellipsis.rectangle"), handler: { (_) in
+
+            }),
+            UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), handler: { (_) in
+                UserDefaults.standard.set("", forKey: "login")
+                UserDefaults.standard.set("", forKey: "passwordClub")
+                UserDefaults.standard.set("", forKey: "tokenClub")
+                UserDefaults.standard.set("", forKey: "clubName")
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+            })
+        ])
+
+        sender.menu = menu
+        sender.showsMenuAsPrimaryAction = true
+    }
+    
+    
 
 }
 extension ClubViewController: UITableViewDataSource {

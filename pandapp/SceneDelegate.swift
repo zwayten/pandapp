@@ -60,10 +60,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
-        print("el init", lastLogged)
-        if lastLogged == "user" {
-            let email = UserDefaults.standard.string(forKey: "email")
-            let password = UserDefaults.standard.string(forKey: "password")
+        
+        let email = UserDefaults.standard.string(forKey: "email")
+        let password = UserDefaults.standard.string(forKey: "password")
+        
+        let emailClub = UserDefaults.standard.string(forKey: "login")
+        let passwordClub = UserDefaults.standard.string(forKey: "passwordClub")
+        
+        if lastLogged == "user" && (email! == "" || password! == "" ) {
+           print("mloggi ka user")
             //let token = UserDefaults.standard.string(forKey: "token")
             loginUser1(email: email!, password: password!, completionHandler: { (test) in
                 if test == true {
@@ -74,11 +79,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 }
                 
             })
-        } else if lastLogged == "club" {
-            let email = UserDefaults.standard.string(forKey: "login")
-            let password = UserDefaults.standard.string(forKey: "passwordClub")
+        } else if lastLogged == "club" && (emailClub != "" || passwordClub != "" ) {
+            print("mloggi ka club")
             //let token = UserDefaults.standard.string(forKey: "token")
-            loginClub(email: email!, password: password!, completionHandler: { (test) in
+            loginClub(email: emailClub!, password: passwordClub!, completionHandler: { (test) in
                 if test == true {
                     let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
                     self.window?.rootViewController = vc
@@ -90,7 +94,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
            
             
-        }  else if lastLogged == nil {
+        }  else if lastLogged! == "" && (email! == "" || password! == "" || emailClub! == "" || passwordClub! == "") {
+            print("makech mloggi jemla")
             let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
             window?.rootViewController = vc
         }

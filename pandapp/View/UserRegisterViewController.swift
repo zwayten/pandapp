@@ -85,7 +85,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         let class2 = classFieldTwo.text!
         let class3 = classFieldThree.text!
         let className = "\(class1)\(class2)\(class3)"
-        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: "534343543.png", FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: className, role: "user", social: false)
+        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: "534343543.png", FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: className, role: "user", social: false, description: "")
         
         return user
        

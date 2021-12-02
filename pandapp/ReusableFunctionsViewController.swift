@@ -78,4 +78,12 @@ class ReusableFunctionsViewController: UIViewController {
         guard let pandaLogo = UIImage(named: "alertPanda") else { return  }
         SCLAlertView().showCustom(title, subTitle: subTitle, color: color2, icon: pandaLogo)
     }
+    
+    static func roundPicture(image: UIImageView){
+        image.layer.borderWidth = 0
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = image.frame.height/2
+        image.clipsToBounds = true
+        
+    }
 }

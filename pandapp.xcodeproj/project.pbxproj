@@ -218,6 +218,7 @@
 		82A9225E27432E5F008D3A8C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82628EDF2730C4BD00719A51 /* Main.storyboard */,
 				82628EDD2730C4BD00719A51 /* ViewController.swift */,
 				823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */,
 				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
@@ -238,7 +239,6 @@
 				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
 				8288D49A275408760088CAA9 /* DetailModuleViewController.swift */,
 				82594ADB2754227D0062575F /* PdfViewController.swift */,
-				82628EDF2730C4BD00719A51 /* Main.storyboard */,
 				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
 				82B7B36F2756F3E90017503E /* DocumentViewController.swift */,
 			);

@@ -39,7 +39,7 @@ class UserViewModel {
     }
     
     public func registerUser(user: User) {
-        let parameters = ["identifant": user.identifant, "email": user.email, "password": user.password, "phoneNumber": user.phoneNumber, "FirstName": user.FirstName, "LastName": user.LastName, "social": user.social, "role": user.role, "verified": user.verified, "className": user.className, "profilePicture": user.profilePicture] as [String : Any]
+        let parameters = ["identifant": user.identifant, "email": user.email, "password": user.password, "phoneNumber": user.phoneNumber, "FirstName": user.FirstName, "LastName": user.LastName, "social": user.social, "role": user.role, "verified": user.verified, "className": user.className, "profilePicture": user.profilePicture, "description": user.description] as [String : Any]
         
         let  url = ConnectionDb.createConnection(urlStringModule: "user")
         var request = URLRequest(url: url)

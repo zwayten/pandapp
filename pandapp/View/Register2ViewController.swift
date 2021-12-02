@@ -67,7 +67,7 @@ class Register2ViewController: UIViewController {
                 else { segueClass!.phoneNumber = 123 }
             }
             else { print("empty field") }
-             uploadService.uploadImageToServer(imageOrVideo: selectedImages, user: segueClass!)
+             uploadService.uploadImageToServer(imageOrVideo: selectedImages, user: segueClass!, bio: bio)
             print("debuggggggg")
             print(segueClass!.profilePicture)
             print("debuggggggg")
@@ -79,7 +79,8 @@ class Register2ViewController: UIViewController {
         }
         if clubCheck! == true && userCheck! == false {
             
-            uploadService.uploadImageToServerClub(imageOrVideo: selectedImages, club: segueClassClub!)
+            uploadService.uploadImageToServerClub(imageOrVideo: selectedImages, club: segueClassClub!, bio: bio)
+            
         }
         
         
