@@ -41,6 +41,7 @@ class UserprofileViewController: UIViewController {
             self?.users = response.value ?? []
             print(self?.users.count)
             self?.userName.text = "\((self?.users[0].LastName)!) \((self?.users[0].FirstName)!)"
+            self?.userBio.text = (self?.users[0].description)!
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.users[0].profilePicture)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)

@@ -122,11 +122,11 @@ class UpdateUserViewController: UIViewController {
         let resetconfirm = resetnewpass.text
         if resetpassword != "" && resetpassword == resetconfirm {
         let parameters = [//"email": email!,
-                          "FirstName": firstname,
-                          "LastName": lastname,
-                          "password": resetpassword,
+                          "FirstName": firstname!,
+                          "LastName": lastname!,
+                          "password": resetpassword!,
                           //"identifant": id,
-                          "className": classe,
+                          "className": classe!,
                           "profilePicture": profilepic,
                           "description": bio!
                         ] as [String : Any]
@@ -135,11 +135,11 @@ class UpdateUserViewController: UIViewController {
         }
         } else if resetpassword == "" {
             let parameters = [//"email": email!,
-                                "FirstName": firstname,
-                                "LastName": lastname,
+                                "FirstName": firstname!,
+                                "LastName": lastname!,
                                 //"password": resetpassword,
                                 //"identifant": id,
-                                "className": classe,
+                                "className": classe!,
                                 "profilePicture": profilepic,
                                 "description": bio!
                               ] as [String : Any]
@@ -171,7 +171,7 @@ class UpdateUserViewController: UIViewController {
         let parameters = [//"email": email!,
                           "FirstName": firstname!,
                           "LastName": lastname!,
-                          "password": resetpassword,
+                          "password": resetpassword!,
                           //"identifant": id,
                           "className": classe!,
                           //"profilePicture": profilepic,

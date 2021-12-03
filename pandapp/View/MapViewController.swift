@@ -7,14 +7,15 @@
 
 import UIKit
 import MapKit
+//import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView = MKMapView()
-                mapView?.delegate = self
+        //mapView = MKMapView()
+                //mapView?.delegate = self
 
         // Do any additional setup after loading the view.
     }
