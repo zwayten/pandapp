@@ -141,6 +141,7 @@ class UserLoginViewController: UIViewController {
             loginClub(loginemail: userEmail.text ?? "123", password: userPassword.text ?? "777", completionHandler: { (login,statusCode) in
                 
                 UserDefaults.standard.set(login.login, forKey: "login")
+                //UserDefaults.standard.set(login._id, forKey: "clubId")
                 UserDefaults.standard.set(login.password, forKey: "passwordClub")
                 UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
                 UserDefaults.standard.set(login.clubName, forKey: "clubName")

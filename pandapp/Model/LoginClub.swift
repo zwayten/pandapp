@@ -17,8 +17,9 @@ class LoginClub: Codable {
     var verified: Bool
     var password: String
     var login: String
+    //var _id: String
     
-        init(tokenClub: String, clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String) {
+    init(tokenClub: String, clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String, _id: String) {
             self.tokenClub = tokenClub
             self.clubName = clubName
             self.clubOwner = clubOwner
@@ -26,5 +27,6 @@ class LoginClub: Codable {
             self.verified = verified
             self.password = password
             self.login = login
+            //self._id = _id
     }
 }

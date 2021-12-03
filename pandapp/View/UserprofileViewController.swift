@@ -39,6 +39,7 @@ class UserprofileViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())user", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
             self?.users = response.value ?? []
+            print(self?.users.count)
             self?.userName.text = "\((self?.users[0].LastName)!) \((self?.users[0].FirstName)!)"
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.users[0].profilePicture)!
             let urlImage = URL(string: strImageUrl)
@@ -52,7 +53,11 @@ class UserprofileViewController: UIViewController {
     @IBAction func logoutUser(_ sender: UIButton) {
         let menu = UIMenu(title: "", children: [
             UIAction(title: "Edit your profile", image: UIImage(systemName: "pencil.and.ellipsis.rectangle"), handler: { (_) in
-
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let updateprofile = storyboard.instantiateViewController(withIdentifier: "userUpdateProfileId")
+                //vc.modalPresentationStyle = .fullScreen
+                self.present(updateprofile, animated: true)
             }),
             UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), handler: { (_) in
                 UserDefaults.standard.set("", forKey: "userName")

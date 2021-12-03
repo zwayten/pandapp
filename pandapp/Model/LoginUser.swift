@@ -21,7 +21,7 @@ class LoginUser: Codable {
     var role :String
     var className: String
     var description: String
-    
+
     //constructor
     init(token: String, email: String, password: String, phoneNumber: Int, profilePicture: String, FirstName: String, LastName: String, verified: Bool, identifant: String, className: String, role: String, social: Bool, description: String) {
         self.token = token
@@ -37,6 +37,7 @@ class LoginUser: Codable {
         self.role = role
         self.social = social
         self.description = description
+
     }
     func set(email:String) {
         self.email = email

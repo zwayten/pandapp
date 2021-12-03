@@ -16,8 +16,9 @@ class Clubs: Codable{
     var password: String
     var login: String
     var description: String
+    var _id: String
     
-    init(clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String, description: String) {
+    init(clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String, description: String, _id: String) {
         self.clubName = clubName
         self.clubOwner = clubOwner
         self.clubLogo = clubLogo
@@ -25,6 +26,7 @@ class Clubs: Codable{
         self.password = password
         self.login = login
         self.description = description
+        self._id = _id
     }
     
     func set(clubLogo: String) {

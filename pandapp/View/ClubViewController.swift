@@ -87,7 +87,10 @@ class ClubViewController: UIViewController {
         //popup menu
         let menu = UIMenu(title: "", children: [
             UIAction(title: "Edit your profile", image: UIImage(systemName: "pencil.and.ellipsis.rectangle"), handler: { (_) in
-
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let updateprofile = storyboard.instantiateViewController(withIdentifier: "clubUpdateId")
+                //vc.modalPresentationStyle = .fullScreen
+                self.present(updateprofile, animated: true)
             }),
             UIAction(title: "Logout", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), handler: { (_) in
                 UserDefaults.standard.set("", forKey: "login")

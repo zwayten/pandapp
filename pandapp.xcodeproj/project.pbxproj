@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52D7735212D28ABCDA8D986F /* Pods_pandapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE227153A47BBA1857149A68 /* Pods_pandapp.framework */; };
+		8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */; };
 		823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */; };
 		823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */; };
 		823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */; };
@@ -32,6 +33,7 @@
 		8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D496275397F70088CAA9 /* AddLostPostViewController.swift */; };
 		8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */; };
 		8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D49A275408760088CAA9 /* DetailModuleViewController.swift */; };
+		829EE46B275946FB003963E2 /* UpdateClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */; };
 		82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F4802751800C0009F372 /* UploadImageStruct.swift */; };
 		82A0F483275180500009F372 /* UploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F482275180500009F372 /* UploadImageService.swift */; };
 		82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A47D6F274C907C002B6F64 /* Register2ViewController.swift */; };
@@ -65,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		35E377F7BA1D40B843BECFC3 /* Pods-pandapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.debug.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.debug.xcconfig"; sourceTree = "<group>"; };
+		8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
 		823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunctionsViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		8288D496275397F70088CAA9 /* AddLostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLostPostViewController.swift; sourceTree = "<group>"; };
 		8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleElearningViewController.swift; sourceTree = "<group>"; };
 		8288D49A275408760088CAA9 /* DetailModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleViewController.swift; sourceTree = "<group>"; };
+		829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClubProfileViewController.swift; sourceTree = "<group>"; };
 		82A0F4802751800C0009F372 /* UploadImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageStruct.swift; sourceTree = "<group>"; };
 		82A0F482275180500009F372 /* UploadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageService.swift; sourceTree = "<group>"; };
 		82A47D6F274C907C002B6F64 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 				8288D496275397F70088CAA9 /* AddLostPostViewController.swift */,
 				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
 				82E0EC23275878D900B58DE0 /* ChatViewController.swift */,
+				829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */,
+				8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			files = (
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
+				8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
 				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
 				8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */,
@@ -408,6 +415,7 @@
 				823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */,
 				82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */,
 				82A9226427433140008D3A8C /* Document.swift in Sources */,
+				829EE46B275946FB003963E2 /* UpdateClubProfileViewController.swift in Sources */,
 				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,

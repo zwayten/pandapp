@@ -59,13 +59,13 @@ class UploadImageService{
                 self.imageJsonReturnAf = imm.img
                 club.set(clubLogo: imm.img)
                 club.set(description: bio!.text)
-                print(imm.img)
+                //print(imm.img)
                 cmodel.registerClub(club: club)
                 
             }
-
-        
     }
+    
+    
     
     public func uploadImageToServer(imageOrVideo : UIImage?, eventPost: EventPost) {
         let token = UserDefaults.standard.string(forKey: "token")

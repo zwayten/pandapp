@@ -10,14 +10,25 @@ import UIKit
 class ELearningViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
+   
+    @IBOutlet var gradelbl: UITextField!
     @IBOutlet var modulePicker: UIPickerView!
     
-    let modules = ["Mathematics", "C-Programming", "Electronics", "French", "English", "Algorithm", "Arduino"]
+    let grades = ["First Grade", "Second Grade", "Third Grade", "Fourth Grade", "Last Grade"]
+    let gradesBusiness = ["First Grade", "Second Grade", "Third Grade"]
+    let specialites = ["it","business","prepa","electromeca","genicivile"]
     
+    var gradeString = "First Grade"
     
     override func viewDidLoad() {
+        
+        
+        
         modulePicker.delegate = self
         modulePicker.dataSource = self
+        modulePicker.isHidden = true
+        
+        gradelbl.inputView = modulePicker
 
         super.viewDidLoad()
 
@@ -36,23 +47,69 @@ class ELearningViewController: UIViewController, UIPickerViewDelegate, UIPickerV
        
        // The number of rows of data
        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-           return modules.count
+           return grades.count
        }
        
        // The data to return fopr the row and component (column) that's being passed in
        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           return modules[row]
+           return grades[row]
        }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+            gradelbl.text = grades[row]
+            gradeString = grades[row]
+            gradelbl.resignFirstResponder()
+        
+        
+        
     }
-    */
+    
+    @IBAction func fsd(_ sender: UITextField) {
+        modulePicker.isHidden = false
+    }
+    
+
+    
+
+}
+extension ELearningViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return specialites.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "elearningCell", for: indexPath)
+        
+        let contentView = cell.contentView.viewWithTag(1)
+        
+        let image = contentView!.viewWithTag(2) as! UIImageView
+        let modulesCount = contentView!.viewWithTag(3) as! UILabel
+        let filesCount = contentView!.viewWithTag(4) as! UILabel
+        
+        
+        image.image = UIImage(named: specialites[indexPath.row])
+        modulesCount.text = "45 learning modules"
+        filesCount.text = "45 files uploaded"
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        let index = indexPath
+        performSegue(withIdentifier: "toLearningModules", sender: index)
+    
+}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toLearningModules" {
+                let index = sender as! IndexPath
+                let destination = segue.destination as! ModuleElearningViewController
+                destination.gradeSegue = grades[index.row]
+                destination.branchSegue = specialites[index.row]
+            }
+        }
 
 }

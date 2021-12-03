@@ -10,9 +10,14 @@ import Alamofire
 
 class ModuleElearningViewController: UIViewController {
     var elearningTab = [Elearning]()
+    
+    var gradeSegue: String?
+    var branchSegue: String?
 
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
+        print(gradeSegue!)
+        print(branchSegue!)
         super.viewDidLoad()
         fetchModules()
         tableView.reloadData()
