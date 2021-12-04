@@ -123,6 +123,7 @@ class UserLoginViewController: UIViewController {
 
             let completeName = "\(login.FirstName) \(login.LastName)"
             UserDefaults.standard.set(completeName, forKey: "userName")
+            UserDefaults.standard.set(login.profilePicture, forKey: "profilePicture")
             UserDefaults.standard.set(login.email, forKey: "email")
             UserDefaults.standard.set(login.identifant, forKey: "identifant")
             UserDefaults.standard.set(login.password, forKey: "password")

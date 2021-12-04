@@ -67,6 +67,14 @@ class VisitClubProfileViewController: UIViewController {
         }
     }
  
+    @IBAction func joinClub(_ sender: Any) {
+        let userName = UserDefaults.standard.string(forKey: "userName")
+        let pic = UserDefaults.standard.string(forKey: "profilePicture")
+        let joinInstantece = ClubMembers(clubName: clubs[0].clubName, userEmail: userName!, memberPicture: pic!, state: false, _id: "")
+        let cmvm = ClubMembersViewModel()
+        cmvm.addMemberToClub(club: joinInstantece)
+    }
+
 
 }
 

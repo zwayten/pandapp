@@ -14,7 +14,7 @@ class ClubMembersViewModel {
                           "userEmail": club.userEmail,
                           "memberPicture": club.memberPicture,
                           "state": club.state,
-                          "-id": club._id] as [String : Any]
+                          "_id": club._id] as [String : Any]
         
         let  url = ConnectionDb.createConnection(urlStringModule: "clubMembers")
         var request = URLRequest(url: url)

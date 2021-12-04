@@ -629,10 +629,13 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Add Event"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spt-Uq-iNq">
-                                <rect key="frame" x="139" y="239" width="140" height="31"/>
+                                <rect key="frame" x="184" y="239" width="101" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Manage Members"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Join"/>
+                                <connections>
+                                    <action selector="joinClub:" destination="oKh-hj-kJV" eventType="touchUpInside" id="mK5-eQ-UPX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OQC-ww-gc0"/>
@@ -647,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pT-gj-Xra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5086" y="214"/>
+            <point key="canvasLocation" x="5085.507246376812" y="213.61607142857142"/>
         </scene>
         <!--Club View Controller-->
         <scene sceneID="BIY-bw-JI2">
