@@ -67,7 +67,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let emailClub = UserDefaults.standard.string(forKey: "login")
         let passwordClub = UserDefaults.standard.string(forKey: "passwordClub")
         
-        if lastLogged == "user" && (email! == "" || password! == "" ) {
+        if lastLogged == "user" && (email! != "" || password! != "" ) {
            print("mloggi ka user")
             //let token = UserDefaults.standard.string(forKey: "token")
             loginUser1(email: email!, password: password!, completionHandler: { (test) in
@@ -94,7 +94,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
            
             
-        }  else if lastLogged! == "" && (email! == "" || password! == "" || emailClub! == "" || passwordClub! == "") {
+        }  else if  (email == nil && password == nil ) || (emailClub == nil && passwordClub == nil) {
             print("makech mloggi jemla")
             let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
             window?.rootViewController = vc
