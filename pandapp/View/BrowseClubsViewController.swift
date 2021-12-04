@@ -61,4 +61,17 @@ extension BrowseClubsViewController: UITableViewDataSource, UITableViewDelegate 
                 
                 return cell!
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let clubNameSegue = clubs[indexPath.row].clubName
+        performSegue(withIdentifier: "visitClubSeg", sender: clubNameSegue)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "visitClubSeg" {
+            let clubNameSegue = sender as! String
+                        let destination = segue.destination as! VisitClubProfileViewController
+                        
+                        destination.visitNameSegue = clubNameSegue
+                        
+        }
+    }
 }

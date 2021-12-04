@@ -66,6 +66,7 @@
 		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
 		82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */; };
 		82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC1B27530B4100D2894F /* TabBarVC.swift */; };
+		82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */; };
 		82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
 		82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
 		82ECAC1B27530B4100D2894F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitClubProfileViewController.swift; sourceTree = "<group>"; };
 		82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseClubsViewController.swift; sourceTree = "<group>"; };
 		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
 		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 				8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */,
 				82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */,
 				82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */,
+				82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
+				82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */,
 				82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */,
 				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
 				82A0F483275180500009F372 /* UploadImageService.swift in Sources */,
