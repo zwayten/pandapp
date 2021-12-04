@@ -622,19 +622,23 @@
                                 <color key="textColor" red="0.16419136519999999" green="0.18464022869999999" blue="0.20398190620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxU-62-SyA">
-                                <rect key="frame" x="293" y="239" width="101" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Add Event"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spt-Uq-iNq">
                                 <rect key="frame" x="184" y="239" width="101" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Join"/>
+                                <buttonConfiguration key="configuration" style="tinted" title=""/>
                                 <connections>
                                     <action selector="joinClub:" destination="oKh-hj-kJV" eventType="touchUpInside" id="mK5-eQ-UPX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rki-c1-VyC">
+                                <rect key="frame" x="293" y="239" width="101" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Join"/>
+                                <connections>
+                                    <action selector="joinClub2:" destination="oKh-hj-kJV" eventType="touchUpInside" id="9Dp-nl-MRL"/>
+                                    <action selector="joinClub:" destination="oKh-hj-kJV" eventType="touchUpInside" id="fGQ-hk-hu3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,6 +649,8 @@
                         <outlet property="clubDesc" destination="i5z-us-hqg" id="Ykc-ib-qaF"/>
                         <outlet property="clubNamelbl" destination="7A8-8l-Tl7" id="ljs-xU-EkN"/>
                         <outlet property="imageview" destination="zRy-Fr-ael" id="kJl-P1-ggP"/>
+                        <outlet property="join2" destination="rki-c1-VyC" id="iYs-mM-yDJ"/>
+                        <outlet property="joinBtn" destination="Spt-Uq-iNq" id="ace-r8-QZU"/>
                         <outlet property="tableView" destination="vWo-KB-2RC" id="uLm-Sj-6Gb"/>
                     </connections>
                 </viewController>

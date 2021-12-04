@@ -11,6 +11,7 @@ import Alamofire
 class BrowseClubsViewController: UIViewController {
 
     var clubs = [Clubs]()
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,6 +19,9 @@ class BrowseClubsViewController: UIViewController {
         fetchClubsAf()
         // Do any additional setup after loading the view.
     }
+    
+   
+    
     
     func fetchClubsAf() {
         let token = UserDefaults.standard.string(forKey: "token")
@@ -32,7 +36,6 @@ class BrowseClubsViewController: UIViewController {
             self?.tableView.reloadData()
         }
     }
-  
 
 }
 

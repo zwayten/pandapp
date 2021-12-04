@@ -11,20 +11,23 @@ class VisitClubProfileViewController: UIViewController {
 
     var events = [EventPost]()
     var clubs = [Clubs]()
-    
+    var members = [ClubMembers]()
     var visitNameSegue: String?
 
     @IBOutlet var clubDesc: UITextView!
     @IBOutlet var imageview: UIImageView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var clubNamelbl: UILabel!
-    
+    @IBOutlet var joinBtn: UIButton!
+    @IBOutlet var join2: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let userName = UserDefaults.standard.string(forKey: "userName")
+        joinBtn.isHidden = true
         fetchUsersAf()
         tableView.reloadData()
         fetchClubProfile()
+        checkIfRequestSent(username:userName! , clubname: visitNameSegue!)
         
         ReusableFunctionsViewController.roundPicture(image: imageview)
 
@@ -67,12 +70,67 @@ class VisitClubProfileViewController: UIViewController {
         }
     }
  
-    @IBAction func joinClub(_ sender: Any) {
+    func checkIfRequestSent(username: String, clubname: String) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+        AF.request("\(ConnectionDb.baserequest())clubMembers", method: .get, headers: headers).responseDecodable(of: [ClubMembers].self) { [weak self] response in
+            self?.members = response.value ?? []
+            for m in self!.members {
+                if m.userEmail == username && m.clubName == clubname {
+                    let userName = UserDefaults.standard.string(forKey: "userName")
+                    
+                    if m.userEmail == userName && m.clubName == self?.visitNameSegue! && m.state == false {
+                        self?.joinBtn.setTitle("Cancel Request", for: .normal)
+                        self?.join2.isEnabled = false
+                        self?.joinBtn.isHidden = false
+                    } else if m.userEmail == userName && m.clubName == self?.visitNameSegue! && m.state == true {
+                        self?.joinBtn.setTitle("Leave Club", for: .normal)
+                        self?.join2.isEnabled = false
+                        self?.joinBtn.isHidden = false
+                    } else {
+                        self?.joinBtn.isHidden = true
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    func deleteMember(id: String) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        AF.request("\(ConnectionDb.baserequest())clubMembers/\(id)", method: .delete, headers: headers).responseJSON { response in
+            print("deleted")
+        }
+    }
+    
+    @IBAction func joinClub2(_ sender: Any) {
         let userName = UserDefaults.standard.string(forKey: "userName")
         let pic = UserDefaults.standard.string(forKey: "profilePicture")
-        let joinInstantece = ClubMembers(clubName: clubs[0].clubName, userEmail: userName!, memberPicture: pic!, state: false, _id: "")
+        let joinInstantece = ClubMembers(clubName: clubs[0].clubName ?? "none", userEmail: userName!, memberPicture: pic!, state: false, _id: "")
         let cmvm = ClubMembersViewModel()
         cmvm.addMemberToClub(club: joinInstantece)
+    }
+    @IBAction func joinClub(_ sender: Any) {
+        
+       
+            for m in members {
+                let userName = UserDefaults.standard.string(forKey: "userName")
+                let pic = UserDefaults.standard.string(forKey: "profilePicture")
+                if m.userEmail == userName && m.clubName == visitNameSegue! && m.state == false {
+                 deleteMember(id: m._id)
+                } else if m.userEmail == userName && m.clubName == visitNameSegue! && m.state == true {
+                 deleteMember(id: m._id)
+                }
+                
+                
+            }
+
     }
 
 
