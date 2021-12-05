@@ -44,6 +44,7 @@ class UserLoginViewController: UIViewController {
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
             guard error == nil else { return }
             guard let user = user else { return }
+            
             // If sign in succeeded, display the app's main content View.
             let emailAddress = user.profile?.email
             let fullName = user.profile?.name
@@ -54,6 +55,7 @@ class UserLoginViewController: UIViewController {
             print("giveName: ",givenName!)
             print("familyName : ", familyName!)
             print("url :",profilePicUrl!)
+            if self.loginas == "user" {
             self.loginGoogle(email: emailAddress!, completionHandler: { (login,statusCode) in
 
                 
@@ -72,6 +74,26 @@ class UserLoginViewController: UIViewController {
 
                 
             })
+            } else if self.loginas == "club" {
+                self.loginClubGoogle(email: emailAddress!, completionHandler: { (login,statusCode) in
+
+                    
+                    UserDefaults.standard.set(login.login, forKey: "login")
+                    //UserDefaults.standard.set(login._id, forKey: "clubId")
+                    UserDefaults.standard.set(login.password, forKey: "passwordClub")
+                    UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
+                    UserDefaults.standard.set(givenName!, forKey: "clubName")
+                    UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
+
+                    
+                })
+            
+            }
             
           }
     }
@@ -162,6 +184,20 @@ class UserLoginViewController: UIViewController {
                 completionHandler(login,statusCode )
             } else {
                 ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+            }
+        }
+}
+    
+    func loginClubGoogle(email: String, completionHandler: @escaping (LoginClub,Int?) -> ()){
+        //var logg: LoginUser
+        let parameters = ["login": email] as [String : Any]
+        AF.request("\(ConnectionDb.baserequest())authClub/googleCheck", method: .post, parameters: parameters).responseJSON {  response in
+            let statusCode = response.response?.statusCode
+            if statusCode == 200 {
+                let login: LoginClub = try! JSONDecoder().decode(LoginClub.self, from: response.data!)
+                completionHandler(login,statusCode )
+            } else {
+                ReusableFunctionsViewController.displayAlert(title: "Account Not Found", subTitle: "Account \(email) never signed up with google account")
             }
         }
 }
