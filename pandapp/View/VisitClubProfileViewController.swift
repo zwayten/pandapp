@@ -20,6 +20,7 @@ class VisitClubProfileViewController: UIViewController {
     @IBOutlet var clubNamelbl: UILabel!
     @IBOutlet var joinBtn: UIButton!
     @IBOutlet var join2: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let userName = UserDefaults.standard.string(forKey: "userName")

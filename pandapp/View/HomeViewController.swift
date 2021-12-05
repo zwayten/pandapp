@@ -22,7 +22,18 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func forcelogout(_ sender: Any) {
+        UserDefaults.standard.set("", forKey: "userName")
+        UserDefaults.standard.set("", forKey: "email")
+        UserDefaults.standard.set("", forKey: "identifant")
+        UserDefaults.standard.set("", forKey: "password")
+        UserDefaults.standard.set("", forKey: "token")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
 
 }
 

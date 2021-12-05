@@ -7,7 +7,10 @@
 
 import UIKit
 import Alamofire
+import GoogleSignIn
 
+
+//305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com
 class UserLoginViewController: UIViewController {
     var token = ""
     var email = ""
@@ -23,6 +26,8 @@ class UserLoginViewController: UIViewController {
     var className = ""
     var loginas = "user"
     
+    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
+    
     var loginUserr: LoginUser?
     
     @IBOutlet var userEmail: UITextField!
@@ -35,6 +40,41 @@ class UserLoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func googleSignIn(_ sender: Any) {
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            // If sign in succeeded, display the app's main content View.
+            let emailAddress = user.profile?.email
+            let fullName = user.profile?.name
+                let givenName = user.profile?.givenName
+                let familyName = user.profile?.familyName
+                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            print(emailAddress!)
+            print("giveName: ",givenName!)
+            print("familyName : ", familyName!)
+            print("url :",profilePicUrl!)
+            self.loginGoogle(email: emailAddress!, completionHandler: { (login,statusCode) in
+
+                
+                UserDefaults.standard.set(fullName!, forKey: "userName")
+                UserDefaults.standard.set(login.profilePicture, forKey: "profilePicture")
+                UserDefaults.standard.set(login.email, forKey: "email")
+                UserDefaults.standard.set(login.identifant, forKey: "identifant")
+                UserDefaults.standard.set(login.password, forKey: "password")
+                UserDefaults.standard.set(login.token, forKey: "token")
+                UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+
+                
+            })
+            
+          }
+    }
     @IBAction func toggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 { loginas = "user"
             print("user")
@@ -95,6 +135,22 @@ class UserLoginViewController: UIViewController {
             }
         }
 }
+    
+    func loginGoogle(email: String, completionHandler: @escaping (LoginUser,Int?) -> ()){
+        //var logg: LoginUser
+        let parameters = ["email": email] as [String : Any]
+        AF.request("\(ConnectionDb.baserequest())auth/googleCheck", method: .post, parameters: parameters).responseJSON {  response in
+            let statusCode = response.response?.statusCode
+            if statusCode == 200 {
+                let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
+                completionHandler(login,statusCode )
+            } else {
+                ReusableFunctionsViewController.displayAlert(title: "Account Not Found", subTitle: "Account \(email) never signed up with google account")
+            }
+        }
+}
+    
+    
     func loginClub(loginemail: String, password: String, completionHandler: @escaping (LoginClub,Int?) -> ()){
         //var logg: LoginUser
         let parameters = ["login": loginemail,

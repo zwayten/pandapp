@@ -53,6 +53,8 @@
 		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
 		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
 		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
+		82AE1D1B275D29D20052116B /* CompleteYourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */; };
+		82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE1D1C275D37AA0052116B /* GoogleSegue.swift */; };
 		82B2F4E2275A960A007AA9D7 /* ClubMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */; };
 		82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */; };
 		82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */; };
@@ -120,6 +122,8 @@
 		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
 		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
 		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
+		82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteYourProfileViewController.swift; sourceTree = "<group>"; };
+		82AE1D1C275D37AA0052116B /* GoogleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSegue.swift; sourceTree = "<group>"; };
 		82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembers.swift; sourceTree = "<group>"; };
 		82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewModel.swift; sourceTree = "<group>"; };
 		82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				8252B154275487E700AF300A /* LoginUser.swift */,
 				82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */,
 				82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */,
+				82AE1D1C275D37AA0052116B /* GoogleSegue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */,
 				82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */,
 				82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */,
+				82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
 				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
 				8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */,
+				82AE1D1B275D29D20052116B /* CompleteYourProfileViewController.swift in Sources */,
 				82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */,
 				8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */,
 				8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */,
@@ -416,6 +423,7 @@
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
 				82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */,
+				82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */,
 				82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */,
 				82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */,
 				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
@@ -604,6 +612,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pandapp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow pandapp to get your current location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Pandapp would like to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -632,6 +642,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pandapp/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow pandapp to get your current location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Pandapp would like to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

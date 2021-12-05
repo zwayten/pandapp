@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    var gs: GoogleSegue?
+    
     @IBOutlet var userEmailRegister: UITextField!
     @IBOutlet var passwordUserRegister: UITextField!
     @IBOutlet var passwordConfirmUserregister: UITextField!
@@ -27,6 +30,8 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     let pickerOneData = ["1", "2", "3", "4", "5"]
     let pickerTwoData = ["aaa", "C-Programming", "Electronics", "French", "English", "Algorithm", "Arduino"]
     let pickerThreeData = ["1", "2", "3", "4", "5","6","7","8","9","10"]
+    
+    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
     
     var toggleCardTooltip = false
     
@@ -61,6 +66,36 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         tooltipCardView.frame = CGRect(x: 175, y: 470, width: self.view.bounds.width * 0.5, height: self.view.bounds.height * 0.13)
 
     }
+    
+    @IBAction func GoogleSignUp(_ sender: Any) {
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            // If sign in succeeded, display the app's main content View.
+            
+            let emailAddress = user.profile?.email
+            let fullName = user.profile?.name
+                let givenName = user.profile?.givenName
+                let familyName = user.profile?.familyName
+                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            let urltoString = profilePicUrl?.absoluteString
+            print(emailAddress!)
+            print("giveName: ",givenName!)
+            print("familyName : ", familyName!)
+            print("url :",profilePicUrl!)
+            let userGoogle = User(email: emailAddress!, password:"" , phoneNumber: 123, profilePicture: urltoString!, FirstName: givenName!, LastName: familyName!, verified: true, identifant: "181JMT123", className: "4sim2", role: "user", social: false, description: "oo")
+            
+            
+            let userGoogleStruct = GoogleSegue(user: userGoogle, profilePictureUrl: profilePicUrl!)
+            
+            self.performSegue(withIdentifier: "fromUserSignupWithGoogle" , sender: userGoogleStruct)
+            
+          }
+    }
+    
+    @IBAction func go(_ sender: Any) {
+    }
+    
     
     @IBAction func displayCardTooltip(_ sender: Any) {
         if toggleCardTooltip == false {
@@ -109,6 +144,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
                     destination.userCheck = true
                     
                 }
+        if segue.identifier == "fromUserSignupWithGoogle" {
+            let userGoogleStruct = sender as! GoogleSegue
+            
+            let destination = segue.destination as! CompleteYourProfileViewController
+            destination.userGoogleSegue = userGoogleStruct
+            
+        }
     }
     
     // Toggle view/hide password field

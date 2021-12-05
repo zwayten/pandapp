@@ -32,12 +32,12 @@ class UserprofileViewController: UIViewController {
         let token = UserDefaults.standard.string(forKey: "token")
         let userName = UserDefaults.standard.string(forKey: "userName")
         let email = UserDefaults.standard.string(forKey: "email")
+        print(userName!)
+        print(email!)
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token!)",
-            "email": "\(email!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())user", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())user/userByEmail/\(email!)", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
             self?.users = response.value ?? []
             print(self?.users.count)
             self?.userName.text = "\((self?.users[0].LastName)!) \((self?.users[0].FirstName)!)"
