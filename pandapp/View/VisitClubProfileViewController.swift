@@ -36,11 +36,12 @@ class VisitClubProfileViewController: UIViewController {
     
     func fetchUsersAf() {
         let token = UserDefaults.standard.string(forKey: "token")
+        let cName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())event", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())event/\(cName!)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
             print(response)
             print(response.value)

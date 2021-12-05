@@ -61,6 +61,7 @@
 		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
 		82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0EC23275878D900B58DE0 /* ChatViewController.swift */; };
+		82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */; };
 		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
 		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
 		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
@@ -127,6 +128,7 @@
 		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
 		82E0EC23275878D900B58DE0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPostViewController.swift; sourceTree = "<group>"; };
 		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
 		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
 		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */,
 				82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */,
 				82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */,
+				82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */,
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */,

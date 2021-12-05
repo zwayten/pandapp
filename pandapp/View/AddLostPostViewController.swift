@@ -30,8 +30,8 @@ class AddLostPostViewController: UIViewController {
         let typelost = typelbl.text!
         let placelost = placelbl.text!
         let objectlost = objectlbl.text!
-       
-        let lostpost = LostPost(publisheId: "eee", state: false, type: typelost, object: objectlost, place: placelost, image: "default.png")
+        let userName = UserDefaults.standard.string(forKey: "userName")
+        let lostpost = LostPost(publisheId: userName!, state: false, type: typelost, object: objectlost, place: placelost, image: "default.png")
         return lostpost
     }
 
@@ -44,14 +44,11 @@ class AddLostPostViewController: UIViewController {
     }
     
     @IBAction func savelostPost(_ sender: Any) {
-        if typelbl.text == "" || placelbl.text == "" || objectlbl.text == "" {
+        
             let lostPostModel = LostPostViewModel()
             let uploadService = UploadImageService()
             uploadService.uploadImageToServerLostPost(imageOrVideo: selectedImages, lostPost: getdata())
-        }
-        else {
-            ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
-        }
+       
         
        
     }

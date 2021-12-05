@@ -94,6 +94,7 @@ class UploadImageService{
     
     public func uploadImageToServerLostPost(imageOrVideo : UIImage?, lostPost: LostPost){
         let token = UserDefaults.standard.string(forKey: "token")
+        
         let headers: HTTPHeaders = [
             "Authorisation": "bearer \(token!)",
             "Content-type": "multipart/form-data"

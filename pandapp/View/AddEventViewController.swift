@@ -56,7 +56,8 @@ class AddEventViewController: UIViewController {
         let time =  eventTimeInput.text!
         let description =  eventDescriptionInput.text!
         let place = eventPlaceInput.text!
-        let event = EventPost(publisheId: "23", state: true, type: "Event", place: place, banner: "default.png", Time: time, price: Double(price) ?? 14.4, rate: 0, title: eventname, description: description)
+        let cName = UserDefaults.standard.string(forKey: "clubName")
+        let event = EventPost(publisheId: cName!, state: true, type: "Event", place: place, banner: "default.png", Time: time, price: Double(price) ?? 14.4, rate: 0, title: eventname, description: description)
         return event
     }
     

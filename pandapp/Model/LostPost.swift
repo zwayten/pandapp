@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LostPost {
+class LostPost: Codable {
     
     var publisheId: String
     //var publishedAt: Date

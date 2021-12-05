@@ -12,8 +12,8 @@ class HomeViewController: UIViewController {
 
    // var collection1Data = [String]()
     var collection1Data = ["Browse Clubs","Browse Lost and Found","Browse Maps","Logout"]
-    var collection1DataPics = ["person.3.fill","car.fill","map.fill","rectangle.portrait.and.arrow.right.fill"]
-    var collection1Segue = ["browseClubsSegue","browseMapSegue","browseMapSegue","browseClubsSegue"]
+    var collection1DataPics = ["person.3.fill","person.fill.questionmark","map.fill","rectangle.portrait.and.arrow.right.fill"]
+    var collection1Segue = ["browseClubsSegue","toLostandFound","browseMapSegue","browseClubsSegue"]
     let color2 = UIColor(red: 103/255, green: 24/255, blue: 24/255, alpha: 1)
     @IBOutlet var collection1: UICollectionView!
     override func viewDidLoad() {
