@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class ClubRegisterViewController: UIViewController {
 
@@ -15,7 +16,8 @@ class ClubRegisterViewController: UIViewController {
     @IBOutlet var clubRegisterClubName: UITextField!
     @IBOutlet var clubRegisterOwner: UITextField!
     
-
+    var gs: GoogleSegueClub?
+    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
     
     func initClubRegister(){
         ReusableFunctionsViewController.customTextField(textfield: clubRegisteremail)
@@ -47,6 +49,34 @@ class ClubRegisterViewController: UIViewController {
         return club
     }
     
+    @IBAction func registerClubGoogle(_ sender: Any) {
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            // If sign in succeeded, display the app's main content View.
+            
+            let emailAddress = user.profile?.email
+            let fullName = user.profile?.name
+                let givenName = user.profile?.givenName
+                let familyName = user.profile?.familyName
+                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            let urltoString = profilePicUrl?.absoluteString
+            print(emailAddress!)
+            print("giveName: ",givenName!)
+            print("familyName : ", familyName!)
+            print("url :",profilePicUrl!)
+            let clubGoogle = Clubs(clubName: givenName!, clubOwner: 123, clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
+            
+            
+            let clubGoogleStruct = GoogleSegueClub(club: clubGoogle, profilePictureUrl: profilePicUrl!)
+            
+            self.performSegue(withIdentifier: "clubGoogleSignup" , sender: clubGoogleStruct)
+            
+          }
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRegisterclub" {
                     let club = sender as! Clubs
@@ -56,6 +86,13 @@ class ClubRegisterViewController: UIViewController {
                     destination.userCheck = false
                     
                 }
+        if segue.identifier == "clubGoogleSignup" {
+            let clubGoogleStruct = sender as! GoogleSegueClub
+            
+            let destination = segue.destination as! ClubGoogleCompleteProfileViewController
+            destination.clubGoogleSegue = clubGoogleStruct
+            
+        }
     }
     
     @IBAction func ShowPassword(_ sender: Any) {

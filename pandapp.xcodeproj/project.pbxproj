@@ -19,6 +19,8 @@
 		823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB327389842003F3FA4 /* HomeViewController.swift */; };
 		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
 		823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */; };
+		82454EB6275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */; };
+		82454EB9275D87BF005590A4 /* GoogleSegueClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */; };
 		8252B155275487E700AF300A /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252B154275487E700AF300A /* LoginUser.swift */; };
 		82594ADC2754227D0062575F /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82594ADB2754227D0062575F /* PdfViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
@@ -86,6 +88,8 @@
 		823E5FB327389842003F3FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubGoogleCompleteProfileViewController.swift; sourceTree = "<group>"; };
+		82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSegueClub.swift; sourceTree = "<group>"; };
 		8252B154275487E700AF300A /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		82594ADB2754227D0062575F /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +221,7 @@
 				82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */,
 				82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */,
 				82AE1D1C275D37AA0052116B /* GoogleSegue.swift */,
+				82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */,
 				82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */,
 				82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */,
+				82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
 				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
+				82454EB9275D87BF005590A4 /* GoogleSegueClub.swift in Sources */,
 				8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */,
 				82AE1D1B275D29D20052116B /* CompleteYourProfileViewController.swift in Sources */,
 				82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */,
@@ -422,6 +429,7 @@
 				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
+				82454EB6275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift in Sources */,
 				82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */,
 				82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */,
 				82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */,

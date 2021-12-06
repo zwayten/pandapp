@@ -35,4 +35,7 @@ class Clubs: Codable{
     func set(description: String) {
         self.description = description
     }
+    func set(password: String) {
+        self.password = password
+    }
 }

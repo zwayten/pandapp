@@ -82,7 +82,7 @@ class UserLoginViewController: UIViewController {
                     //UserDefaults.standard.set(login._id, forKey: "clubId")
                     UserDefaults.standard.set(login.password, forKey: "passwordClub")
                     UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
-                    UserDefaults.standard.set(givenName!, forKey: "clubName")
+                    UserDefaults.standard.set(login.clubName, forKey: "clubName")
                     UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
