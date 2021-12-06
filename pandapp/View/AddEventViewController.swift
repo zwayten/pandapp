@@ -63,14 +63,12 @@ class AddEventViewController: UIViewController {
     
     
     @IBAction func btnsaveEvent(_ sender: UIButton) {
-        if eventNameInput.text == "" || eventPriceInput.text == "" || eventDateInput.text == "" || eventTimeInput.text == "" || eventTimeInput.text == "" || eventDescriptionInput.text == "" || eventPlaceInput.text == "" {
+       
         
         let uploadService = UploadImageService()
         let event = getData()
         uploadService.uploadImageToServer(imageOrVideo: selectedImages, eventPost: event)
-        } else {
-            ReusableFunctionsViewController.displayAlert(title: "Warning", subTitle: " Some data are missing")
-        }
+       
         //eventPostModel.addEventPost(eventPost: event)
     }
     

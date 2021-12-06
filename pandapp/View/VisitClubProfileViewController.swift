@@ -55,10 +55,9 @@ class VisitClubProfileViewController: UIViewController {
        // let clubName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
-            "clubName": "\(visitNameSegue!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())club/clubByName/\(visitNameSegue!)", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             self?.clubDesc.text = self?.clubs[0].description

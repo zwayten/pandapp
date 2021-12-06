@@ -50,12 +50,11 @@ class ClubViewController: UIViewController {
     func fetchClubProfile() {
         let token = UserDefaults.standard.string(forKey: "tokenClub")
         let clubName = UserDefaults.standard.string(forKey: "clubName")
+        let clubLogin = UserDefaults.standard.string(forKey: "login")
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token!)",
-            "clubName": "\(clubName!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())club", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())club/clubByLogin/\(clubLogin!)", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             self?.clubDesc.text = self?.clubs[0].description
