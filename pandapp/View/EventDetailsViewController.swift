@@ -56,7 +56,7 @@ class EventDetailsViewController: UIViewController {
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())eventInt/\(_idSegue!)", method: .get, headers: headers).responseDecodable(of: [EventInt].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())eventInt/eventIntById/\(_idSegue!)", method: .get, headers: headers).responseDecodable(of: [EventInt].self) { [weak self] response in
             self?.eventInts = response.value ?? []
             self?.tableView.reloadData()
         }
@@ -82,7 +82,7 @@ extension EventDetailsViewController: UITableViewDataSource {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "eventReusableCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "participantsCell")
             let contentView =  cell?.contentView
             
             let title = contentView?.viewWithTag(2) as! UILabel
@@ -90,7 +90,7 @@ extension EventDetailsViewController: UITableViewDataSource {
                     
             //image.image = UIImage(named: users[indexPath.row].profilePicture)
             title.text = eventInts[indexPath.row].userEmail
-            
+            ReusableFunctionsViewController.roundPicture(image: image)
             let strImageUrl = "\(ConnectionDb.baserequest())upload/download/default.png"
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
