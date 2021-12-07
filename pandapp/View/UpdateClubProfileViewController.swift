@@ -59,7 +59,7 @@ class UpdateClubProfileViewController: UIViewController {
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             self?.clubdescription.text = self?.clubs[0].description
-            self?.clubownerlbl.text = String(self?.clubs[0].clubOwner ?? 123)
+            self?.clubownerlbl.text = self?.clubs[0].clubOwner
             self?.clubloginlbl.text = self?.clubs[0].login
 
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!

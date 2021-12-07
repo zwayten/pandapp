@@ -43,9 +43,9 @@ class ClubRegisterViewController: UIViewController {
         let clubname = clubRegisteremail.text!
         let password  = clubRegisterPassword.text!
         let login = clubRegisteremail.text!
-        let owner = Int(clubRegisterOwner.text!)
+        let owner = clubRegisterOwner.text!
         
-        let club = Clubs(clubName: clubname, clubOwner: owner!, clubLogo: "logo.png", verified: false, password: password, login: login, description: "", _id: "")
+        let club = Clubs(clubName: clubname, clubOwner: owner, clubLogo: "logo.png", verified: false, password: password, login: login, description: "", _id: "")
         return club
     }
     
@@ -65,7 +65,7 @@ class ClubRegisterViewController: UIViewController {
             print("giveName: ",givenName!)
             print("familyName : ", familyName!)
             print("url :",profilePicUrl!)
-            let clubGoogle = Clubs(clubName: givenName!, clubOwner: 123, clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
+            let clubGoogle = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
             
             
             let clubGoogleStruct = GoogleSegueClub(club: clubGoogle, profilePictureUrl: profilePicUrl!)

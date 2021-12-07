@@ -15,13 +15,16 @@ class ClubGoogleCompleteProfileViewController: UIViewController {
     @IBOutlet var bio: UITextView!
     @IBOutlet var passwordConfirmlbl: UITextField!
     @IBOutlet var passwordlbl: UITextField!
+    @IBOutlet var clubOwnerlbl: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ReusableFunctionsViewController.customTextField(textfield: clubnamelbl)
         ReusableFunctionsViewController.customTextField(textfield: passwordConfirmlbl)
         ReusableFunctionsViewController.customTextField(textfield: passwordlbl)
+        ReusableFunctionsViewController.customTextField(textfield: clubOwnerlbl)
         clubnamelbl.text = clubGoogleSegue!.club.clubName
+        clubOwnerlbl.text = clubGoogleSegue!.club.clubOwner
     }
     
     func signupWithGoogleClub() {

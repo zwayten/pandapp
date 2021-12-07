@@ -10,7 +10,7 @@ import Foundation
 class Clubs: Codable{
     
     var clubName: String
-    var clubOwner: Int
+    var clubOwner: String
     var clubLogo: String
     var verified: Bool
     var password: String
@@ -18,7 +18,7 @@ class Clubs: Codable{
     var description: String
     var _id: String
     
-    init(clubName: String, clubOwner: Int, clubLogo: String, verified: Bool, password: String, login: String, description: String, _id: String) {
+    init(clubName: String, clubOwner: String, clubLogo: String, verified: Bool, password: String, login: String, description: String, _id: String) {
         self.clubName = clubName
         self.clubOwner = clubOwner
         self.clubLogo = clubLogo
