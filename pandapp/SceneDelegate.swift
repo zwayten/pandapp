@@ -75,7 +75,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
                     self.window?.rootViewController = vc
                 } else {
-                    ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+                    print("Your credentials are invalid")
+                    //ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
                 }
                 
             })
@@ -87,7 +88,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
                     self.window?.rootViewController = vc
                 } else {
-                    ReusableFunctionsViewController.displayAlert(title: "Invalid club Credentials", subTitle: "Your club credentials are invalid")
+                    print("Your club credentials are invalid")
+                    //ReusableFunctionsViewController.displayAlert(title: "Invalid club Credentials", subTitle: "Your club credentials are invalid")
                 }
                 
             })

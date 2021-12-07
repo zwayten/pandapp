@@ -63,6 +63,9 @@
 		82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36D2756E0400017503E /* AddDocumentViewController.swift */; };
 		82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36F2756F3E90017503E /* DocumentViewController.swift */; };
 		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
+		82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48E9275ED8D7005D67E3 /* EventInt.swift */; };
+		82BB48EC275ED948005D67E3 /* EventIntViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */; };
+		82BB48EF275EE61E005D67E3 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
 		82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0EC23275878D900B58DE0 /* ChatViewController.swift */; };
 		82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */; };
@@ -134,6 +137,9 @@
 		82B7B36D2756E0400017503E /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		82B7B36F2756F3E90017503E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
+		82BB48E9275ED8D7005D67E3 /* EventInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInt.swift; sourceTree = "<group>"; };
+		82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventIntViewModel.swift; sourceTree = "<group>"; };
+		82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
 		82E0EC23275878D900B58DE0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPostViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 				82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */,
 				82AE1D1C275D37AA0052116B /* GoogleSegue.swift */,
 				82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */,
+				82BB48E9275ED8D7005D67E3 /* EventInt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 				82762819274C7ED50068B01D /* ConnectionDb.swift */,
 				82A0F482275180500009F372 /* UploadImageService.swift */,
 				82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */,
+				82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +288,7 @@
 				82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */,
 				82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */,
 				82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */,
+				82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,14 +450,17 @@
 				82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */,
 				82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */,
 				8252B155275487E700AF300A /* LoginUser.swift in Sources */,
+				82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */,
 				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
 				82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
 				82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */,
 				82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
+				82BB48EF275EE61E005D67E3 /* EventDetailsViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
 				82A9227227433825008D3A8C /* userViewModel.swift in Sources */,
+				82BB48EC275ED948005D67E3 /* EventIntViewModel.swift in Sources */,
 				823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */,
 				823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */,
 				82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */,

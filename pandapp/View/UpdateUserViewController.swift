@@ -41,10 +41,9 @@ class UpdateUserViewController: UIViewController {
         let email = UserDefaults.standard.string(forKey: "email")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
-            "email": "\(email!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())user", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())user/userByEmail/\(email!)", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
             self?.users = response.value ?? []
             
             self?.firstnamelbl.text = self?.users[0].FirstName

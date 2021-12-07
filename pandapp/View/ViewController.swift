@@ -36,7 +36,8 @@ class ViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
             } else {
-                ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
+                print("fddgdfgdf")
+                //ReusableFunctionsViewController.displayAlert(title: "Invalid Credentials", subTitle: "Your credentials are invalid")
             }
         }
         

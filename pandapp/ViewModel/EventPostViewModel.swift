@@ -46,7 +46,7 @@ class EventPostViewModel {
     }
     
     public func addEventPost(eventPost: EventPost) {
-        let parameters = ["publisheId": eventPost.publisheId, "state": eventPost.state, "type": eventPost.type, "place": eventPost.place, "banner": eventPost.banner, "Time": eventPost.Time, "price": eventPost.price, "rate": eventPost.rate, "title": eventPost.title, "description": eventPost.description] as [String : Any]
+        let parameters = ["publisheId": eventPost.publisheId, "state": eventPost.state, "type": eventPost.type, "place": eventPost.place, "banner": eventPost.banner, "Time": eventPost.Time, "price": eventPost.price, "rate": eventPost.rate, "title": eventPost.title, "description": eventPost.description,"_id": eventPost._id] as [String : Any]
         let token = UserDefaults.standard.string(forKey: "tokenClub")
         let  url = ConnectionDb.createConnection(urlStringModule: "event")
         var request = URLRequest(url: url)

@@ -54,7 +54,6 @@ class VisitClubProfileViewController: UIViewController {
         let token = UserDefaults.standard.string(forKey: "token")
        // let clubName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
         AF.request("\(ConnectionDb.baserequest())club/clubByName/\(visitNameSegue!)", method: .get, headers: headers).responseDecodable(of: [Clubs].self) { [weak self] response in
@@ -137,7 +136,7 @@ class VisitClubProfileViewController: UIViewController {
 
 }
 
-extension VisitClubProfileViewController: UITableViewDataSource {
+extension VisitClubProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -169,5 +168,15 @@ extension VisitClubProfileViewController: UITableViewDataSource {
                 return cell!
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let _idSegue = events[indexPath.row]._id
+        performSegue(withIdentifier: "toEventdetail", sender: _idSegue)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toEventdetail" {
+            let _idSegue = sender as! String
+            let destination = segue.destination as! EventDetailsViewController
+            destination._idSegue = _idSegue
+        }
+    }
 }

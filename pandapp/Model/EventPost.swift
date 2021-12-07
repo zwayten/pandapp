@@ -19,9 +19,10 @@ var price: Double
 var rate: Int
 var title: String
 var description: String
+var _id: String
     
 
-    init(publisheId: String, state: Bool, type: String, place: String, banner: String, Time: String, price: Double, rate: Int, title: String, description: String) {
+    init(publisheId: String, state: Bool, type: String, place: String, banner: String, Time: String, price: Double, rate: Int, title: String, description: String,_id: String) {
         self.publisheId = publisheId
         self.state = state
         self.type = type
@@ -32,6 +33,7 @@ var description: String
         self.rate = rate
         self.title = title
         self.description = description
+        self._id = _id
     }
     
     func set(publisheId: String){

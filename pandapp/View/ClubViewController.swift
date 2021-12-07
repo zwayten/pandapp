@@ -41,8 +41,6 @@ class ClubViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())event/clubName/\(cName!)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
-            print(response)
-            print(response.value)
             self?.tableView.reloadData()
         }
     }
@@ -62,8 +60,6 @@ class ClubViewController: UIViewController {
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageview.image = UIImage(data: imageData!)
-            print(response)
-            print(response.value)
             
         }
     }
@@ -111,7 +107,7 @@ class ClubViewController: UIViewController {
     
 
 }
-extension ClubViewController: UITableViewDataSource {
+extension ClubViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -142,6 +138,10 @@ extension ClubViewController: UITableViewDataSource {
                 
                 return cell!
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let _idSegue = events[indexPath.row]._id
+        //performSegue(withIdentifier: <#T##String#>, sender: _idSegue)
+        print(_idSegue)
+    }
     
 }
