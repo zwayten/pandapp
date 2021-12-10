@@ -59,5 +59,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChatRoomViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

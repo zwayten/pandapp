@@ -35,6 +35,7 @@
 		8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D496275397F70088CAA9 /* AddLostPostViewController.swift */; };
 		8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */; };
 		8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D49A275408760088CAA9 /* DetailModuleViewController.swift */; };
+		829BEDC52763B83400F179B5 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */; };
 		829EE46B275946FB003963E2 /* UpdateClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */; };
 		82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F4802751800C0009F372 /* UploadImageStruct.swift */; };
 		82A0F483275180500009F372 /* UploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F482275180500009F372 /* UploadImageService.swift */; };
@@ -109,6 +110,7 @@
 		8288D496275397F70088CAA9 /* AddLostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLostPostViewController.swift; sourceTree = "<group>"; };
 		8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleElearningViewController.swift; sourceTree = "<group>"; };
 		8288D49A275408760088CAA9 /* DetailModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleViewController.swift; sourceTree = "<group>"; };
+		829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClubProfileViewController.swift; sourceTree = "<group>"; };
 		82A0F4802751800C0009F372 /* UploadImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageStruct.swift; sourceTree = "<group>"; };
 		82A0F482275180500009F372 /* UploadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageService.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */,
 				82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */,
 				82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */,
+				829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */,
 				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
 				82594ADC2754227D0062575F /* PdfViewController.swift in Sources */,
+				829BEDC52763B83400F179B5 /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
