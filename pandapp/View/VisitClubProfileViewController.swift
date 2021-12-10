@@ -23,7 +23,7 @@ class VisitClubProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userName = UserDefaults.standard.string(forKey: "userName")
+        let userName = UserDefaults.standard.string(forKey: "email")
         joinBtn.isHidden = true
         fetchUsersAf()
         tableView.reloadData()
@@ -109,7 +109,7 @@ class VisitClubProfileViewController: UIViewController {
     }
     
     @IBAction func joinClub2(_ sender: Any) {
-        let userName = UserDefaults.standard.string(forKey: "userName")
+        let userName = UserDefaults.standard.string(forKey: "email")
         let pic = UserDefaults.standard.string(forKey: "profilePicture")
         let joinInstantece = ClubMembers(clubName: clubs[0].clubName , userEmail: userName!, memberPicture: pic!, state: false, _id: "")
         let cmvm = ClubMembersViewModel()
@@ -119,7 +119,7 @@ class VisitClubProfileViewController: UIViewController {
         
        
             for m in members {
-                let userName = UserDefaults.standard.string(forKey: "userName")
+                let userName = UserDefaults.standard.string(forKey: "email")
                // let pic = UserDefaults.standard.string(forKey: "profilePicture")
                 if m.userEmail == userName && m.clubName == visitNameSegue! && m.state == false {
                  deleteMember(id: m._id)

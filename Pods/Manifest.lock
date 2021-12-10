@@ -13,11 +13,17 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
+  - InputBarAccessoryView (5.4.0):
+    - InputBarAccessoryView/Core (= 5.4.0)
+  - InputBarAccessoryView/Core (5.4.0)
+  - MessageKit (3.7.0):
+    - InputBarAccessoryView (~> 5.4.0)
   - SCLAlertView (0.8)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - GoogleSignIn
+  - MessageKit
   - SCLAlertView
 
 SPEC REPOS:
@@ -27,6 +33,8 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
+    - InputBarAccessoryView
+    - MessageKit
     - SCLAlertView
 
 SPEC CHECKSUMS:
@@ -35,8 +43,10 @@ SPEC CHECKSUMS:
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  InputBarAccessoryView: 74d471ab1fa1736806be50328df79257e52865a9
+  MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: a62a608ad3bd78ddec975ce12557461494d56f96
+PODFILE CHECKSUM: 6d6b1da2f515a29a2dee7d6a6c85871703508e1e
 
 COCOAPODS: 1.11.2
