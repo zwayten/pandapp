@@ -45,7 +45,6 @@ class AddLostPostViewController: UIViewController {
     
     @IBAction func savelostPost(_ sender: Any) {
         
-            let lostPostModel = LostPostViewModel()
             let uploadService = UploadImageService()
             uploadService.uploadImageToServerLostPost(imageOrVideo: selectedImages, lostPost: getdata())
        

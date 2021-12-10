@@ -121,7 +121,7 @@ extension ClubViewController: UITableViewDataSource, UITableViewDelegate {
         let date = contentView?.viewWithTag(3) as! UILabel
         let location = contentView?.viewWithTag(4) as! UILabel
         let description = contentView?.viewWithTag(5) as! UITextView
-        let price = contentView?.viewWithTag(6) as! UILabel
+        //let price = contentView?.viewWithTag(6) as! UILabel
                 
         //image.image = UIImage(named: users[indexPath.row].profilePicture)
         title.text = events[indexPath.row].title

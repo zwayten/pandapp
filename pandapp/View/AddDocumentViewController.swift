@@ -69,8 +69,7 @@ class AddDocumentViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())document/\(identifant!)", method: .get, headers: headers).responseDecodable(of: [Document].self) { [weak self] response in
             self?.docTable = response.value ?? []
             self?.tableView.reloadData()
-            print(response)
-            print(response.value)
+
             
         }
     }
@@ -85,8 +84,7 @@ class AddDocumentViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())document/\(id)", method: .delete, headers: headers).responseDecodable(of: [Document].self) { [weak self] response in
             
             self?.fetchDocumentsByUserId()
-            print(response)
-            print(response.value)
+
             
         }
     }

@@ -52,7 +52,7 @@ class AddEventViewController: UIViewController {
     func getData() -> EventPost {
         let eventname = eventNameInput.text!
         let price = eventPriceInput.text!
-        let date = eventDateInput.text!
+        //let date = eventDateInput.text!
         let time =  eventTimeInput.text!
         let description =  eventDescriptionInput.text!
         let place = eventPlaceInput.text!

@@ -28,7 +28,7 @@ class CompleteYourProfileViewController: UIViewController {
     
     func signupWithGoogleUser() {
         let password = passwordlbl.text!
-        let passwordConf = passwordConfirmlbl.text
+        //let passwordConf = passwordConfirmlbl.text
         userGoogleSegue!.user.setPassword(password: password)
         
         

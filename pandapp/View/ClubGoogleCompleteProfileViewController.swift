@@ -29,7 +29,7 @@ class ClubGoogleCompleteProfileViewController: UIViewController {
     
     func signupWithGoogleClub() {
         let password = passwordlbl.text!
-        let passwordConf = passwordConfirmlbl.text
+       // let passwordConf = passwordConfirmlbl.text
         clubGoogleSegue!.club.set(password: password)
         
         

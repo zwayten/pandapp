@@ -74,7 +74,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
             // If sign in succeeded, display the app's main content View.
             
             let emailAddress = user.profile?.email
-            let fullName = user.profile?.name
+           // let fullName = user.profile?.name
                 let givenName = user.profile?.givenName
                 let familyName = user.profile?.familyName
                 let profilePicUrl = user.profile?.imageURL(withDimension: 320)

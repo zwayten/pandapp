@@ -31,8 +31,7 @@ class ClubMembersViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())clubMembers/join/false", method: .get, headers: headers).responseDecodable(of: [ClubMembers].self) { [weak self] response in
             self?.membersRequestingToJoin = response.value ?? []
-            print(response)
-            print(response.value)
+
             self?.tableViewJoin.reloadData()
         }
     }
@@ -45,14 +44,13 @@ class ClubMembersViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())clubMembers/join/true", method: .get, headers: headers).responseDecodable(of: [ClubMembers].self) { [weak self] response in
             self?.members = response.value ?? []
-            print(response)
-            print(response.value)
+
             self?.tableView.reloadData()
         }
     }
     
     func deleteMember(id: String) {
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        //let token = UserDefaults.standard.string(forKey: "tokenClub")
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]
@@ -62,7 +60,7 @@ class ClubMembersViewController: UIViewController {
     }
     
     func acceptRequest(id: String){
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        //let token = UserDefaults.standard.string(forKey: "tokenClub")
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]

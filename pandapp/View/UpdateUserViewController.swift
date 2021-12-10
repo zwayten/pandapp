@@ -102,14 +102,14 @@ class UpdateUserViewController: UIViewController {
     }
     
     func updateProfileUserWithPicure(imageupload: String) {
-        let token = UserDefaults.standard.string(forKey: "token")
+       // let token = UserDefaults.standard.string(forKey: "token")
         let email = UserDefaults.standard.string(forKey: "email")
-        let userpass = UserDefaults.standard.string(forKey: "password")
+        //let userpass = UserDefaults.standard.string(forKey: "password")
         
        let firstname = firstnamelbl.text
        let lastname = lastnamelbl.text
-       let id = idlbl.text
-       let emaill = emailbl.text
+       //let id = idlbl.text
+       //let emaill = emailbl.text
        //let phonenumber = Int(phonenumberlbl.text)
        let classe = classlbl.text
        let bio = biolbl.text
@@ -149,19 +149,19 @@ class UpdateUserViewController: UIViewController {
     }
     
     func updateProfileUserNoPicture() {
-        let token = UserDefaults.standard.string(forKey: "token")
+       // let token = UserDefaults.standard.string(forKey: "token")
         let email = UserDefaults.standard.string(forKey: "email")
-        let userpass = UserDefaults.standard.string(forKey: "password")
+       // let userpass = UserDefaults.standard.string(forKey: "password")
         
        let firstname = firstnamelbl.text
        let lastname = lastnamelbl.text
-       let id = idlbl.text
-       let emaill = emailbl.text
+       //let id = idlbl.text
+       //let emaill = emailbl.text
        //let phonenumber = Int(phonenumberlbl.text)
        let classe = classlbl.text
        let bio = biolbl.text
        let resetpassword = resetpasswordlbl.text
-       let passconf = resetnewpass.text
+       //let passconf = resetnewpass.text
       // let profilepic = imageupload
         
         

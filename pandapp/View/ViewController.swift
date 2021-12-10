@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())auth", method: .post, parameters: parameters).responseJSON {  response in
             let statusCode = response.response?.statusCode
             if statusCode == 200 {
-                let login: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
+                let _: LoginUser = try! JSONDecoder().decode(LoginUser.self, from: response.data!)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
                 vc.modalPresentationStyle = .fullScreen

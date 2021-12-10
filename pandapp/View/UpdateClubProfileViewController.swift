@@ -107,7 +107,7 @@ class UpdateClubProfileViewController: UIViewController {
     }
     
     func updateProfileClubWithPicure(imageupload: String) {
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        //let token = UserDefaults.standard.string(forKey: "tokenClub")
         let clubName = UserDefaults.standard.string(forKey: "clubName")
         let clubpass = UserDefaults.standard.string(forKey: "passwordClub")
         
@@ -116,12 +116,12 @@ class UpdateClubProfileViewController: UIViewController {
         let newClubLogin = clubloginlbl.text
         let resetpassword = resetpasswordlbl.text
         let newDescription = clubdescription.text
-        let passconf = resetnewpass.text
+        //let passconf = resetnewpass.text
         let newLogo = imageupload
         let resetconfirm = resetnewpass.text
         if resetpassword != "" && resetpassword == resetconfirm {
         let parameters = ["login": newClubLogin!,
-                          "password": resetpassword,
+                          "password": resetpassword ?? "tt",
                           //"clubOwner": newClubOwner,
                           "clubName": newClubName!,
                           //"clubLogo": newLogo,

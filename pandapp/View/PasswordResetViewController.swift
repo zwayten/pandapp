@@ -39,7 +39,7 @@ class PasswordResetViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())reset", method: .post, parameters: parameters).responseJSON {  response in
             
             
-                let login: String = try! JSONDecoder().decode(String.self, from: response.data!)
+            let _: String = try! JSONDecoder().decode(String.self, from: response.data!)
                 
             
         }

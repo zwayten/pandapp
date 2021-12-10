@@ -44,14 +44,13 @@ class VisitClubProfileViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())event/\(cName!)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
-            print(response)
-            print(response.value)
+
             self?.tableView.reloadData()
         }
     }
 
     func fetchClubProfile() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        //let token = UserDefaults.standard.string(forKey: "token")
        // let clubName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Accept": "application/json"
@@ -65,7 +64,7 @@ class VisitClubProfileViewController: UIViewController {
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageview.image = UIImage(data: imageData!)
             print(response)
-            print(response.value)
+
             
         }
     }
@@ -100,7 +99,7 @@ class VisitClubProfileViewController: UIViewController {
     }
     
     func deleteMember(id: String) {
-        let token = UserDefaults.standard.string(forKey: "token")
+       // let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]
@@ -112,7 +111,7 @@ class VisitClubProfileViewController: UIViewController {
     @IBAction func joinClub2(_ sender: Any) {
         let userName = UserDefaults.standard.string(forKey: "userName")
         let pic = UserDefaults.standard.string(forKey: "profilePicture")
-        let joinInstantece = ClubMembers(clubName: clubs[0].clubName ?? "none", userEmail: userName!, memberPicture: pic!, state: false, _id: "")
+        let joinInstantece = ClubMembers(clubName: clubs[0].clubName , userEmail: userName!, memberPicture: pic!, state: false, _id: "")
         let cmvm = ClubMembersViewModel()
         cmvm.addMemberToClub(club: joinInstantece)
     }
@@ -121,7 +120,7 @@ class VisitClubProfileViewController: UIViewController {
        
             for m in members {
                 let userName = UserDefaults.standard.string(forKey: "userName")
-                let pic = UserDefaults.standard.string(forKey: "profilePicture")
+               // let pic = UserDefaults.standard.string(forKey: "profilePicture")
                 if m.userEmail == userName && m.clubName == visitNameSegue! && m.state == false {
                  deleteMember(id: m._id)
                 } else if m.userEmail == userName && m.clubName == visitNameSegue! && m.state == true {
@@ -150,7 +149,7 @@ extension VisitClubProfileViewController: UITableViewDataSource, UITableViewDele
         let date = contentView?.viewWithTag(3) as! UILabel
         let location = contentView?.viewWithTag(4) as! UILabel
         let description = contentView?.viewWithTag(5) as! UITextView
-        let price = contentView?.viewWithTag(6) as! UILabel
+        //let price = contentView?.viewWithTag(6) as! UILabel
                 
         //image.image = UIImage(named: users[indexPath.row].profilePicture)
         title.text = events[indexPath.row].title

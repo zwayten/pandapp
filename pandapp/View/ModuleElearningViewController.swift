@@ -25,8 +25,7 @@ class ModuleElearningViewController: UIViewController {
     func fetchModules() {
         AF.request("\(ConnectionDb.baserequest())elearning", method: .get).responseDecodable(of: [Elearning].self) { [weak self] response in
             self?.elearningTab = response.value ?? []
-            print(response)
-            print(response.value)
+  
             self?.tableView.reloadData()
         }
     }

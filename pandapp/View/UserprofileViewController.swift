@@ -29,7 +29,7 @@ class UserprofileViewController: UIViewController {
     }
     
     func fetchClubProfile() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        //let token = UserDefaults.standard.string(forKey: "token")
         let userName = UserDefaults.standard.string(forKey: "userName")
         let email = UserDefaults.standard.string(forKey: "email")
         print(userName!)
@@ -39,15 +39,14 @@ class UserprofileViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())user/userByEmail/\(email!)", method: .get, headers: headers).responseDecodable(of: [User].self) { [weak self] response in
             self?.users = response.value ?? []
-            print(self?.users.count)
+            //print(self?.users.count)
             self?.userName.text = "\((self?.users[0].LastName)!) \((self?.users[0].FirstName)!)"
             self?.userBio.text = (self?.users[0].description)!
             let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.users[0].profilePicture)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.userImage.image = UIImage(data: imageData!)
-            print(response)
-            print(response.value)
+           
             
         }
     }
@@ -85,14 +84,6 @@ class UserprofileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
