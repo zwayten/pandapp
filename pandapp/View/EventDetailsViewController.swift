@@ -42,7 +42,7 @@ class EventDetailsViewController: UIViewController {
             self?.descriptionlbl.text = self?.eventPost[0].description
             self?.datelbl.text = self?.eventPost[0].Time
             self?.locationlbl.text = self?.eventPost[0].place
-            let strImageUrl = "\(ConnectionDb.baserequest())/upload/download/" + (self?.eventPost[0].banner)!
+            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.eventPost[0].banner)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)

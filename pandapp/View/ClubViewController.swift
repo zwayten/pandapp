@@ -33,7 +33,7 @@ class ClubViewController: UIViewController {
     
     
     func fetchUsersAf() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let token = UserDefaults.standard.string(forKey: "tokenClub")
         let cName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
