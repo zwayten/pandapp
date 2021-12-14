@@ -44,7 +44,7 @@ class LostPostViewModel {
                           "type": lostPost.type,
                           "place": lostPost.place,
                           "object": lostPost.object] as [String : Any]
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        let token = UserDefaults.standard.string(forKey: "token")
         let  url = ConnectionDb.createConnection(urlStringModule: "lostpost")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

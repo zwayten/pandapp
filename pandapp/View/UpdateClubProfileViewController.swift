@@ -62,7 +62,7 @@ class UpdateClubProfileViewController: UIViewController {
             self?.clubownerlbl.text = self?.clubs[0].clubOwner
             self?.clubloginlbl.text = self?.clubs[0].login
 
-            let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
+            let strImageUrl = "\(ConnectionDb.baserequest())/upload/download/" + (self?.clubs[0].clubLogo)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)

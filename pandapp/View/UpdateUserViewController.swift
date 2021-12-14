@@ -57,7 +57,7 @@ class UpdateUserViewController: UIViewController {
             //print("el taswira", (self?.users[0].profilePicture)!)
             
 
-            let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.users[0].profilePicture)!
+            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.users[0].profilePicture)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)

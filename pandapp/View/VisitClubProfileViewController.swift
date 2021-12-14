@@ -37,12 +37,12 @@ class VisitClubProfileViewController: UIViewController {
     
     func fetchUsersAf() {
         let token = UserDefaults.standard.string(forKey: "token")
-        let cName = UserDefaults.standard.string(forKey: "clubName")
+        //let cName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())event/\(cName!)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())event/clubName/\(visitNameSegue!)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.events = response.value ?? []
 
             self?.tableView.reloadData()
@@ -59,7 +59,7 @@ class VisitClubProfileViewController: UIViewController {
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             self?.clubDesc.text = self?.clubs[0].description
-            let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
+            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.clubs[0].clubLogo)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageview.image = UIImage(data: imageData!)
@@ -77,9 +77,10 @@ class VisitClubProfileViewController: UIViewController {
         ]
         AF.request("\(ConnectionDb.baserequest())clubMembers", method: .get, headers: headers).responseDecodable(of: [ClubMembers].self) { [weak self] response in
             self?.members = response.value ?? []
+            let userName = UserDefaults.standard.string(forKey: "email")
             for m in self!.members {
                 if m.userEmail == username && m.clubName == clubname {
-                    let userName = UserDefaults.standard.string(forKey: "userName")
+                    
                     
                     if m.userEmail == userName && m.clubName == self?.visitNameSegue! && m.state == false {
                         self?.joinBtn.setTitle("Cancel Request", for: .normal)

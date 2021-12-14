@@ -56,7 +56,7 @@ class ClubViewController: UIViewController {
             self?.clubs = response.value ?? []
             self?.clubNamelbl.text = self?.clubs[0].clubName
             self?.clubDesc.text = self?.clubs[0].description
-            let strImageUrl = "http://192.168.109.1:3000/upload/download/" + (self?.clubs[0].clubLogo)!
+            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.clubs[0].clubLogo)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageview.image = UIImage(data: imageData!)
