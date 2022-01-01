@@ -60,6 +60,8 @@
 		82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE1D1C275D37AA0052116B /* GoogleSegue.swift */; };
 		82B1412727807B0D0050255B /* RatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412627807B0D0050255B /* RatePost.swift */; };
 		82B1412927807B690050255B /* RatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412827807B690050255B /* RatePostViewModel.swift */; };
+		82B1412B2780A7030050255B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412A2780A7030050255B /* Message.swift */; };
+		82B1412D2780BC040050255B /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412C2780BC040050255B /* MessagesViewModel.swift */; };
 		82B2F4E2275A960A007AA9D7 /* ClubMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */; };
 		82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */; };
 		82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */; };
@@ -137,6 +139,8 @@
 		82AE1D1C275D37AA0052116B /* GoogleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSegue.swift; sourceTree = "<group>"; };
 		82B1412627807B0D0050255B /* RatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePost.swift; sourceTree = "<group>"; };
 		82B1412827807B690050255B /* RatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePostViewModel.swift; sourceTree = "<group>"; };
+		82B1412A2780A7030050255B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		82B1412C2780BC040050255B /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembers.swift; sourceTree = "<group>"; };
 		82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewModel.swift; sourceTree = "<group>"; };
 		82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */,
 				82BB48E9275ED8D7005D67E3 /* EventInt.swift */,
 				82B1412627807B0D0050255B /* RatePost.swift */,
+				82B1412A2780A7030050255B /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */,
 				82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */,
 				82B1412827807B690050255B /* RatePostViewModel.swift */,
+				82B1412C2780BC040050255B /* MessagesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 			files = (
 				82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */,
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
+				82B1412D2780BC040050255B /* MessagesViewModel.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
@@ -488,6 +495,7 @@
 				82B2F4E2275A960A007AA9D7 /* ClubMembers.swift in Sources */,
 				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
+				82B1412B2780A7030050255B /* Message.swift in Sources */,
 				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
 				82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */,
 				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,

@@ -61,6 +61,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ChatRoomViewController()
+        vc.clubEmail = clubs[indexPath.row].clubName
         navigationController?.pushViewController(vc, animated: true)
     }
     
