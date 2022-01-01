@@ -10,5 +10,5 @@ pod 'Alamofire', '~> 5.4'
 pod 'SCLAlertView'
 pod 'GoogleSignIn'
 pod 'MessageKit'
-
+pod 'Cosmos', '~> 19.0'
 end

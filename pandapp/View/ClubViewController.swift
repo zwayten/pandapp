@@ -31,6 +31,12 @@ class ClubViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchUsersAf()
+        tableView.reloadData()
+        fetchClubProfile()
+    }
     
     func fetchUsersAf() {
         let token = UserDefaults.standard.string(forKey: "tokenClub")

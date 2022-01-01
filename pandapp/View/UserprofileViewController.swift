@@ -76,12 +76,19 @@ class UserprofileViewController: UIViewController {
         sender.showsMenuAsPrimaryAction = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initProfile()
+        fetchClubProfile()
+    }
+    /*
     override func viewDidLoad() {
         super.viewDidLoad()
         initProfile()
         fetchClubProfile()
         // Do any additional setup after loading the view.
     }
+     */
     
 
     

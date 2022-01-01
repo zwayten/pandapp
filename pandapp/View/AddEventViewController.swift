@@ -39,6 +39,9 @@ class AddEventViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     @IBAction func uploadImage(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary

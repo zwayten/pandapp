@@ -7,10 +7,13 @@
 
 import UIKit
 import Alamofire
+import Cosmos
 
 class EventDetailsViewController: UIViewController {
 
     var _idSegue: String?
+    var noteEvent = 0
+    var ratetable = [RatePost]()
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var locationlbl: UILabel!
@@ -18,6 +21,8 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var eventNamelbl: UILabel!
     @IBOutlet var descriptionlbl: UITextView!
+    @IBOutlet weak var participateBtn: UIButton!
+    @IBOutlet weak var notelbl: UILabel!
     
     var eventInts = [EventInt]()
     var eventPost = [EventPost]()
@@ -26,9 +31,13 @@ class EventDetailsViewController: UIViewController {
         fetchEventPostById(_id: _idSegue!)
         let email = UserDefaults.standard.string(forKey: "email")
         fetchparticipants(userEmail: email!)
+        fetchRate()
         
+
         // Do any additional setup after loading the view.
     }
+    
+    
     
     func fetchEventPostById(_id: String) {
         let token = UserDefaults.standard.string(forKey: "token")
@@ -50,6 +59,39 @@ class EventDetailsViewController: UIViewController {
         }
     }
     
+    func fetchRate() {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+        AF.request("\(ConnectionDb.baserequest())ratePost/rate/\(_idSegue!)", method: .get, headers: headers).responseDecodable(of: [RatePost].self) { [weak self] response in
+            self?.ratetable = response.value ?? []
+            var moyenne = 1.0
+            var somme = 0
+            for item in self!.ratetable {
+                somme += item.note
+            }
+            if self!.ratetable.count != 0 {
+                moyenne = Double(somme / self!.ratetable.count)
+            }
+            
+            self?.notelbl.text = "\(String(moyenne)) / 5"
+            
+        }
+    }
+    
+    func checkRate() -> Bool {
+        let email = UserDefaults.standard.string(forKey: "email")
+        for item in ratetable {
+            if item.userEmail == email! {
+                return true
+            }
+        }
+        return false
+    }
+    
+    
     func fetchparticipants(userEmail: String) {
         let token = UserDefaults.standard.string(forKey: "token")
         let headers: HTTPHeaders = [
@@ -68,11 +110,61 @@ class EventDetailsViewController: UIViewController {
         let evvinntt = EventInt(userEmail: email!, postId: _idSegue!, _id: "")
         evm.addEventParticipation(eventInt: evvinntt)
     }
+    
+    func checkParticipation(checkEmail: String, postId: String) -> Bool {
+        for interaction in eventInts {
+            if interaction.postId == postId && interaction.userEmail == checkEmail {
+                return true
+            }
+        }
+        return false
+    }
+    
     @IBAction func participate(_ sender: Any) {
+        
         let evm = EventIntViewModel()
         let email = UserDefaults.standard.string(forKey: "email")
         let evvinntt = EventInt(userEmail: email!, postId: _idSegue!, _id: "")
+        let test = checkParticipation(checkEmail: email!, postId: _idSegue!)
+        if test == true {
+            ReusableFunctionsViewController.displayAlert(title: "Duplicate ", subTitle: "You can not participate more than once in an event")
+            
+        }
+        else{
         evm.addEventParticipation(eventInt: evvinntt)
+        }
+    }
+    
+    
+    @IBAction func rate(_ sender: Any) {
+        let alert = UIAlertController(title: "Rate this Event", message: nil, preferredStyle: .actionSheet)
+        let ratingView = CosmosView(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
+        ratingView.rating = 0
+        ratingView.settings.starSize = 30
+        ratingView.settings.emptyBorderColor = UIColor.black
+        ratingView.settings.updateOnTouch = true
+        ratingView.frame.origin.x = alert.view.frame.width/2 - 100
+        ratingView.frame.origin.y = 40
+        ratingView.didFinishTouchingCosmos = { rating in
+            self.noteEvent = Int(rating)
+        }
+        alert.addAction(UIAlertAction(title: "Rate", style: .default, handler: {
+            (alert) in
+            print("la note est :\(self.noteEvent)")
+            let rpvm = RatePostViewModel()
+            let email = UserDefaults.standard.string(forKey: "email")
+            let rateInstance = RatePost(userEmail: email!, postId: self._idSegue!, note: self.noteEvent, _id: "")
+            rpvm.ratePost(ratePost: rateInstance)
+        }))
+        alert.addAction(UIAlertAction(title: "cancel", style: .destructive, handler: nil))
+        alert.view.addSubview(ratingView)
+        let checkRate = checkRate()
+        if checkRate == false {
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if checkRate == true{
+                    ReusableFunctionsViewController.displayAlert(title: "Already rated", subTitle: "You can not rate more than once an event")
+        }
     }
 }
     
