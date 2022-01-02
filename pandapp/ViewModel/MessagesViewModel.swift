@@ -8,6 +8,8 @@
 import Foundation
 class MessagesViewModel {
     
+    
+    
     public func sendMessages(messages: Messages) {
         let parameters = ["content": messages.content,
                           "whoSend": messages.whoSend,

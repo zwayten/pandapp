@@ -8,6 +8,7 @@
 import UIKit
 import MessageKit
 import InputBarAccessoryView
+import Alamofire
 
 class Sender: SenderType {
     init(senderId: String, displayName: String) {
@@ -38,51 +39,97 @@ class Message: MessageType {
     
 }
 
-class ChatRoomViewController: MessagesViewController, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate, InputBarAccessoryViewDelegate {
+class ChatRoomViewController: MessagesViewController{
    
     var clubEmail: String?
     var currentUser = Sender(senderId: "aaaaa", displayName: "rrrr")
     var otherUser = Sender(senderId: "bbb", displayName: "ffff")
     var messageList = [MessageType]()
+    var fetchTabMessages = [Messages]()
     
     override func viewDidLoad() {
-        let currentUserEmail = UserDefaults.standard.string(forKey: "email")
-        
-        
-        messageList.append(Message(sender: currentUser,
-                                messageId: "1",
-                                sentDate: Date().addingTimeInterval(-86400),
-                                kind: .text("aaaaaaaaa")))
-        messageList.append(Message(sender: otherUser,
-                                messageId: "2",
-                                sentDate: Date().addingTimeInterval(-80400),
-                                kind: .text("salut bb ")))
-        messageList.append(Message(sender: currentUser,
-                                messageId: "3",
-                                sentDate: Date().addingTimeInterval(-70400),
-                                kind: .text("sousou bikech chna7welek")))
-        messageList.append(Message(sender: otherUser,
-                                messageId: "4",
-                                sentDate: Date().addingTimeInterval(-56400),
-                                kind: .text("aaaaaaaaa")))
-        
+
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.fetchmessages()
+            self.messagesCollectionView.reloadData()
+            self.messagesCollectionView.scrollToLastItem()
+            print("taille mtaa tableu :  \(self.fetchTabMessages.count)")
+        }
+        
+        configureMessageCollectionView()
+     
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         messageInputBar.delegate = self
+        
     
     }
     
-    func currentSender() -> SenderType {
+    func fetchmessages()  {
+        
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+                      AF.request("\(ConnectionDb.baserequest())message/tosend/\(clubEmail!)", method: .get, headers: headers).responseDecodable(of: [Messages].self) { [weak self] response in
+            self?.fetchTabMessages = response.value ?? []
+            
+            for item in self!.fetchTabMessages {
+                print(item.whoSend)
+                
+                if item.whoSend == self!.currentUser.senderId {
+                self!.messageList.append(Message(sender: self!.currentUser,
+                                        messageId: UUID().uuidString,
+                                        sentDate: Date().addingTimeInterval(-70400),
+                                                 kind: .text(item.content)))
+                }
+                else if item.whoSend != self?.currentUser.senderId {
+                    self?.otherUser.senderId = item.whoSend
+                    self?.messageList.append(Message(sender: self!.otherUser,
+                                            messageId: UUID().uuidString,
+                                            sentDate: Date().addingTimeInterval(-70400),
+                                                     kind: .text(item.content)))
+                }
+            }
+            print("messageList : \(self!.messageList.count)")
+                          self?.messagesCollectionView.reloadData()
+        }
+    }
+    func fetch() {
+        let token = UserDefaults.standard.string(forKey: "token")
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+        AF.request("\(ConnectionDb.baserequest())message/tosend/\(clubEmail!)", method: .get, headers: headers).responseDecodable(of: [Messages].self) { [weak self] response in
+            self?.fetchTabMessages = response.value ?? []
+           
+
+            
+        }
+    }
+   
+    
+}
+    
+extension ChatRoomViewController: MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate, InputBarAccessoryViewDelegate{
+        func currentSender() -> SenderType {
+        let currentUserEmail = UserDefaults.standard.string(forKey: "email")
+        currentUser.senderId = currentUserEmail!
         return currentUser
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
+        
         return messageList[indexPath.section]
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
+        
         return messageList.count
     }
 
@@ -162,5 +209,19 @@ class ChatRoomViewController: MessagesViewController, MessagesDataSource, Messag
             }
         }
     }
+   
+    
+    
+    func configureMessageCollectionView() {
+    
+        
+        scrollsToLastItemOnKeyboardBeginsEditing = true // default false
+        maintainPositionOnKeyboardFrameChanged = true // default false
+
+        showMessageTimestampOnSwipeLeft = true // default false
+        
+       // messagesCollectionView.refreshControl = refreshControl
+    }
 
 }
+

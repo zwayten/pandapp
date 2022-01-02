@@ -17,6 +17,7 @@ class BrowseClubsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchClubsAf()
+        
         // Do any additional setup after loading the view.
     }
     
