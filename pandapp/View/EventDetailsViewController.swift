@@ -46,7 +46,7 @@ class EventDetailsViewController: UIViewController {
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
         ]
-        AF.request("\(ConnectionDb.baserequest())event/eventById/\(_id)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
+        AF.request("\(ConnectionDb.baserequest())event/id/\(_id)", method: .get, headers: headers).responseDecodable(of: [EventPost].self) { [weak self] response in
             self?.eventPost = response.value ?? []
             self?.eventNamelbl.text = self?.eventPost[0].title
             self?.descriptionlbl.text = self?.eventPost[0].description

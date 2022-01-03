@@ -16,14 +16,18 @@ class AddLostPostViewController: UIViewController {
     
     var selectedImages : UIImage?
     var imageJsonReturnAf  = ""
+    var currSegue: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ReusableFunctionsViewController.customTextField(textfield: typelbl)
         ReusableFunctionsViewController.customTextField(textfield: placelbl)
         ReusableFunctionsViewController.customTextField(textfield: objectlbl)
+        typelbl.text = currSegue!
     }
     
+    
+   
     
     
     func getdata() -> LostPost {
@@ -51,6 +55,7 @@ class AddLostPostViewController: UIViewController {
         
        
     }
+    
 }
 extension AddLostPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         

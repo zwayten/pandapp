@@ -86,6 +86,8 @@
 		82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC1B27530B4100D2894F /* TabBarVC.swift */; };
 		82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */; };
 		82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */; };
+		94B2F7B52783250D008853D7 /* Emploi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B42783250D008853D7 /* Emploi.swift */; };
+		94B2F7B72783260D008853D7 /* EmploiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B62783260D008853D7 /* EmploiViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,8 @@
 		82ECAC1B27530B4100D2894F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitClubProfileViewController.swift; sourceTree = "<group>"; };
 		82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseClubsViewController.swift; sourceTree = "<group>"; };
+		94B2F7B42783250D008853D7 /* Emploi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emploi.swift; sourceTree = "<group>"; };
+		94B2F7B62783260D008853D7 /* EmploiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploiViewModel.swift; sourceTree = "<group>"; };
 		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
 		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -252,6 +256,7 @@
 				82BB48E9275ED8D7005D67E3 /* EventInt.swift */,
 				82B1412627807B0D0050255B /* RatePost.swift */,
 				82B1412A2780A7030050255B /* Message.swift */,
+				94B2F7B42783250D008853D7 /* Emploi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */,
 				82B1412827807B690050255B /* RatePostViewModel.swift */,
 				82B1412C2780BC040050255B /* MessagesViewModel.swift */,
+				94B2F7B62783260D008853D7 /* EmploiViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				82BB353327820514009E855E /* EventCollectionViewCell.swift in Sources */,
 				82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
+				94B2F7B72783260D008853D7 /* EmploiViewModel.swift in Sources */,
 				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
 				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
@@ -523,6 +530,7 @@
 				82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */,
 				82A922622743306D008D3A8C /* User.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
+				94B2F7B52783250D008853D7 /* Emploi.swift in Sources */,
 				82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */,
 				82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */,
 				8252B155275487E700AF300A /* LoginUser.swift in Sources */,

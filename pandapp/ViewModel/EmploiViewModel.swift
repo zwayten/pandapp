@@ -1,23 +1,19 @@
 //
-//  RatePostViewModel.swift
+//  EmploiViewModel.swift
 //  pandapp
 //
-//  Created by yassine zitoun on 1/1/2022.
+//  Created by Mac2021 on 3/1/2022.
 //
 
 import Foundation
-class RatePostViewModel {
-    
-    public func ratePost(ratePost: RatePost) {
-        let parameters = ["userEmail": ratePost.userEmail,
-                          "postId": ratePost.postId,
-                          "note": ratePost.note,
-                          "_id": ratePost._id] as [String : Any]
-        
-        let  url = ConnectionDb.createConnection(urlStringModule: "ratePost")
+class EmploiViewModel {
+    public func addEmploi(emploi: Emploi) {
+        let parameters = ["picture": emploi.picture,
+                          "classe": emploi.classe] as [String : Any]
+        let token = UserDefaults.standard.string(forKey: "token")
+        let  url = ConnectionDb.createConnection(urlStringModule: "emploi")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let token = UserDefaults.standard.string(forKey: "token")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue( "Bearer \(token!)", forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }

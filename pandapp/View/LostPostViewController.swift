@@ -13,6 +13,7 @@ class LostPostViewController: UIViewController {
     var lost = [LostPost]()
     var found = [LostPost]()
     var currentTab = [LostPost]()
+    var curr = "lost"
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -22,13 +23,26 @@ class LostPostViewController: UIViewController {
         fetchFoundPosts()
         tableView.reloadData()
     }
+    @IBAction func addpost(_ sender: Any) {
+        let se = curr
+        performSegue(withIdentifier: "addlostPost", sender: se)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addlostPost" {
+            let ss = sender as! String
+            let destination = segue.destination as! AddLostPostViewController
+            destination.currSegue = ss
+        }
+    }
     
     @IBAction func toggleTabs(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
                            
                    currentTab = lost
+            curr = "lost"
             tableView.reloadData()
                        }else {
+                           curr = "found"
                            currentTab = found
                            tableView.reloadData()
                        }

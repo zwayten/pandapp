@@ -64,6 +64,7 @@ class UserLoginViewController: UIViewController {
                 UserDefaults.standard.set(login.email, forKey: "email")
                 UserDefaults.standard.set(login.identifant, forKey: "identifant")
                 UserDefaults.standard.set(login.password, forKey: "password")
+                UserDefaults.standard.set(login.className, forKey: "classe")
                 UserDefaults.standard.set(login.token, forKey: "token")
                 UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
                 
@@ -219,6 +220,7 @@ class UserLoginViewController: UIViewController {
             UserDefaults.standard.set(login.email, forKey: "email")
             UserDefaults.standard.set(login.identifant, forKey: "identifant")
             UserDefaults.standard.set(login.password, forKey: "password")
+            UserDefaults.standard.set(login.className, forKey: "classe")
             UserDefaults.standard.set(login.token, forKey: "token")
             UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
             
