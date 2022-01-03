@@ -5,6 +5,14 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - AppCenter (4.4.1):
+    - AppCenter/Analytics (= 4.4.1)
+    - AppCenter/Crashes (= 4.4.1)
+  - AppCenter/Analytics (4.4.1):
+    - AppCenter/Core
+  - AppCenter/Core (4.4.1)
+  - AppCenter/Crashes (4.4.1):
+    - AppCenter/Core
   - Cosmos (19.0.3)
   - GoogleSignIn (6.0.2):
     - AppAuth (~> 1.4)
@@ -23,6 +31,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
+  - AppCenter
   - Cosmos (~> 19.0)
   - GoogleSignIn
   - MessageKit
@@ -32,6 +41,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AppAuth
+    - AppCenter
     - Cosmos
     - GoogleSignIn
     - GTMAppAuth
@@ -43,6 +53,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  AppCenter: b0b6f1190215b5f983c42934db718f3b46fff3c0
   Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
@@ -51,6 +62,6 @@ SPEC CHECKSUMS:
   MessageKit: 8e76dd8d65ad44b49e1651c673497146416461e9
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 49260d2fa7530c3426cf3eaae02c52aabd5f56a1
+PODFILE CHECKSUM: 1f033d1bdfef88599b4fe74051e12487d110dcbb
 
 COCOAPODS: 1.11.2

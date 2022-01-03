@@ -88,6 +88,7 @@
 		82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */; };
 		94B2F7B52783250D008853D7 /* Emploi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B42783250D008853D7 /* Emploi.swift */; };
 		94B2F7B72783260D008853D7 /* EmploiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B62783260D008853D7 /* EmploiViewModel.swift */; };
+		94B2F7B9278372BB008853D7 /* mapSimpleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseClubsViewController.swift; sourceTree = "<group>"; };
 		94B2F7B42783250D008853D7 /* Emploi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emploi.swift; sourceTree = "<group>"; };
 		94B2F7B62783260D008853D7 /* EmploiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploiViewModel.swift; sourceTree = "<group>"; };
+		94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSimpleUserViewController.swift; sourceTree = "<group>"; };
 		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
 		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -321,6 +323,7 @@
 				82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */,
 				82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */,
 				829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */,
+				94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				8252B155275487E700AF300A /* LoginUser.swift in Sources */,
 				82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */,
 				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
+				94B2F7B9278372BB008853D7 /* mapSimpleUserViewController.swift in Sources */,
 				82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */,
 				82BB352E2781DA5B009E855E /* CategoryCollectionViewCell.swift in Sources */,
 				82BB353927820F0B009E855E /* CardView.swift in Sources */,

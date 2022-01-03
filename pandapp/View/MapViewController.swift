@@ -9,26 +9,81 @@ import UIKit
 import MapKit
 //import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
-
-    @IBOutlet var mapView: MKMapView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //mapView = MKMapView()
-                //mapView?.delegate = self
-
-        // Do any additional setup after loading the view.
-    }
+class MapViewController: UIViewController,MKMapViewDelegate,UIGestureRecognizerDelegate,CLLocationManagerDelegate,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
+    @IBOutlet weak var nomStade: UITextField!
 
-    /*
-    // MARK: - Navigation
+    @IBOutlet weak var descStade: UITextField!
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var numStade: UITextField!
+
+    @IBOutlet weak var mapView: MKMapView!
+
+    @IBOutlet weak var addImageButton: UIButton!
+
+    var longitudeVal : Double?
+
+    var latitudeVal : Double?
+
+    var myGeoCoder = CLGeocoder()
+    var locationManager  = CLLocationManager()
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        locationManager.delegate = self
+
+        mapView.delegate = self
+
+        let oLongTapGerture = UILongPressGestureRecognizer(target: self, action:#selector(MapViewController.handleLongtapGesture(gestureRecognizer:)))
+        self.mapView.addGestureRecognizer(oLongTapGerture)
+
     }
-    */
+    @IBAction func saveLocation(_ sender: Any) {
+        let userid = UserDefaults.standard.string(forKey: "email")
+        let parking = Parking(longatitude: longitudeVal!, latatitude: latitudeVal!, userId: userid!)
+        let pvm = ParkingViewModel()
+        pvm.addParking(parking: parking)
+    }
+    @objc func handleLongtapGesture(gestureRecognizer : UILongPressGestureRecognizer){
+
+        if gestureRecognizer.state != UIGestureRecognizer.State.ended{
+
+            let touchLocation = gestureRecognizer.location(in: mapView)
+
+            let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+
+            latitudeVal = locationCoordinate.latitude
+
+            longitudeVal = locationCoordinate.longitude
+
+            print("latitude: \(locationCoordinate.latitude), Longitude:  \(locationCoordinate.longitude)")
+
+            
+
+            let myPin = MKPointAnnotation()
+
+            myPin.coordinate = locationCoordinate
+
+
+
+            myPin.title = " latitude: \(locationCoordinate.latitude), Longitude\(locationCoordinate.longitude)"
+
+            mapView.addAnnotation(myPin)
+
+        }
+
+        
+
+        if gestureRecognizer.state != UIGestureRecognizer.State.began
+
+        {
+
+            return
+
+        }
+
+    }
+
+
 
 }

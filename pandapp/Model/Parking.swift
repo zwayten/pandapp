@@ -7,17 +7,19 @@
 
 import Foundation
 
-class Parking {
+class Parking: Codable {
+     
+    
 
-    var longatitude: Int
-    var latatitude: Int
-    var creted_at: Date
+    var longatitude: Double
+    var latatitude: Double
     var userId: String
     
-    init(longatitude: Int, latatitude: Int, creted_at: Date, userId: String) {
-        self.longatitude = longatitude
-        self.latatitude = latatitude
-        self.creted_at = creted_at
-        self.userId = userId
-    }
+    
+    init(longatitude: Double, latatitude: Double, userId: String) {
+       self.longatitude = longatitude
+       self.latatitude = latatitude
+       self.userId = userId
+   }
+    
 }

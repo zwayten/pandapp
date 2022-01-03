@@ -8,11 +8,18 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        AppCenter.start(withAppSecret: "2512e25b-124e-4dab-861c-1f0087741074", services:[
+          Analytics.self,
+          Crashes.self
+        ])
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {

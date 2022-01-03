@@ -11,4 +11,5 @@ pod 'SCLAlertView'
 pod 'GoogleSignIn'
 pod 'MessageKit'
 pod 'Cosmos', '~> 19.0'
+pod 'AppCenter'
 end

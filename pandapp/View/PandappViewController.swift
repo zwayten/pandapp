@@ -23,6 +23,8 @@ class PandappViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func map2(_ sender: Any) {performSegue(withIdentifier: "mapsegue", sender: nil)
+    }
     func fetchEventsAf() {
         let token = UserDefaults.standard.string(forKey: "token")
        
@@ -55,7 +57,10 @@ class PandappViewController: UIViewController {
         /*specialsCollectionView.register(UINib(nibName: DIshLandscapeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DIshLandscapeCollectionViewCell.identifier) */
     }
 
-
+    @IBAction func map(_ sender: Any) {
+        performSegue(withIdentifier: "map", sender: nil)
+    }
+    
 }
 
 extension PandappViewController: UICollectionViewDelegate, UICollectionViewDataSource {
