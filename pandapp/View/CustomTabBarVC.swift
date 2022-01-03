@@ -25,7 +25,7 @@ class CustomTabBarvc: UITabBarController, UITabBarControllerDelegate {
         let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let hvc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let hvc = storyboard.instantiateViewController(withIdentifier: "PandappViewController") as! PandappViewController
         /*
         HomeViewController
         clubProfileId

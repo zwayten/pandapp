@@ -16,7 +16,6 @@
 		823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAC27362B60003F3FA4 /* ClubViewController.swift */; };
 		823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */; };
 		823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */; };
-		823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB327389842003F3FA4 /* HomeViewController.swift */; };
 		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
 		823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */; };
 		82454EB6275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */; };
@@ -68,6 +67,12 @@
 		82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36D2756E0400017503E /* AddDocumentViewController.swift */; };
 		82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36F2756F3E90017503E /* DocumentViewController.swift */; };
 		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
+		82BB35272781CDB9009E855E /* PandappViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB35262781CDB9009E855E /* PandappViewController.swift */; };
+		82BB352E2781DA5B009E855E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB352C2781DA5B009E855E /* CategoryCollectionViewCell.swift */; };
+		82BB352F2781DA5B009E855E /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82BB352D2781DA5B009E855E /* CategoryCollectionViewCell.xib */; };
+		82BB353327820514009E855E /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB353127820514009E855E /* EventCollectionViewCell.swift */; };
+		82BB353427820514009E855E /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82BB353227820514009E855E /* EventCollectionViewCell.xib */; };
+		82BB353927820F0B009E855E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB353827820F0B009E855E /* CardView.swift */; };
 		82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48E9275ED8D7005D67E3 /* EventInt.swift */; };
 		82BB48EC275ED948005D67E3 /* EventIntViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */; };
 		82BB48EF275EE61E005D67E3 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */; };
@@ -93,7 +98,6 @@
 		823E5FAC27362B60003F3FA4 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRegisterViewController.swift; sourceTree = "<group>"; };
 		823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELearningViewController.swift; sourceTree = "<group>"; };
-		823E5FB327389842003F3FA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubGoogleCompleteProfileViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,12 @@
 		82B7B36D2756E0400017503E /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
 		82B7B36F2756F3E90017503E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
+		82BB35262781CDB9009E855E /* PandappViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandappViewController.swift; sourceTree = "<group>"; };
+		82BB352C2781DA5B009E855E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		82BB352D2781DA5B009E855E /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		82BB353127820514009E855E /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		82BB353227820514009E855E /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		82BB353827820F0B009E855E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		82BB48E9275ED8D7005D67E3 /* EventInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInt.swift; sourceTree = "<group>"; };
 		82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventIntViewModel.swift; sourceTree = "<group>"; };
 		82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +216,7 @@
 		82628ED82730C4BD00719A51 /* pandapp */ = {
 			isa = PBXGroup;
 			children = (
+				82BB35292781D9B2009E855E /* CustomViews */,
 				82A9225E27432E5F008D3A8C /* View */,
 				82A9225D27432E52008D3A8C /* ViewModel */,
 				82A9225C27432E3E008D3A8C /* Model */,
@@ -271,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				82628EDF2730C4BD00719A51 /* Main.storyboard */,
-				823E5FB327389842003F3FA4 /* HomeViewController.swift */,
+				82BB35262781CDB9009E855E /* PandappViewController.swift */,
 				82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */,
 				82ECAC1B27530B4100D2894F /* TabBarVC.swift */,
 				82628EDD2730C4BD00719A51 /* ViewController.swift */,
@@ -306,6 +317,50 @@
 				829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		82BB35292781D9B2009E855E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				82BB353527820E6C009E855E /* CardView */,
+				82BB352A2781D9D9009E855E /* CollectionViewCells */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		82BB352A2781D9D9009E855E /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				82BB3530278202DE009E855E /* EventCollectionViewCell */,
+				82BB352B2781DA01009E855E /* CategoryCollectionViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		82BB352B2781DA01009E855E /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82BB352C2781DA5B009E855E /* CategoryCollectionViewCell.swift */,
+				82BB352D2781DA5B009E855E /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		82BB3530278202DE009E855E /* EventCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82BB353127820514009E855E /* EventCollectionViewCell.swift */,
+				82BB353227820514009E855E /* EventCollectionViewCell.xib */,
+			);
+			path = EventCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		82BB353527820E6C009E855E /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				82BB353827820F0B009E855E /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		C8F7B8F55A5F0F83B48F1E90 /* Frameworks */ = {
@@ -376,9 +431,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82BB352F2781DA5B009E855E /* CategoryCollectionViewCell.xib in Resources */,
 				82628EE92730C4BF00719A51 /* LaunchScreen.storyboard in Resources */,
 				82628EE62730C4BF00719A51 /* Assets.xcassets in Resources */,
 				82628EE12730C4BD00719A51 /* Main.storyboard in Resources */,
+				82BB353427820514009E855E /* EventCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +508,7 @@
 				82B1412927807B690050255B /* RatePostViewModel.swift in Sources */,
 				82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */,
 				82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */,
+				82BB353327820514009E855E /* EventCollectionViewCell.swift in Sources */,
 				82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
 				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
@@ -471,7 +529,10 @@
 				82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */,
 				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
 				82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */,
+				82BB352E2781DA5B009E855E /* CategoryCollectionViewCell.swift in Sources */,
+				82BB353927820F0B009E855E /* CardView.swift in Sources */,
 				823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */,
+				82BB35272781CDB9009E855E /* PandappViewController.swift in Sources */,
 				82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */,
 				82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
@@ -484,7 +545,6 @@
 				82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */,
 				82A9226427433140008D3A8C /* Document.swift in Sources */,
 				829EE46B275946FB003963E2 /* UpdateClubProfileViewController.swift in Sources */,
-				823E5FB427389842003F3FA4 /* HomeViewController.swift in Sources */,
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
 				82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */,

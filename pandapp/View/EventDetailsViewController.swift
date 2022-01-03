@@ -28,6 +28,7 @@ class EventDetailsViewController: UIViewController {
     var eventPost = [EventPost]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ell id \(_idSegue)")
         fetchEventPostById(_id: _idSegue!)
         let email = UserDefaults.standard.string(forKey: "email")
         fetchparticipants(userEmail: email!)
@@ -55,6 +56,7 @@ class EventDetailsViewController: UIViewController {
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)
+            
             
         }
     }
