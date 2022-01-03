@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>82628ED52730C4BD00719A51</key>
+		<key>pandapp.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
-			<true/>
+			<key>orderHint</key>
+			<integer>12</integer>
 		</dict>
 	</dict>
 </dict>
