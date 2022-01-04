@@ -138,6 +138,8 @@ class UserprofileViewController: UIViewController {
                 UserDefaults.standard.set("", forKey: "identifant")
                 UserDefaults.standard.set("", forKey: "password")
                 UserDefaults.standard.set("", forKey: "token")
+                UserDefaults.standard.set("", forKey: "classe")
+                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "initialNavigation")
                 vc.modalPresentationStyle = .fullScreen
