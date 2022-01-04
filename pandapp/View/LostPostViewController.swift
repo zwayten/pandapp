@@ -14,6 +14,7 @@ class LostPostViewController: UIViewController {
     var found = [LostPost]()
     var currentTab = [LostPost]()
     var curr = "lost"
+    var token: String?
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -48,7 +49,13 @@ class LostPostViewController: UIViewController {
                        }
     }
     func fetchLostPosts() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
@@ -61,7 +68,13 @@ class LostPostViewController: UIViewController {
     }
     
     func fetchFoundPosts() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"

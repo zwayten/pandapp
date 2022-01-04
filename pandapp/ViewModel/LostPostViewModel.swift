@@ -12,6 +12,7 @@ class LostPostViewModel {
     
     public func fetchLostPost() {
         
+        
         let  url = ConnectionDb.createConnection(urlStringModule: "lostpost")
         print("test 1")
         let session = URLSession.shared
@@ -44,7 +45,14 @@ class LostPostViewModel {
                           "type": lostPost.type,
                           "place": lostPost.place,
                           "object": lostPost.object] as [String : Any]
-        let token = UserDefaults.standard.string(forKey: "token")
+        var token: String?
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+            token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let  url = ConnectionDb.createConnection(urlStringModule: "lostpost")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

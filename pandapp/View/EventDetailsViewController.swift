@@ -14,6 +14,7 @@ class EventDetailsViewController: UIViewController {
     var _idSegue: String?
     var noteEvent = 0
     var ratetable = [RatePost]()
+    var token: String?
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var locationlbl: UILabel!
@@ -41,7 +42,13 @@ class EventDetailsViewController: UIViewController {
     
     
     func fetchEventPostById(_id: String) {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
@@ -62,7 +69,13 @@ class EventDetailsViewController: UIViewController {
     }
     
     func fetchRate() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
@@ -95,7 +108,13 @@ class EventDetailsViewController: UIViewController {
     
     
     func fetchparticipants(userEmail: String) {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
             "Accept": "application/json"
@@ -143,7 +162,7 @@ class EventDetailsViewController: UIViewController {
         let ratingView = CosmosView(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
         ratingView.rating = 0
         ratingView.settings.starSize = 30
-        ratingView.settings.emptyBorderColor = UIColor.black
+        ratingView.settings.emptyBorderColor = UIColor.red
         ratingView.settings.updateOnTouch = true
         ratingView.frame.origin.x = alert.view.frame.width/2 - 100
         ratingView.frame.origin.y = 40

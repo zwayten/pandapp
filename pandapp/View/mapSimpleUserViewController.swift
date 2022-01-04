@@ -51,8 +51,20 @@ class mapSimpleUserViewController: UIViewController , UISearchBarDelegate{
         configureLocationManager()
         configureMapView()
         enableLocationServices()
-
-        let headers: HTTPHeaders = [.contentType("application/json"),.authorization(bearerToken:(UserDefaults.standard.string(forKey: "token")!)) ]
+        var token: String?
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(token!)",
+            "Accept": "application/json"
+        ]
+        
+        
         AF.request("\(ConnectionDb.baserequest())parking", method: .get , headers: headers ).responseDecodable(of: [Parking].self) { [weak self] response in
             self?.myresult = response.value ?? []
                 

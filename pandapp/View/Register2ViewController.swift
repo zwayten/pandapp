@@ -12,7 +12,10 @@ class Register2ViewController: UIViewController {
     //var from Register 1 interface
         // classes user and clubs instantiated in "UserRegisterViewController"
         var segueClass: User?
+ 
         var segueClassClub: Clubs?
+
+    
         // Bool vars to check if its user or club to register
         var clubCheck: Bool?
         var userCheck: Bool?
@@ -34,10 +37,23 @@ class Register2ViewController: UIViewController {
         if clubCheck! == true && userCheck! == false {
             PhoneNumber.isHidden = true
             phonelbl.isHidden = true
+            if segueClassClub!.clubLogo != "default.png" {
+                let strImageUrl = segueClassClub!.clubLogo
+                let urlImage = URL(string: strImageUrl)
+                let imageData = try? Data(contentsOf: urlImage!)
+                imageView.image = UIImage(data: imageData!)
+            }
         }
         if clubCheck! == false && userCheck! == true {
             PhoneNumber.isHidden = false
             phonelbl.isHidden = false
+            print("eeeeeeeeeeeeeeeee \(segueClass!.profilePicture)")
+            if segueClass!.profilePicture != "default.png" {
+                let strImageUrl = segueClass!.profilePicture
+                let urlImage = URL(string: strImageUrl)
+                let imageData = try? Data(contentsOf: urlImage!)
+                imageView.image = UIImage(data: imageData!)
+            }
         }
         
         super.viewDidLoad()
@@ -67,7 +83,12 @@ class Register2ViewController: UIViewController {
                 else { segueClass!.phoneNumber = 123 }
             }
             else { print("empty field") }
+            if segueClass!.profilePicture != "default.png" {
+                uploadService.uploadImageToServer(imageOrVideo: imageView.image, user: segueClass!, bio: bio)
+            }
+            else {
              uploadService.uploadImageToServer(imageOrVideo: selectedImages, user: segueClass!, bio: bio)
+            }
             print("debuggggggg")
             print(segueClass!.profilePicture)
             print("debuggggggg")
@@ -78,9 +99,12 @@ class Register2ViewController: UIViewController {
              //umodel.registerUser(user: segueClass!)
         }
         if clubCheck! == true && userCheck! == false {
-            
+            if segueClassClub!.clubLogo != "default.png" {
+                uploadService.uploadImageToServerClub(imageOrVideo: imageView.image, club: segueClassClub!, bio: bio)
+            }
+            else{
             uploadService.uploadImageToServerClub(imageOrVideo: selectedImages, club: segueClassClub!, bio: bio)
-            
+            }
         }
         
         

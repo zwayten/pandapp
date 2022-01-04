@@ -38,7 +38,9 @@ class CustomTabBarvc: UITabBarController, UITabBarControllerDelegate {
         
         if lastLogged! == "club" {
         let cpvc = storyboard.instantiateViewController(withIdentifier: "clubProfileId") as! ClubViewController
-            let chatvc = storyboard.instantiateViewController(withIdentifier: "chatId") as! ChatViewController
+            //let chatvc = storyboard.instantiateViewController(withIdentifier: "chatId") as! ChatViewController
+            let chatvc = storyboard.instantiateViewController(withIdentifier: "alt") as! AltViewController
+            //let chatvc = AltViewController()
             
             self.viewControllers = [chatvc, hvc, cpvc]
             

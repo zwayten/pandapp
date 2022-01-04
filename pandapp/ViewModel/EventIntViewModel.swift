@@ -10,6 +10,7 @@ import Foundation
 class EventIntViewModel {
     
     public func addEventParticipation(eventInt: EventInt) {
+        var token: String?
         let parameters = ["userEmail": eventInt.userEmail,
                           "postId": eventInt.postId,
                           "_id": eventInt._id] as [String : Any]

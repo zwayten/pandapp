@@ -11,15 +11,24 @@ class MessagesViewModel {
     
     
     public func sendMessages(messages: Messages) {
+        var token: String?
         let parameters = ["content": messages.content,
                           "whoSend": messages.whoSend,
                           "toSend": messages.toSend,
                           "_id": messages._id] as [String : Any]
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         
         let  url = ConnectionDb.createConnection(urlStringModule: "message")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue( "Bearer \(token!)", forHTTPHeaderField: "Authorization")
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return }
         request.httpBody = httpBody
         

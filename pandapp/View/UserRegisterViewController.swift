@@ -7,11 +7,12 @@
 
 import UIKit
 import GoogleSignIn
+import Alamofire
 
 class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var gs: GoogleSegue?
-    
+    var testgoogle: Bool?
     @IBOutlet var userEmailRegister: UITextField!
     @IBOutlet var passwordUserRegister: UITextField!
     @IBOutlet var passwordConfirmUserregister: UITextField!
@@ -24,12 +25,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet var claasOnePicker: UIPickerView!
     @IBOutlet var claasTwoPicker: UIPickerView!
     @IBOutlet var claasThreePicker: UIPickerView!
+    @IBOutlet var imageGoogle: UITextField!
     
     @IBOutlet var tooltipCardView: UIView!
     
     let pickerOneData = ["1", "2", "3", "4", "5"]
-    let pickerTwoData = ["aaa", "C-Programming", "Electronics", "French", "English", "Algorithm", "Arduino"]
-    let pickerThreeData = ["1", "2", "3", "4", "5","6","7","8","9","10"]
+    let pickerTwoData = ["Info", "Genie-Civile", "Business", "Prepa", "Sim", "Se", "Twin","Info", "Nids", "Iost", "BI", "Sleam", "Sae", "Ds", "Infini"]
+    let pickerThreeData = ["1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"]
     
     let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
     
@@ -80,15 +82,35 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
                 let profilePicUrl = user.profile?.imageURL(withDimension: 320)
             let urltoString = profilePicUrl?.absoluteString
             print(emailAddress!)
-            print("giveName: ",givenName!)
-            print("familyName : ", familyName!)
-            print("url :",profilePicUrl!)
+           
             let userGoogle = User(email: emailAddress!, password:"" , phoneNumber: 123, profilePicture: urltoString!, FirstName: givenName!, LastName: familyName!, verified: true, identifant: "181JMT123", className: "4sim2", role: "user", social: false, description: "oo")
             
             
             let userGoogleStruct = GoogleSegue(user: userGoogle, profilePictureUrl: profilePicUrl!)
             
-            self.performSegue(withIdentifier: "fromUserSignupWithGoogle" , sender: userGoogleStruct)
+            self.userEmailRegister.text = emailAddress!
+            self.lastNameUserRegister.text = familyName!
+            self.FirstNameUserRegister.text = givenName!
+            self.imageGoogle.text = urltoString!
+            let uploadService = UploadImageService()
+            let imageData = try? Data(contentsOf: profilePicUrl!)
+            let image = UIImage(data: imageData!)
+            
+            let headers: HTTPHeaders = [
+                //"Authorisation": "bearer \(token!)",
+                "Content-type": "multipart/form-data"
+            ]
+            
+                            AF.upload(
+                    multipartFormData: { multipartFormData in
+                        multipartFormData.append(image!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
+                },
+                    to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
+                .responseJSON {  response in
+                  print("uploaded")
+                    
+                }
+           // self.performSegue(withIdentifier: "fromUserSignupWithGoogle" , sender: userGoogleStruct)
             
           }
     }
@@ -119,8 +141,9 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         let class1 = classFieldOne.text!
         let class2 = classFieldTwo.text!
         let class3 = classFieldThree.text!
+        let image = imageGoogle.text ?? "default.png"
         let className = "\(class1)\(class2)\(class3)"
-        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: "534343543.png", FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: className, role: "user", social: false, description: "")
+        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: image, FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: className, role: "user", social: false, description: "")
         
         return user
        

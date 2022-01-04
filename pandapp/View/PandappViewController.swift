@@ -11,6 +11,7 @@ class PandappViewController: UIViewController {
     
     var clubs = [Clubs]()
     var events = [EventPost]()
+    var token: String?
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var eventCollectionView: UICollectionView!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
@@ -26,7 +27,13 @@ class PandappViewController: UIViewController {
     @IBAction func map2(_ sender: Any) {performSegue(withIdentifier: "mapsegue", sender: nil)
     }
     func fetchEventsAf() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
        
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",

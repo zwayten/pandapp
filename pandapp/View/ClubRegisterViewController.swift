@@ -16,6 +16,7 @@ class ClubRegisterViewController: UIViewController {
     @IBOutlet var clubRegisterClubName: UITextField!
     @IBOutlet var clubRegisterOwner: UITextField!
     
+    @IBOutlet var imageGoogle: UITextField!
     var gs: GoogleSegueClub?
     let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
     
@@ -44,8 +45,9 @@ class ClubRegisterViewController: UIViewController {
         let password  = clubRegisterPassword.text!
         let login = clubRegisteremail.text!
         let owner = clubRegisterOwner.text!
+        let image = imageGoogle.text ?? "default.png"
         
-        let club = Clubs(clubName: clubname, clubOwner: owner, clubLogo: "logo.png", verified: false, password: password, login: login, description: "", _id: "")
+        let club = Clubs(clubName: clubname, clubOwner: owner, clubLogo: image, verified: false, password: password, login: login, description: "", _id: "")
         return club
     }
     
@@ -62,15 +64,17 @@ class ClubRegisterViewController: UIViewController {
                 let profilePicUrl = user.profile?.imageURL(withDimension: 320)
             let urltoString = profilePicUrl?.absoluteString
             print(emailAddress!)
-            print("giveName: ",givenName!)
-            print("familyName : ", familyName!)
-            print("url :",profilePicUrl!)
+            
             let clubGoogle = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
             
             
             let clubGoogleStruct = GoogleSegueClub(club: clubGoogle, profilePictureUrl: profilePicUrl!)
             
-            self.performSegue(withIdentifier: "clubGoogleSignup" , sender: clubGoogleStruct)
+            self.clubRegisteremail.text = emailAddress!
+            self.clubRegisterClubName.text = familyName!
+            self.imageGoogle.text = urltoString!
+            
+           // self.performSegue(withIdentifier: "clubGoogleSignup" , sender: clubGoogleStruct)
             
           }
     }

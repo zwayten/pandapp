@@ -9,11 +9,18 @@ import Foundation
 
 
 class ParkingViewModel {
+    var token: String?
     public func addParking(parking: Parking) {
         let parameters = ["longatitude": parking.longatitude,
                           "latatitude": parking.latatitude,
                           "userId": parking.userId] as [String : Any]
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         let  url = ConnectionDb.createConnection(urlStringModule: "parking")
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

@@ -13,6 +13,7 @@ class VisitClubProfileViewController: UIViewController {
     var clubs = [Clubs]()
     var members = [ClubMembers]()
     var visitNameSegue: String?
+    var token: String?
 
     @IBOutlet var clubDesc: UITextView!
     @IBOutlet var imageview: UIImageView!
@@ -36,7 +37,13 @@ class VisitClubProfileViewController: UIViewController {
     }
     
     func fetchUsersAf() {
-        let token = UserDefaults.standard.string(forKey: "token")
+        let lastLogged = UserDefaults.standard.string(forKey: "lastLoggedIn")
+        if lastLogged! == "user" {
+         token = UserDefaults.standard.string(forKey: "token")
+        }
+        else if lastLogged == "club" {
+             token = UserDefaults.standard.string(forKey: "tokenClub")
+            }
         //let cName = UserDefaults.standard.string(forKey: "clubName")
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(token!)",
