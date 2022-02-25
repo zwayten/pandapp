@@ -40,10 +40,16 @@ class MapViewController: UIViewController,MKMapViewDelegate,UIGestureRecognizerD
     }
     @IBAction func saveLocation(_ sender: Any) {
         let userid = UserDefaults.standard.string(forKey: "email")
+        if longitudeVal == nil && latitudeVal == nil{
+            
+            print("rahou nulllllllllllllllllllllllllllllllll")
+         
+        }
+        else{
         let parking = Parking(longatitude: longitudeVal!, latatitude: latitudeVal!, userId: userid!)
         let pvm = ParkingViewModel()
         pvm.addParking(parking: parking)
-    }
+            }}
     @objc func handleLongtapGesture(gestureRecognizer : UILongPressGestureRecognizer){
 
         if gestureRecognizer.state != UIGestureRecognizer.State.ended{
