@@ -93,7 +93,7 @@ class mapSimpleUserViewController: UIViewController , UISearchBarDelegate{
 
                 }
                 //self.mapView.region
-                print(self?.annotationsLocation)
+               // print(self?.annotationsLocation)
                 
 
 

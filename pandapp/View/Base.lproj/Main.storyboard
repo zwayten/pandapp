@@ -401,7 +401,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-n7-5t5">
-                                <rect key="frame" x="16" y="148" width="194" height="44"/>
+                                <rect key="frame" x="16" y="148" width="288" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>

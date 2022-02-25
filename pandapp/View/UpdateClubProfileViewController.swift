@@ -159,7 +159,7 @@ class UpdateClubProfileViewController: UIViewController {
         let resetconfirm = resetnewpass.text
         if resetpassword != "" && resetpassword == resetconfirm {
         let parameters = ["login": newClubLogin!,
-                          "password": resetpassword,
+                          "password": resetpassword!,
                           //"clubOwner": newClubOwner,
                           "clubName": newClubName!,
                           //"clubLogo": newLogo,

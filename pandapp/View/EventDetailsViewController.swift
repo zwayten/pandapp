@@ -29,7 +29,7 @@ class EventDetailsViewController: UIViewController {
     var eventPost = [EventPost]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ell id \(_idSegue)")
+        //print("ell id \(_idSegue)")
         fetchEventPostById(_id: _idSegue!)
         let email = UserDefaults.standard.string(forKey: "email")
         fetchparticipants(userEmail: email!)
