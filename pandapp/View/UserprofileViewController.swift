@@ -77,7 +77,7 @@ class UserprofileViewController: UIViewController {
         AF.request("\(ConnectionDb.baserequest())emploi/\(classe)", method: .get, headers: headers).responseDecodable(of: [Emploi].self) { [weak self] response in
             self?.emploi = response.value ?? []
             
-            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.emploi[0].picture)!
+           let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.emploi[0].picture)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageEmploi.image = UIImage(data: imageData!)
