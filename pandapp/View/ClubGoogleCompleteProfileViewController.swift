@@ -19,10 +19,7 @@ class ClubGoogleCompleteProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReusableFunctionsViewController.customTextField(textfield: clubnamelbl)
-        ReusableFunctionsViewController.customTextField(textfield: passwordConfirmlbl)
-        ReusableFunctionsViewController.customTextField(textfield: passwordlbl)
-        ReusableFunctionsViewController.customTextField(textfield: clubOwnerlbl)
+        
         clubnamelbl.text = clubGoogleSegue!.club.clubName
         clubOwnerlbl.text = clubGoogleSegue!.club.clubOwner
     }

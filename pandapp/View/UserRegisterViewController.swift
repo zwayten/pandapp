@@ -19,15 +19,12 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet var lastNameUserRegister: UITextField!
     @IBOutlet var FirstNameUserRegister: UITextField!
     @IBOutlet var identifierUserRegister: UITextField!
-    @IBOutlet var classFieldOne: UITextField!
+    
     @IBOutlet var classFieldTwo: UITextField!
-    @IBOutlet var classFieldThree: UITextField!
-    @IBOutlet var claasOnePicker: UIPickerView!
-    @IBOutlet var claasTwoPicker: UIPickerView!
-    @IBOutlet var claasThreePicker: UIPickerView!
+    
     @IBOutlet var imageGoogle: UITextField!
     
-    @IBOutlet var tooltipCardView: UIView!
+    
     
     let pickerOneData = ["1", "2", "3"]
     let pickerTwoData = ["Info", "Genie-Civile"]
@@ -39,33 +36,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReusableFunctionsViewController.customTextField(textfield: userEmailRegister)
-        ReusableFunctionsViewController.customTextField(textfield: passwordUserRegister)
-        ReusableFunctionsViewController.customTextField(textfield: passwordConfirmUserregister)
-        ReusableFunctionsViewController.customTextField(textfield: lastNameUserRegister)
-        ReusableFunctionsViewController.customTextField(textfield: FirstNameUserRegister)
-        ReusableFunctionsViewController.customTextField(textfield: identifierUserRegister)
-        ReusableFunctionsViewController.customTextField(textfield: classFieldOne)
-        ReusableFunctionsViewController.customTextField(textfield: classFieldTwo)
-        ReusableFunctionsViewController.customTextField(textfield: classFieldThree)
-        
-        claasOnePicker.delegate = self
-        claasOnePicker.dataSource = self
-        claasOnePicker.isHidden = true
-        
-        claasTwoPicker.delegate = self
-        claasTwoPicker.dataSource = self
-        claasTwoPicker.isHidden = true
-        
-        claasThreePicker.delegate = self
-        claasThreePicker.dataSource = self
-        claasThreePicker.isHidden = true
+       
 
-        classFieldOne.inputView = claasOnePicker
-        classFieldTwo.inputView = claasTwoPicker
-        classFieldThree.inputView = claasThreePicker
         
-        tooltipCardView.frame = CGRect(x: 175, y: 470, width: self.view.bounds.width * 0.5, height: self.view.bounds.height * 0.13)
+        
+        
+        
+        
 
     }
     
@@ -119,16 +96,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     
-    @IBAction func displayCardTooltip(_ sender: Any) {
-        if toggleCardTooltip == false {
-            toggleCardTooltip = true
-            self.view.addSubview(tooltipCardView)
-        }
-        else {
-            toggleCardTooltip = false
-            tooltipCardView.removeFromSuperview()
-        }
-    }
+    
     
     func getData() -> User {
         let mail = userEmailRegister.text!
@@ -138,12 +106,12 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
         let lastName = lastNameUserRegister.text!
         let firstName = FirstNameUserRegister.text!
         let identifiant = identifierUserRegister.text!
-        let class1 = classFieldOne.text!
+        
         let class2 = classFieldTwo.text!
-        let class3 = classFieldThree.text!
-        let image = imageGoogle.text ?? "default.png"
-        let className = "\(class1)\(class2)\(class3)"
-        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: image, FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: className, role: "user", social: false, description: "")
+        
+        
+        
+        let user = User(email: mail, password: password, phoneNumber: 99, profilePicture: "default.png", FirstName: firstName, LastName: lastName, verified: true, identifant: identifiant, className: class2, role: "user", social: false, description: "")
         
         return user
        
@@ -186,17 +154,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
 
-    @IBAction func userConfirmPasswordListener(_ sender: Any) {
-        if ReusableFunctionsViewController.validatePassword(textfield: passwordUserRegister, textfieldConfirm: passwordConfirmUserregister) {
-            ReusableFunctionsViewController.customTextFieldGreen(textfield: passwordConfirmUserregister)
-            ReusableFunctionsViewController.customTextFieldGreen(textfield: passwordUserRegister)
-        }
-        else {
-            ReusableFunctionsViewController.customTextField(textfield: passwordConfirmUserregister)
-            ReusableFunctionsViewController.customTextField(textfield: passwordUserRegister)
-            
-        }
-    }
+ 
     
     override func didReceiveMemoryWarning() {
         
@@ -235,33 +193,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
            }
        }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            classFieldOne.text = pickerOneData[row]
-            classFieldOne.resignFirstResponder()
-        }
-        else if pickerView.tag == 2 {
-            classFieldTwo.text = pickerTwoData[row]
-            classFieldTwo.resignFirstResponder()
-        }
-        else {
-            classFieldThree.text = pickerThreeData[row]
-            classFieldThree.resignFirstResponder()
-        }
-        
-    }
-
-    
-    @IBAction func filedoneclick(_ sender: Any) {
-        claasOnePicker.isHidden = false
-    }
-    @IBAction func fieldtwoclick(_ sender: Any) {
-        claasTwoPicker.isHidden = false
-    }
-    
-    @IBAction func fieldthreeclick(_ sender: Any) {
-        claasThreePicker.isHidden = false
-    }
+   
     
   
 

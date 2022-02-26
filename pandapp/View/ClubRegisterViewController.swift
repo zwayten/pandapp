@@ -16,17 +16,12 @@ class ClubRegisterViewController: UIViewController {
     @IBOutlet var clubRegisterClubName: UITextField!
     @IBOutlet var clubRegisterOwner: UITextField!
     
-    @IBOutlet var imageGoogle: UITextField!
+    
     var gs: GoogleSegueClub?
     let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
     
     func initClubRegister(){
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisteremail)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterPassword)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterConfirmPassword)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterClubName)
-        ReusableFunctionsViewController.customTextField(textfield: clubRegisterOwner)
-
+       
         
     }
     override func viewDidLoad() {
@@ -45,9 +40,7 @@ class ClubRegisterViewController: UIViewController {
         let password  = clubRegisterPassword.text!
         let login = clubRegisteremail.text!
         let owner = clubRegisterOwner.text!
-        let image = imageGoogle.text ?? "default.png"
-        
-        let club = Clubs(clubName: clubname, clubOwner: owner, clubLogo: image, verified: false, password: password, login: login, description: "", _id: "")
+        let club = Clubs(clubName: clubname, clubOwner: owner, clubLogo: "default.png", verified: false, password: password, login: login, description: "", _id: "")
         return club
     }
     
@@ -71,7 +64,7 @@ class ClubRegisterViewController: UIViewController {
             
             self.clubRegisteremail.text = emailAddress!
             self.clubRegisterClubName.text = familyName!
-            self.imageGoogle.text = urltoString!
+
             
            // self.performSegue(withIdentifier: "clubGoogleSignup" , sender: clubGoogleStruct)
             
@@ -105,17 +98,7 @@ class ClubRegisterViewController: UIViewController {
     @IBAction func showconfirmPassword(_ sender: Any) {
         clubRegisterConfirmPassword.isSecureTextEntry.toggle()
     }
-    @IBAction func confirmPasswordListene(_ sender: Any) {
-        if ReusableFunctionsViewController.validatePassword(textfield: clubRegisterPassword, textfieldConfirm: clubRegisterConfirmPassword) {
-            ReusableFunctionsViewController.customTextFieldGreen(textfield: clubRegisterConfirmPassword)
-            ReusableFunctionsViewController.customTextFieldGreen(textfield: clubRegisterPassword)
-        }
-        else {
-            ReusableFunctionsViewController.customTextField(textfield: clubRegisterPassword)
-            ReusableFunctionsViewController.customTextField(textfield: clubRegisterConfirmPassword)
-            
-        }
-    }
+
     
     
     @IBAction func unwindToUserRegister(_ sender: UIStoryboardSegue) {}

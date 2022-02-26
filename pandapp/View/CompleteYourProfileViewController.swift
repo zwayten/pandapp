@@ -20,9 +20,7 @@ class CompleteYourProfileViewController: UIViewController {
     @IBOutlet var passwordlbl: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReusableFunctionsViewController.customTextField(textfield: idlbl)
-        ReusableFunctionsViewController.customTextField(textfield: passwordConfirmlbl)
-        ReusableFunctionsViewController.customTextField(textfield: passwordlbl)
+       
         // Do any additional setup after loading the view.
     }
     

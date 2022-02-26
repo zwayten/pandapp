@@ -35,8 +35,7 @@ class UserLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReusableFunctionsViewController.customTextField(textfield: userEmail)
-        ReusableFunctionsViewController.customTextField(textfield: userPassword)
+        
         // Do any additional setup after loading the view.
     }
     

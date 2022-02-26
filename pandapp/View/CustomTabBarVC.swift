@@ -39,32 +39,36 @@ class CustomTabBarvc: UITabBarController, UITabBarControllerDelegate {
         if lastLogged! == "club" {
         let cpvc = storyboard.instantiateViewController(withIdentifier: "clubProfileId") as! ClubViewController
             //let chatvc = storyboard.instantiateViewController(withIdentifier: "chatId") as! ChatViewController
+            let lpvc = storyboard.instantiateViewController(withIdentifier: "lp") as! LostPostViewController
             
             //let chatvc = AltViewController()
             
-            self.viewControllers = [hvc, cpvc]
+            self.viewControllers = [lpvc,hvc, cpvc]
             
             let title = ""
             let profileButton = UITabBarItem(title: title, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
             
            
+            let boxbutton = UITabBarItem(title: title, image: UIImage(systemName: "cube.box"), selectedImage: UIImage(systemName: "cube.box.fill"))
             
            
-            
+            lpvc.tabBarItem = boxbutton
+
             cpvc.tabBarItem = profileButton
             
         }
         else if lastLogged! == "user" {
             let upvc = storyboard.instantiateViewController(withIdentifier: "userProfileId") as! UserprofileViewController
-            
-            self.viewControllers = [hvc, upvc ]
+            let lpvc = storyboard.instantiateViewController(withIdentifier: "lp") as! LostPostViewController
+            self.viewControllers = [lpvc, hvc, upvc ]
             
             let title = ""
             let profileButton = UITabBarItem(title: title, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
+            let boxbutton = UITabBarItem(title: title, image: UIImage(systemName: "cube.box"), selectedImage: UIImage(systemName: "cube.box.fill"))
             
             
             
-            
+            lpvc.tabBarItem = boxbutton
             upvc.tabBarItem = profileButton
         }
         

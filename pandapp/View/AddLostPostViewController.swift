@@ -20,9 +20,7 @@ class AddLostPostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReusableFunctionsViewController.customTextField(textfield: typelbl)
-        ReusableFunctionsViewController.customTextField(textfield: placelbl)
-        ReusableFunctionsViewController.customTextField(textfield: objectlbl)
+       
         typelbl.text = currSegue!
     }
     

@@ -26,11 +26,6 @@ class UpdateClubProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ReusableFunctionsViewController.customTextField(textfield: clubNamelbl)
-        ReusableFunctionsViewController.customTextField(textfield: clubownerlbl)
-        ReusableFunctionsViewController.customTextField(textfield: clubloginlbl)
-        ReusableFunctionsViewController.customTextField(textfield: resetpasswordlbl)
-        ReusableFunctionsViewController.customTextField(textfield: resetnewpass)
         ReusableFunctionsViewController.roundPicture(image: imageView)
         
         fetchClubProfile()
@@ -62,18 +57,12 @@ class UpdateClubProfileViewController: UIViewController {
             self?.clubownerlbl.text = self?.clubs[0].clubOwner
             self?.clubloginlbl.text = self?.clubs[0].login
 
-            let strImageUrl = "\(ConnectionDb.baserequest())/upload/download/" + (self?.clubs[0].clubLogo)!
+            let strImageUrl = "\(ConnectionDb.baserequest())upload/download/" + (self?.clubs[0].clubLogo)!
             let urlImage = URL(string: strImageUrl)
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)
             
-            if self?.clubs[0].verified == false {
-                self?.verifiedAccount.text = "Account Not verified press the button to verify"
-            }
-            else {
-                self?.verifiedAccount.text = "Account verified nothing to do here"
-                self?.verifyButton.isEnabled = false
-            }
+          
          //   print(response)
           //  print(response.value)
             

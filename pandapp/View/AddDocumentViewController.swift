@@ -23,9 +23,7 @@ class AddDocumentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         steppernumber.value = 1
-        ReusableFunctionsViewController.customTextField(textfield: typelbl)
-        ReusableFunctionsViewController.customTextField(textfield: langlbl)
-        
+       
         fetchDocumentsByUserId()
         tableView.reloadData()
         // Do any additional setup after loading the view.

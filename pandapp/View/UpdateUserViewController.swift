@@ -26,8 +26,7 @@ class UpdateUserViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        ReusableFunctionsViewController.customTextField(textfield: resetpasswordlbl)
-        ReusableFunctionsViewController.customTextField(textfield: resetnewpass)
+        
         ReusableFunctionsViewController.roundPicture(image: imageView)
         fetchUserProfile()
         super.viewDidLoad()

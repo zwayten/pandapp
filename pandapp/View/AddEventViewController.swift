@@ -24,11 +24,7 @@ class AddEventViewController: UIViewController {
     var imageJsonReturnAf  = ""
     
     override func viewDidLoad() {
-        ReusableFunctionsViewController.customTextField(textfield: eventNameInput)
-        ReusableFunctionsViewController.customTextField(textfield: eventPriceInput)
-        ReusableFunctionsViewController.customTextField(textfield: eventDateInput)
-        ReusableFunctionsViewController.customTextField(textfield: eventTimeInput)
-        ReusableFunctionsViewController.customTextField(textfield: eventPlaceInput)
+      
 
         eventDatePicker.isHidden = true
         eventTimePicker.isHidden = true
