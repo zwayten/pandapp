@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 
 class ClubRegisterViewController: UIViewController {
 
@@ -17,9 +16,7 @@ class ClubRegisterViewController: UIViewController {
     @IBOutlet var clubRegisterOwner: UITextField!
     
     
-    var gs: GoogleSegueClub?
-    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
-    
+   
     func initClubRegister(){
        
         
@@ -44,32 +41,7 @@ class ClubRegisterViewController: UIViewController {
         return club
     }
     
-    @IBAction func registerClubGoogle(_ sender: Any) {
-        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-            guard error == nil else { return }
-            guard let user = user else { return }
-            // If sign in succeeded, display the app's main content View.
-            
-            let emailAddress = user.profile?.email
-           // let fullName = user.profile?.name
-                let givenName = user.profile?.givenName
-                let familyName = user.profile?.familyName
-                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            let urltoString = profilePicUrl?.absoluteString
-            print(emailAddress!)
-            
-            _ = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
-            
-            
-            
-            self.clubRegisteremail.text = emailAddress!
-            self.clubRegisterClubName.text = familyName!
-
-            
-           // self.performSegue(withIdentifier: "clubGoogleSignup" , sender: clubGoogleStruct)
-            
-          }
-    }
+   
     
     
     

@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import GoogleSignIn
 
 
 //305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com
@@ -26,8 +25,7 @@ class UserLoginViewController: UIViewController {
     var className = ""
     var loginas = "user"
     
-    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
-    
+   
     var loginUserr: LoginUser?
     
     @IBOutlet var userEmail: UITextField!
@@ -39,64 +37,7 @@ class UserLoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func googleSignIn(_ sender: Any) {
-        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-            guard error == nil else { return }
-            guard let user = user else { return }
-            
-            // If sign in succeeded, display the app's main content View.
-            let emailAddress = user.profile?.email
-            let fullName = user.profile?.name
-                let givenName = user.profile?.givenName
-                let familyName = user.profile?.familyName
-                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            print(emailAddress!)
-            print("giveName: ",givenName!)
-            print("familyName : ", familyName!)
-            print("url :",profilePicUrl!)
-            if self.loginas == "user" {
-            self.loginGoogle(email: emailAddress!, completionHandler: { (login,statusCode) in
-
-                
-                UserDefaults.standard.set(fullName!, forKey: "userName")
-                UserDefaults.standard.set(login.profilePicture, forKey: "profilePicture")
-                UserDefaults.standard.set(login.email, forKey: "email")
-                UserDefaults.standard.set(login.identifant, forKey: "identifant")
-                UserDefaults.standard.set(login.password, forKey: "password")
-                UserDefaults.standard.set(login.className, forKey: "classe")
-                UserDefaults.standard.set(login.token, forKey: "token")
-                UserDefaults.standard.set(self.loginas , forKey: "lastLoggedIn")
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true)
-
-                
-            })
-            } else if self.loginas == "club" {
-                self.loginClubGoogle(email: emailAddress!, completionHandler: { (login,statusCode) in
-
-                    
-                    UserDefaults.standard.set(login.login, forKey: "login")
-                    //UserDefaults.standard.set(login._id, forKey: "clubId")
-                    UserDefaults.standard.set(login.password, forKey: "passwordClub")
-                    UserDefaults.standard.set(login.tokenClub, forKey: "tokenClub")
-                    UserDefaults.standard.set(login.clubName, forKey: "clubName")
-                    UserDefaults.standard.set(self.loginas, forKey: "lastLoggedIn")
-                    
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "customTabBarId")
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true)
-
-                    
-                })
-            
-            }
-            
-          }
-    }
+   
     @IBAction func toggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 { loginas = "user"
             print("user")
@@ -131,7 +72,6 @@ class UserLoginViewController: UIViewController {
             print(login.token)
             print(self.token)
         }
-        print("test:###############", token)
         
         //print(loginUserr!.token)
         

@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreData
-import GoogleSignIn
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
@@ -21,13 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           Crashes.self
         ])
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-              // Show the app's signed-out state.
-            } else {
-              // Show the app's signed-in state.
-            }
-          }
+     
         
         return true
     }
@@ -36,12 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       _ app: UIApplication,
       open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
-      var handled: Bool
-
-      handled = GIDSignIn.sharedInstance.handle(url)
-      if handled {
-        return true
-      }
+      
 
       // Handle other custom URL types.
 

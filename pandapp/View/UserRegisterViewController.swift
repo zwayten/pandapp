@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 import Alamofire
 
 class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -30,8 +29,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
     let pickerTwoData = ["Info", "Genie-Civile"]
     let pickerThreeData = ["1", "2"]
     
-    let signInConfig = GIDConfiguration.init(clientID: "305921896289-684s0ca16d70o2mg2s5hf46dlujjj6fr.apps.googleusercontent.com")
-    
+
     var toggleCardTooltip = false
     
     override func viewDidLoad() {
@@ -46,51 +44,7 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
 
     }
     
-    @IBAction func GoogleSignUp(_ sender: Any) {
-        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
-            guard error == nil else { return }
-            guard let user = user else { return }
-            // If sign in succeeded, display the app's main content View.
-            
-            let emailAddress = user.profile?.email
-           // let fullName = user.profile?.name
-                let givenName = user.profile?.givenName
-                let familyName = user.profile?.familyName
-                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-            let urltoString = profilePicUrl?.absoluteString
-            print(emailAddress!)
-           
-            let userGoogle = User(email: emailAddress!, password:"" , phoneNumber: 123, profilePicture: urltoString!, FirstName: givenName!, LastName: familyName!, verified: true, identifant: "181JMT123", className: "4sim2", role: "user", social: false, description: "oo")
-            
-            
-            _ = GoogleSegue(user: userGoogle, profilePictureUrl: profilePicUrl!)
-            
-            self.userEmailRegister.text = emailAddress!
-            self.lastNameUserRegister.text = familyName!
-            self.FirstNameUserRegister.text = givenName!
-            self.imageGoogle.text = urltoString!
-            _ = UploadImageService()
-            let imageData = try? Data(contentsOf: profilePicUrl!)
-            let image = UIImage(data: imageData!)
-            
-            let headers: HTTPHeaders = [
-                //"Authorisation": "bearer \(token!)",
-                "Content-type": "multipart/form-data"
-            ]
-            
-                            AF.upload(
-                    multipartFormData: { multipartFormData in
-                        multipartFormData.append(image!.jpegData(compressionQuality: 0.5)!, withName: "file" , fileName: "file.png", mimeType: "image/png")
-                },
-                    to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
-                .responseJSON {  response in
-                  print("uploaded")
-                    
-                }
-           // self.performSegue(withIdentifier: "fromUserSignupWithGoogle" , sender: userGoogleStruct)
-            
-          }
-    }
+  
     
     @IBAction func go(_ sender: Any) {
     }
