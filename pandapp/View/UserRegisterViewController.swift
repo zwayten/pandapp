@@ -86,13 +86,13 @@ class UserRegisterViewController: UIViewController, UIPickerViewDelegate, UIPick
             let userGoogle = User(email: emailAddress!, password:"" , phoneNumber: 123, profilePicture: urltoString!, FirstName: givenName!, LastName: familyName!, verified: true, identifant: "181JMT123", className: "4sim2", role: "user", social: false, description: "oo")
             
             
-            let userGoogleStruct = GoogleSegue(user: userGoogle, profilePictureUrl: profilePicUrl!)
+            _ = GoogleSegue(user: userGoogle, profilePictureUrl: profilePicUrl!)
             
             self.userEmailRegister.text = emailAddress!
             self.lastNameUserRegister.text = familyName!
             self.FirstNameUserRegister.text = givenName!
             self.imageGoogle.text = urltoString!
-            let uploadService = UploadImageService()
+            _ = UploadImageService()
             let imageData = try? Data(contentsOf: profilePicUrl!)
             let image = UIImage(data: imageData!)
             

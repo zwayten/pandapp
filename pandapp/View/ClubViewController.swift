@@ -52,8 +52,8 @@ class ClubViewController: UIViewController {
     }
 
     func fetchClubProfile() {
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
-        let clubName = UserDefaults.standard.string(forKey: "clubName")
+        _ = UserDefaults.standard.string(forKey: "tokenClub")
+        _ = UserDefaults.standard.string(forKey: "clubName")
         let clubLogin = UserDefaults.standard.string(forKey: "login")
         let headers: HTTPHeaders = [
             "Accept": "application/json"

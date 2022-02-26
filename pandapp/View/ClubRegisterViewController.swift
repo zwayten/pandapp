@@ -65,7 +65,7 @@ class ClubRegisterViewController: UIViewController {
             let urltoString = profilePicUrl?.absoluteString
             print(emailAddress!)
             
-            let clubGoogle = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
+            _ = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
             
             
             

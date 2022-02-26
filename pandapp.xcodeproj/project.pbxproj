@@ -8,22 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		52D7735212D28ABCDA8D986F /* Pods_pandapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE227153A47BBA1857149A68 /* Pods_pandapp.framework */; };
-		821B7F9F278414BC008860C2 /* ChatRoomClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B7F9E278414BC008860C2 /* ChatRoomClubViewController.swift */; };
-		821B7FA127841E98008860C2 /* AltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B7FA027841E98008860C2 /* AltViewController.swift */; };
 		8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */; };
 		823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */; };
 		823E5FA72734C9BE003F3FA4 /* UserRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */; };
 		823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */; };
-		823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */; };
 		823E5FAD27362B60003F3FA4 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAC27362B60003F3FA4 /* ClubViewController.swift */; };
 		823E5FAF27363754003F3FA4 /* ClubRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */; };
-		823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */; };
-		823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB52738A9EB003F3FA4 /* MapViewController.swift */; };
 		823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */; };
 		82454EB6275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */; };
 		82454EB9275D87BF005590A4 /* GoogleSegueClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */; };
 		8252B155275487E700AF300A /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252B154275487E700AF300A /* LoginUser.swift */; };
-		82594ADC2754227D0062575F /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82594ADB2754227D0062575F /* PdfViewController.swift */; };
 		82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628ED92730C4BD00719A51 /* AppDelegate.swift */; };
 		82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDB2730C4BD00719A51 /* SceneDelegate.swift */; };
 		82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82628EDD2730C4BD00719A51 /* ViewController.swift */; };
@@ -34,9 +28,6 @@
 		827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827387052734BE55005C8A9B /* UserprofileViewController.swift */; };
 		8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82762819274C7ED50068B01D /* ConnectionDb.swift */; };
 		8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D496275397F70088CAA9 /* AddLostPostViewController.swift */; };
-		8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */; };
-		8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288D49A275408760088CAA9 /* DetailModuleViewController.swift */; };
-		829BEDC52763B83400F179B5 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */; };
 		829EE46B275946FB003963E2 /* UpdateClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */; };
 		82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F4802751800C0009F372 /* UploadImageStruct.swift */; };
 		82A0F483275180500009F372 /* UploadImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A0F482275180500009F372 /* UploadImageService.swift */; };
@@ -46,29 +37,19 @@
 		82A9226427433140008D3A8C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226327433140008D3A8C /* Document.swift */; };
 		82A92266274331CA008D3A8C /* EventPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92265274331CA008D3A8C /* EventPost.swift */; };
 		82A92268274332A3008D3A8C /* LostPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92267274332A3008D3A8C /* LostPost.swift */; };
-		82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922692743334A008D3A8C /* OtherPost.swift */; };
-		82A9226C2743340E008D3A8C /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226B2743340E008D3A8C /* Parking.swift */; };
-		82A9226E27433489008D3A8C /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226D27433489008D3A8C /* Surveys.swift */; };
 		82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9226F274337F9008D3A8C /* ClubsViewModel.swift */; };
 		82A9227227433825008D3A8C /* userViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227127433825008D3A8C /* userViewModel.swift */; };
 		82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922732743384A008D3A8C /* DocumentViewModel.swift */; };
 		82A9227627433862008D3A8C /* EventPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227527433862008D3A8C /* EventPostViewModel.swift */; };
 		82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A922772743388A008D3A8C /* LostPostViewModel.swift */; };
-		82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A92279274338B9008D3A8C /* OtherPostViewModel.swift */; };
-		82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227B274338E5008D3A8C /* ParkingViewModel.swift */; };
-		82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9227D2743390A008D3A8C /* SurveysViewModel.swift */; };
 		82AE1D1B275D29D20052116B /* CompleteYourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */; };
 		82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82AE1D1C275D37AA0052116B /* GoogleSegue.swift */; };
 		82B1412727807B0D0050255B /* RatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412627807B0D0050255B /* RatePost.swift */; };
 		82B1412927807B690050255B /* RatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412827807B690050255B /* RatePostViewModel.swift */; };
-		82B1412B2780A7030050255B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412A2780A7030050255B /* Message.swift */; };
-		82B1412D2780BC040050255B /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B1412C2780BC040050255B /* MessagesViewModel.swift */; };
 		82B2F4E2275A960A007AA9D7 /* ClubMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */; };
 		82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */; };
 		82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */; };
 		82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36D2756E0400017503E /* AddDocumentViewController.swift */; };
-		82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B7B36F2756F3E90017503E /* DocumentViewController.swift */; };
-		82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA60A4275644B400037525 /* ResetTwoViewController.swift */; };
 		82BB35272781CDB9009E855E /* PandappViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB35262781CDB9009E855E /* PandappViewController.swift */; };
 		82BB352E2781DA5B009E855E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB352C2781DA5B009E855E /* CategoryCollectionViewCell.swift */; };
 		82BB352F2781DA5B009E855E /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82BB352D2781DA5B009E855E /* CategoryCollectionViewCell.xib */; };
@@ -79,38 +60,27 @@
 		82BB48EC275ED948005D67E3 /* EventIntViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */; };
 		82BB48EF275EE61E005D67E3 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */; };
 		82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */; };
-		82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E0EC23275878D900B58DE0 /* ChatViewController.swift */; };
 		82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */; };
-		82ECAC0C275263A000D2894F /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0B275263A000D2894F /* Elearning.swift */; };
-		82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0D275276C900D2894F /* AddElearningViewController.swift */; };
-		82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC0F275276E300D2894F /* ElearningViewModel.swift */; };
 		82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */; };
 		82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECAC1B27530B4100D2894F /* TabBarVC.swift */; };
 		82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */; };
 		82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */; };
 		94B2F7B52783250D008853D7 /* Emploi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B42783250D008853D7 /* Emploi.swift */; };
 		94B2F7B72783260D008853D7 /* EmploiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B62783260D008853D7 /* EmploiViewModel.swift */; };
-		94B2F7B9278372BB008853D7 /* mapSimpleUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35E377F7BA1D40B843BECFC3 /* Pods-pandapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.debug.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.debug.xcconfig"; sourceTree = "<group>"; };
-		821B7F9E278414BC008860C2 /* ChatRoomClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomClubViewController.swift; sourceTree = "<group>"; };
-		821B7FA027841E98008860C2 /* AltViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltViewController.swift; sourceTree = "<group>"; };
 		8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
 		823E5FA42734C96D003F3FA4 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterViewController.swift; sourceTree = "<group>"; };
 		823E5FA82734DE11003F3FA4 /* ReusableFunctionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunctionsViewController.swift; sourceTree = "<group>"; };
-		823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		823E5FAC27362B60003F3FA4 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRegisterViewController.swift; sourceTree = "<group>"; };
-		823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ELearningViewController.swift; sourceTree = "<group>"; };
-		823E5FB52738A9EB003F3FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubGoogleCompleteProfileViewController.swift; sourceTree = "<group>"; };
 		82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSegueClub.swift; sourceTree = "<group>"; };
 		8252B154275487E700AF300A /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
-		82594ADB2754227D0062575F /* PdfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfViewController.swift; sourceTree = "<group>"; };
 		82628ED62730C4BD00719A51 /* pandapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pandapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82628ED92730C4BD00719A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82628EDB2730C4BD00719A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,9 +93,6 @@
 		827387052734BE55005C8A9B /* UserprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserprofileViewController.swift; sourceTree = "<group>"; };
 		82762819274C7ED50068B01D /* ConnectionDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDb.swift; sourceTree = "<group>"; };
 		8288D496275397F70088CAA9 /* AddLostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLostPostViewController.swift; sourceTree = "<group>"; };
-		8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleElearningViewController.swift; sourceTree = "<group>"; };
-		8288D49A275408760088CAA9 /* DetailModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleViewController.swift; sourceTree = "<group>"; };
-		829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateClubProfileViewController.swift; sourceTree = "<group>"; };
 		82A0F4802751800C0009F372 /* UploadImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageStruct.swift; sourceTree = "<group>"; };
 		82A0F482275180500009F372 /* UploadImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageService.swift; sourceTree = "<group>"; };
@@ -135,29 +102,19 @@
 		82A9226327433140008D3A8C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		82A92265274331CA008D3A8C /* EventPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPost.swift; sourceTree = "<group>"; };
 		82A92267274332A3008D3A8C /* LostPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPost.swift; sourceTree = "<group>"; };
-		82A922692743334A008D3A8C /* OtherPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPost.swift; sourceTree = "<group>"; };
-		82A9226B2743340E008D3A8C /* Parking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
-		82A9226D27433489008D3A8C /* Surveys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surveys.swift; sourceTree = "<group>"; };
 		82A9226F274337F9008D3A8C /* ClubsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsViewModel.swift; sourceTree = "<group>"; };
 		82A9227127433825008D3A8C /* userViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewModel.swift; sourceTree = "<group>"; };
 		82A922732743384A008D3A8C /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
 		82A9227527433862008D3A8C /* EventPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPostViewModel.swift; sourceTree = "<group>"; };
 		82A922772743388A008D3A8C /* LostPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPostViewModel.swift; sourceTree = "<group>"; };
-		82A92279274338B9008D3A8C /* OtherPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPostViewModel.swift; sourceTree = "<group>"; };
-		82A9227B274338E5008D3A8C /* ParkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingViewModel.swift; sourceTree = "<group>"; };
-		82A9227D2743390A008D3A8C /* SurveysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveysViewModel.swift; sourceTree = "<group>"; };
 		82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteYourProfileViewController.swift; sourceTree = "<group>"; };
 		82AE1D1C275D37AA0052116B /* GoogleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSegue.swift; sourceTree = "<group>"; };
 		82B1412627807B0D0050255B /* RatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePost.swift; sourceTree = "<group>"; };
 		82B1412827807B690050255B /* RatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePostViewModel.swift; sourceTree = "<group>"; };
-		82B1412A2780A7030050255B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		82B1412C2780BC040050255B /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembers.swift; sourceTree = "<group>"; };
 		82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewModel.swift; sourceTree = "<group>"; };
 		82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubMembersViewController.swift; sourceTree = "<group>"; };
 		82B7B36D2756E0400017503E /* AddDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentViewController.swift; sourceTree = "<group>"; };
-		82B7B36F2756F3E90017503E /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		82BA60A4275644B400037525 /* ResetTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetTwoViewController.swift; sourceTree = "<group>"; };
 		82BB35262781CDB9009E855E /* PandappViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandappViewController.swift; sourceTree = "<group>"; };
 		82BB352C2781DA5B009E855E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		82BB352D2781DA5B009E855E /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -168,18 +125,13 @@
 		82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventIntViewModel.swift; sourceTree = "<group>"; };
 		82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClub.swift; sourceTree = "<group>"; };
-		82E0EC23275878D900B58DE0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		82E4CA99275C3E0A00769CB5 /* LostPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPostViewController.swift; sourceTree = "<group>"; };
-		82ECAC0B275263A000D2894F /* Elearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
-		82ECAC0D275276C900D2894F /* AddElearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddElearningViewController.swift; sourceTree = "<group>"; };
-		82ECAC0F275276E300D2894F /* ElearningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
 		82ECAC19275308AE00D2894F /* CustomTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVC.swift; sourceTree = "<group>"; };
 		82ECAC1B27530B4100D2894F /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		82F58241275BEEC2006F6A91 /* VisitClubProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitClubProfileViewController.swift; sourceTree = "<group>"; };
 		82F61CE2275BD91600E40F96 /* BrowseClubsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseClubsViewController.swift; sourceTree = "<group>"; };
 		94B2F7B42783250D008853D7 /* Emploi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emploi.swift; sourceTree = "<group>"; };
 		94B2F7B62783260D008853D7 /* EmploiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploiViewModel.swift; sourceTree = "<group>"; };
-		94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapSimpleUserViewController.swift; sourceTree = "<group>"; };
 		B1846F83AE6FFE2D440D4F00 /* Pods-pandapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pandapp.release.xcconfig"; path = "Target Support Files/Pods-pandapp/Pods-pandapp.release.xcconfig"; sourceTree = "<group>"; };
 		BE227153A47BBA1857149A68 /* Pods_pandapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pandapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,11 +201,7 @@
 				82A9226327433140008D3A8C /* Document.swift */,
 				82A92265274331CA008D3A8C /* EventPost.swift */,
 				82A92267274332A3008D3A8C /* LostPost.swift */,
-				82A922692743334A008D3A8C /* OtherPost.swift */,
-				82A9226B2743340E008D3A8C /* Parking.swift */,
-				82A9226D27433489008D3A8C /* Surveys.swift */,
 				82A0F4802751800C0009F372 /* UploadImageStruct.swift */,
-				82ECAC0B275263A000D2894F /* Elearning.swift */,
 				8252B154275487E700AF300A /* LoginUser.swift */,
 				82BCA6BE2755BA5000BC3CDB /* LoginClub.swift */,
 				82B2F4E1275A960A007AA9D7 /* ClubMembers.swift */,
@@ -261,7 +209,6 @@
 				82454EB8275D87BF005590A4 /* GoogleSegueClub.swift */,
 				82BB48E9275ED8D7005D67E3 /* EventInt.swift */,
 				82B1412627807B0D0050255B /* RatePost.swift */,
-				82B1412A2780A7030050255B /* Message.swift */,
 				94B2F7B42783250D008853D7 /* Emploi.swift */,
 			);
 			path = Model;
@@ -272,19 +219,14 @@
 			children = (
 				82A9226F274337F9008D3A8C /* ClubsViewModel.swift */,
 				82A9227127433825008D3A8C /* userViewModel.swift */,
-				82ECAC0F275276E300D2894F /* ElearningViewModel.swift */,
 				82A9227527433862008D3A8C /* EventPostViewModel.swift */,
 				82A922772743388A008D3A8C /* LostPostViewModel.swift */,
 				82A922732743384A008D3A8C /* DocumentViewModel.swift */,
-				82A92279274338B9008D3A8C /* OtherPostViewModel.swift */,
-				82A9227B274338E5008D3A8C /* ParkingViewModel.swift */,
-				82A9227D2743390A008D3A8C /* SurveysViewModel.swift */,
 				82762819274C7ED50068B01D /* ConnectionDb.swift */,
 				82A0F482275180500009F372 /* UploadImageService.swift */,
 				82B2F4E3275A96CE007AA9D7 /* ClubMembersViewModel.swift */,
 				82BB48EB275ED948005D67E3 /* EventIntViewModel.swift */,
 				82B1412827807B690050255B /* RatePostViewModel.swift */,
-				82B1412C2780BC040050255B /* MessagesViewModel.swift */,
 				94B2F7B62783260D008853D7 /* EmploiViewModel.swift */,
 			);
 			path = ViewModel;
@@ -302,21 +244,11 @@
 				823E5FA62734C9BE003F3FA4 /* UserRegisterViewController.swift */,
 				82A47D6F274C907C002B6F64 /* Register2ViewController.swift */,
 				827387052734BE55005C8A9B /* UserprofileViewController.swift */,
-				823E5FAA2735903F003F3FA4 /* PasswordResetViewController.swift */,
-				82BA60A4275644B400037525 /* ResetTwoViewController.swift */,
 				823E5FAE27363754003F3FA4 /* ClubRegisterViewController.swift */,
 				823E5FAC27362B60003F3FA4 /* ClubViewController.swift */,
 				823E5FB72739CAF7003F3FA4 /* AddEventViewController.swift */,
-				82ECAC0D275276C900D2894F /* AddElearningViewController.swift */,
-				8288D49A275408760088CAA9 /* DetailModuleViewController.swift */,
-				8288D4982753F4040088CAA9 /* ModuleElearningViewController.swift */,
-				823E5FB12737FA3B003F3FA4 /* ELearningViewController.swift */,
-				82594ADB2754227D0062575F /* PdfViewController.swift */,
-				82B7B36F2756F3E90017503E /* DocumentViewController.swift */,
-				823E5FB52738A9EB003F3FA4 /* MapViewController.swift */,
 				8288D496275397F70088CAA9 /* AddLostPostViewController.swift */,
 				82B7B36D2756E0400017503E /* AddDocumentViewController.swift */,
-				82E0EC23275878D900B58DE0 /* ChatViewController.swift */,
 				829EE46A275946FB003963E2 /* UpdateClubProfileViewController.swift */,
 				8234D7532759AE77006AAEBF /* UpdateUserViewController.swift */,
 				82B2F4E5275A97D1007AA9D7 /* ClubMembersViewController.swift */,
@@ -326,10 +258,6 @@
 				82AE1D1A275D29D20052116B /* CompleteYourProfileViewController.swift */,
 				82454EB5275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift */,
 				82BB48EE275EE61E005D67E3 /* EventDetailsViewController.swift */,
-				829BEDC42763B83400F179B5 /* ChatRoomViewController.swift */,
-				94B2F7B8278372BB008853D7 /* mapSimpleUserViewController.swift */,
-				821B7F9E278414BC008860C2 /* ChatRoomClubViewController.swift */,
-				821B7FA027841E98008860C2 /* AltViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,48 +433,34 @@
 			files = (
 				82E4CA9A275C3E0A00769CB5 /* LostPostViewController.swift in Sources */,
 				827387062734BE55005C8A9B /* UserprofileViewController.swift in Sources */,
-				82B1412D2780BC040050255B /* MessagesViewModel.swift in Sources */,
 				823E5FB82739CAF7003F3FA4 /* AddEventViewController.swift in Sources */,
 				8234D7542759AE77006AAEBF /* UpdateUserViewController.swift in Sources */,
 				82A922782743388A008D3A8C /* LostPostViewModel.swift in Sources */,
-				82ECAC0C275263A000D2894F /* Elearning.swift in Sources */,
 				82454EB9275D87BF005590A4 /* GoogleSegueClub.swift in Sources */,
-				8288D49B275408760088CAA9 /* DetailModuleViewController.swift in Sources */,
 				82AE1D1B275D29D20052116B /* CompleteYourProfileViewController.swift in Sources */,
 				82B2F4E6275A97D1007AA9D7 /* ClubMembersViewController.swift in Sources */,
 				8276281A274C7ED50068B01D /* ConnectionDb.swift in Sources */,
 				8288D497275397F70088CAA9 /* AddLostPostViewController.swift in Sources */,
-				82A9227C274338E5008D3A8C /* ParkingViewModel.swift in Sources */,
-				823E5FAB2735903F003F3FA4 /* PasswordResetViewController.swift in Sources */,
 				82BCA6BF2755BA5000BC3CDB /* LoginClub.swift in Sources */,
 				82B1412727807B0D0050255B /* RatePost.swift in Sources */,
 				82B1412927807B690050255B /* RatePostViewModel.swift in Sources */,
-				82A9227E2743390A008D3A8C /* SurveysViewModel.swift in Sources */,
 				82A922742743384A008D3A8C /* DocumentViewModel.swift in Sources */,
 				82BB353327820514009E855E /* EventCollectionViewCell.swift in Sources */,
-				82A9226A2743334A008D3A8C /* OtherPost.swift in Sources */,
 				82628EE42730C4BD00719A51 /* pandapp.xcdatamodeld in Sources */,
-				821B7F9F278414BC008860C2 /* ChatRoomClubViewController.swift in Sources */,
 				94B2F7B72783260D008853D7 /* EmploiViewModel.swift in Sources */,
 				82A9226027432ED5008D3A8C /* Clubs.swift in Sources */,
 				82628EDE2730C4BD00719A51 /* ViewController.swift in Sources */,
-				823E5FB22737FA3B003F3FA4 /* ELearningViewController.swift in Sources */,
 				82454EB6275D8681005590A4 /* ClubGoogleCompleteProfileViewController.swift in Sources */,
 				82B7B36E2756E0400017503E /* AddDocumentViewController.swift in Sources */,
 				82AE1D1D275D37AA0052116B /* GoogleSegue.swift in Sources */,
 				82F61CE3275BD91600E40F96 /* BrowseClubsViewController.swift in Sources */,
-				82E0EC24275878D900B58DE0 /* ChatViewController.swift in Sources */,
 				82A92266274331CA008D3A8C /* EventPost.swift in Sources */,
 				82ECAC1A275308AE00D2894F /* CustomTabBarVC.swift in Sources */,
 				82A922622743306D008D3A8C /* User.swift in Sources */,
 				823E5FA92734DE11003F3FA4 /* ReusableFunctionsViewController.swift in Sources */,
 				94B2F7B52783250D008853D7 /* Emploi.swift in Sources */,
-				82ECAC0E275276CA00D2894F /* AddElearningViewController.swift in Sources */,
-				82BA60A5275644B400037525 /* ResetTwoViewController.swift in Sources */,
 				8252B155275487E700AF300A /* LoginUser.swift in Sources */,
 				82BB48EA275ED8D7005D67E3 /* EventInt.swift in Sources */,
-				82ECAC10275276E300D2894F /* ElearningViewModel.swift in Sources */,
-				94B2F7B9278372BB008853D7 /* mapSimpleUserViewController.swift in Sources */,
 				82B2F4E4275A96CE007AA9D7 /* ClubMembersViewModel.swift in Sources */,
 				82BB352E2781DA5B009E855E /* CategoryCollectionViewCell.swift in Sources */,
 				82BB353927820F0B009E855E /* CardView.swift in Sources */,
@@ -555,7 +469,6 @@
 				82A92270274337F9008D3A8C /* ClubsViewModel.swift in Sources */,
 				82ECAC1C27530B4100D2894F /* TabBarVC.swift in Sources */,
 				823E5FA52734C96D003F3FA4 /* UserLoginViewController.swift in Sources */,
-				821B7FA127841E98008860C2 /* AltViewController.swift in Sources */,
 				82BB48EF275EE61E005D67E3 /* EventDetailsViewController.swift in Sources */,
 				82628EDA2730C4BD00719A51 /* AppDelegate.swift in Sources */,
 				82A9227227433825008D3A8C /* userViewModel.swift in Sources */,
@@ -568,19 +481,10 @@
 				82A92268274332A3008D3A8C /* LostPost.swift in Sources */,
 				82A0F4812751800C0009F372 /* UploadImageStruct.swift in Sources */,
 				82F58242275BEEC2006F6A91 /* VisitClubProfileViewController.swift in Sources */,
-				82B7B3702756F3E90017503E /* DocumentViewController.swift in Sources */,
-				82A9227A274338B9008D3A8C /* OtherPostViewModel.swift in Sources */,
 				82A0F483275180500009F372 /* UploadImageService.swift in Sources */,
-				8288D4992753F4040088CAA9 /* ModuleElearningViewController.swift in Sources */,
 				82B2F4E2275A960A007AA9D7 /* ClubMembers.swift in Sources */,
-				82A9226E27433489008D3A8C /* Surveys.swift in Sources */,
 				82628EDC2730C4BD00719A51 /* SceneDelegate.swift in Sources */,
-				82B1412B2780A7030050255B /* Message.swift in Sources */,
-				82A9226C2743340E008D3A8C /* Parking.swift in Sources */,
 				82A47D70274C907C002B6F64 /* Register2ViewController.swift in Sources */,
-				823E5FB62738A9EB003F3FA4 /* MapViewController.swift in Sources */,
-				82594ADC2754227D0062575F /* PdfViewController.swift in Sources */,
-				829BEDC52763B83400F179B5 /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

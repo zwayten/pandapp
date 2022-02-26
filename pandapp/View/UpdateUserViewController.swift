@@ -19,8 +19,6 @@ class UpdateUserViewController: UIViewController {
     @IBOutlet var biolbl: UITextView!
     @IBOutlet var resetpasswordlbl: UITextField!
     @IBOutlet var resetnewpass: UITextField!
-    @IBOutlet var verifiedAccount: UILabel!
-    @IBOutlet var verifyButton: UIButton!
     @IBOutlet var imageView: UIImageView!
     
     var users = [User]()
@@ -62,13 +60,7 @@ class UpdateUserViewController: UIViewController {
             let imageData = try? Data(contentsOf: urlImage!)
             self?.imageView.image = UIImage(data: imageData!)
             
-            if self?.users[0].verified == false {
-                self?.verifiedAccount.text = "Account Not verified press the button to verify"
-            }
-            else {
-                self?.verifiedAccount.text = "Account verified nothing to do here"
-                self?.verifyButton.isEnabled = false
-            }
+           
          //   print(response)
           //  print(response.value)
             
@@ -114,7 +106,7 @@ class UpdateUserViewController: UIViewController {
        let classe = classlbl.text
        let bio = biolbl.text
        let resetpassword = resetpasswordlbl.text
-       let passconf = resetnewpass.text
+        _ = resetnewpass.text
        let profilepic = imageupload
         
         

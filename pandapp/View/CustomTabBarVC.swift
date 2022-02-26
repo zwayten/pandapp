@@ -39,32 +39,32 @@ class CustomTabBarvc: UITabBarController, UITabBarControllerDelegate {
         if lastLogged! == "club" {
         let cpvc = storyboard.instantiateViewController(withIdentifier: "clubProfileId") as! ClubViewController
             //let chatvc = storyboard.instantiateViewController(withIdentifier: "chatId") as! ChatViewController
-            let chatvc = storyboard.instantiateViewController(withIdentifier: "alt") as! AltViewController
+            
             //let chatvc = AltViewController()
             
-            self.viewControllers = [chatvc, hvc, cpvc]
+            self.viewControllers = [hvc, cpvc]
             
             let title = ""
             let profileButton = UITabBarItem(title: title, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
-            let chatButton = UITabBarItem(title: title, image: UIImage(systemName: "message"), selectedImage: UIImage(systemName: "message.fill"))
+            
            
             
            
-            chatvc.tabBarItem = chatButton
+            
             cpvc.tabBarItem = profileButton
             
         }
         else if lastLogged! == "user" {
             let upvc = storyboard.instantiateViewController(withIdentifier: "userProfileId") as! UserprofileViewController
-            let ccvc = storyboard.instantiateViewController(withIdentifier: "elearningId") as! ELearningViewController
-            self.viewControllers = [ccvc, hvc, upvc ]
+            
+            self.viewControllers = [hvc, upvc ]
             
             let title = ""
             let profileButton = UITabBarItem(title: title, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
             
-            let ccvcButton = UITabBarItem(title: title, image: UIImage(systemName: "books.vertical"), selectedImage: UIImage(systemName: "books.vertical.fill"))
             
-            ccvc.tabBarItem = ccvcButton
+            
+            
             upvc.tabBarItem = profileButton
         }
         

@@ -118,27 +118,5 @@ class UploadImageService{
         
     }
     
-    public func uploadFileToServer(pdf : Data?, elearning: Elearning) {
-        let token = UserDefaults.standard.string(forKey: "token")
-        let headers: HTTPHeaders = [
-            "Authorisation": "bearer \(token!)",
-            "Content-type": "multipart/form-data"
-        ]
-        let postmodel = ElearningViewModel()
-            AF.upload(
-                multipartFormData: { multipartFormData in
-                    multipartFormData.append(pdf!, withName: "file" , fileName: "file.pdf", mimeType: "application/pdf")
-            },
-                to: "\(ConnectionDb.baserequest())upload/file", method: .post , headers: headers)
-            .responseJSON {  response in
-                let imm: ImageReturn = try! JSONDecoder().decode(ImageReturn.self, from: response.data!)
-                //print(imm.img)
-                self.imageJsonReturnAf = imm.img
-                elearning.set(courseFile: imm.img)
-                print(imm.img)
-                postmodel.addCoursePost(eLearning: elearning)
-                
-            }
-        
-    }
+   
 }

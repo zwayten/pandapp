@@ -145,7 +145,7 @@ class UpdateClubProfileViewController: UIViewController {
     }
     
     func updateProfileClubNoPicture() {
-        let token = UserDefaults.standard.string(forKey: "tokenClub")
+        _ = UserDefaults.standard.string(forKey: "tokenClub")
         let clubName = UserDefaults.standard.string(forKey: "clubName")
         let clubpass = UserDefaults.standard.string(forKey: "passwordClub")
         
@@ -154,8 +154,8 @@ class UpdateClubProfileViewController: UIViewController {
         let newClubLogin = clubloginlbl.text
         let resetpassword = resetpasswordlbl.text
         let newDescription = clubdescription.text
-        let passconf = resetnewpass.text
-        let newLogo = "default.png"
+        _ = resetnewpass.text
+        _ = "default.png"
         let resetconfirm = resetnewpass.text
         if resetpassword != "" && resetpassword == resetconfirm {
         let parameters = ["login": newClubLogin!,
