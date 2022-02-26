@@ -68,7 +68,6 @@ class ClubRegisterViewController: UIViewController {
             let clubGoogle = Clubs(clubName: givenName!, clubOwner: "123", clubLogo: urltoString!, verified: true, password: "", login: emailAddress!, description: "", _id: "")
             
             
-            let clubGoogleStruct = GoogleSegueClub(club: clubGoogle, profilePictureUrl: profilePicUrl!)
             
             self.clubRegisteremail.text = emailAddress!
             self.clubRegisterClubName.text = familyName!
