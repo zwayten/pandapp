@@ -1,5 +1,8 @@
-
-![command-line-pic](https://github.com/KlaiGhassen/IosBack/blob/main/final_panda_ios.png)
+<div align="center">
+ <a href="https://github.com/KlaiGhassen/PandApp-Android">
+    <img src="https://github.com/KlaiGhassen/IosBack/blob/main/final_panda_ios.png" alt="Logo" width="200" height="200">
+  </a>
+  </div>
 
 # README-Swift
 
